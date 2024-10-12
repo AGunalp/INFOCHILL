@@ -1,0 +1,13 @@
+body {
+    background-color: #121212; /* Fond sombre */
+    color: #e0e0e0; /* Texte clair */
+}
+
+pre, code {
+    background-color: #1e1e1e; /* Fond sombre pour le code */
+    color: #dcdcdc; /* Couleur claire pour le code */
+}
+
+a {
+    color: #bb86fc; /* Couleur des liens */
+}

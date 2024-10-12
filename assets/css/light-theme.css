@@ -1,0 +1,43 @@
+body {
+    background-color: #121212; /* Fond sombre et moderne */
+    color: #e0e0e0; /* Texte clair pour un meilleur contraste */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Police plus moderne */
+    line-height: 1.6; /* Meilleure lisibilité */
+    margin: 0;
+    padding: 0;
+}
+
+pre, code {
+    background-color: #2b2b2b; /* Fond légèrement plus foncé pour le code */
+    color: #f8f8f2; /* Couleur du texte claire pour un meilleur contraste */
+    padding: 12px; /* Plus de padding pour un espacement confortable */
+    border-radius: 8px; /* Arrondis plus visibles */
+    font-size: 0.95em; /* Taille de texte légèrement réduite pour le code */
+    overflow-x: auto; /* Ajout du défilement horizontal si le code dépasse */
+    border: 1px solid #444; /* Ajout d'une bordure subtile */
+}
+
+code {
+    background-color: #2e2e2e; /* Fond légèrement différent pour le code en ligne */
+    color: #e6db74; /* Couleur légèrement plus chaude pour le code en ligne */
+    padding: 4px 6px; /* Plus d'espace pour une meilleure lisibilité */
+    border-radius: 5px; /* Arrondi subtil pour le code en ligne */
+}
+
+h1, h2, h3 {
+    color: #ffcc00; /* Couleurs des titres pour un meilleur contraste */
+    font-weight: 600; /* Titres plus épais pour mieux se démarquer */
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+a {
+    color: #66d9ef; /* Couleur des liens harmonisée avec le thème global */
+    text-decoration: none;
+    border-bottom: 1px dashed #66d9ef; /* Lien avec une bordure subtile */
+}
+
+a:hover {
+    color: #ffcc00; /* Changement de couleur au survol pour plus d'interaction */
+    border-bottom: 1px solid #ffcc00; /* Bordure solide au survol */
+}
