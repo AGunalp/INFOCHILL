@@ -110,7 +110,7 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 
   Après avoir configuré votre machine Debian pour NRPE, vous devez maintenant définir cet hôte sur votre serveur Nagios. Cela permettra à Nagios de commencer à surveiller la machine.
 
-<div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;">
+
     <strong>📝 Méthodes de Configuration</strong>
     <p>Il existe deux approches pour gérer les fichiers de configuration des hôtes dans Nagios :</p>
     <ol>
@@ -118,7 +118,7 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
         <li><strong>Fichiers séparés :</strong> Créez un fichier .cfg pour chaque machine. C'est la méthode recommandée car elle facilite la gestion et la maintenance.</li>
     </ol>
     <p>Dans ce guide, nous allons opter pour la méthode des <strong>fichiers séparés</strong>.</p>
-</div>
+
 
 
   #### Création du Fichier de Configuration pour l'Hôte (SrvDeb)
@@ -185,6 +185,7 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 </details>
 
 ***
+
 <details>
 <summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
     <strong>Superviser un Système Windows</strong>
