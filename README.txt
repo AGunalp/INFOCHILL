@@ -23,4 +23,7 @@ git commit -m "Votre message ici"
 git push origin main
 
     Si vous avez une erreur, utilisez :
+
+git pull origin main
+ou
 git push --force origin main

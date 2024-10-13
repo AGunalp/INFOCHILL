@@ -7,13 +7,21 @@ body {
 pre, code {
     background-color: #2e2e2e !important; /* Fond pour le code */
     color: #ffffff !important; /* Couleur du texte du code */
-    padding: 10px;
-    border-radius: 1px; /* Coins arrondis */
+    padding: 15px; /* Plus de padding pour un meilleur espacement */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transition pour l'animation */
+}
+
+pre:hover, code:hover {
+    transform: translateY(-2px); /* Légère élévation au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Ombre plus prononcée au survol */
 }
 
 code {
-    padding: 1px 4px; /* Un peu de padding pour le code en ligne */
-    border-radius: 10px; /* Coins arrondis */
+    padding: 2px 6px; /* Un peu de padding pour le code en ligne */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: #444; /* Fond légèrement plus clair pour le code en ligne */
 }
 
 h1, h2, h3 {
@@ -22,4 +30,10 @@ h1, h2, h3 {
 
 a {
     color: #66d9ef; /* Couleur des liens */
+    text-decoration: none; /* Supprime le soulignement */
+    transition: color 0.2s; /* Transition pour les liens */
+}
+
+a:hover {
+    color: #ff79c6; /* Changer la couleur au survol */
 }
