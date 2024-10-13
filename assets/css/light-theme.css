@@ -4,24 +4,21 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 pre, code {
-    background-color: #2e2e2e; /* Fond pour le code */
-    color: #ffffff; /* Couleur du texte du code */
+    background-color: #2e2e2e !important; /* Fond pour le code */
+    color: #ffffff !important; /* Couleur du texte du code */
     padding: 10px;
-    border-radius: 10px; /* Coins arrondis uniquement pour les blocs de code */
-    border: 1px solid #3c3c3c; /* Ajout d'une bordure subtile pour mieux les démarquer */
+    border-radius: 1px; /* Coins arrondis */
 }
 
 code {
-    padding: 1px 4px; /* Padding pour le code en ligne */
-    border-radius: 5px; /* Coins arrondis pour le code en ligne */
+    padding: 1px 4px; /* Un peu de padding pour le code en ligne */
+    border-radius: 10px; /* Coins arrondis */
 }
 
 h1, h2, h3 {
     color: #f8f8f2; /* Couleur des titres */
 }
-
 
 a {
     color: #66d9ef; /* Couleur des liens */
