@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](index.md) > [GLPI](./index.md)
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI](./index.md)
 
 ## En cours
 
