@@ -56,10 +56,32 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 ```
 ## Sélectionnez le type de système à superviser :
 
-
-
-
-Superviser un Système Linux (Debian)
+<style>
+    .link-box {
+        border: 2px solid white; /* Contour blanc */
+        border-radius: 5px; /* Arrondir les coins */
+        padding: 10px; /* Espacement intérieur */
+        margin: 10px 0; /* Espacement extérieur */
+        text-align: center; /* Centrer le texte */
+        cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+        transition: background-color 0.3s; /* Animation de transition pour le survol */
+    }
+    .link-box:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Changement de couleur au survol */
+    }
+</style>
+<div class="link-box" onclick="window.location.href='superviser-linux.md'">
+    <strong>Superviser un Système Linux (Debian)</strong>
+</div>
+<div class="link-box" onclick="window.location.href='superviser-windows.md'">
+    <strong>Superviser un Système Windows</strong>
+</div>
+<div class="link-box" onclick="window.location.href='superviser-cisco.md'">
+    <strong>Superviser un Switch Cisco</strong>
+</div>
+<div class="link-box" onclick="window.location.href='superviser-hp.md'">
+    <strong>Superviser un Switch HP</strong>
+</div>
 
 
 ## 🖥️ Depuis un Système Linux (Debian)
@@ -177,51 +199,3 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 #### Retour sur le Serveur Nagios :
 
 - Définition de l'hôte dans un fichier de configuration dans le répertoire `/usr/local/nagios/etc/servers/`
-
-
-<!-- -->
-<!-- -->
-<!-- -->
-
-<details>
-<summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
-    <strong>Superviser un Système Windows</strong>
-</summary>
-
-<div style="background-color: #343A40; padding: 20px; border-radius: 5px; border: 1px solid #c3e6cb;">
-<!-- Contenu de la section Windows ici -->
-EN COURS
-</div>
-</details>
-
-
-<!-- -->
-<!-- -->
-<!-- -->
-
-<details>
-<summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
-    <strong>Superviser un Switch Cisco</strong>
-</summary>
-
-<div style="background-color: #343A40; padding: 20px; border-radius: 5px; border: 1px solid #c3e6cb;">
-<!-- Contenu de la section Switch Cisco ici -->
-EN COURS
-</div>
-</details>
-
-<!-- -->
-<!-- -->
-<!-- -->
-
-<details>
-<summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
-    <strong>Superviser un Switch HP</strong>
-</summary>
-
-<div style="background-color: #343A40; padding: 20px; border-radius: 5px; border: 1px solid #c3e6cb;">
-<!-- Contenu de la section Switch HP ici -->
-EN COURS
-</div>
-</details>
-
