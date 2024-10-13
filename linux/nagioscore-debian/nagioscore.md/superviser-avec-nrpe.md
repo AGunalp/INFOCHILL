@@ -63,7 +63,7 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
  Superviser un Système Linux (Debian)
   </summary>
 
-<div style="background-color: #343A40; >
+
 
 
 ## 🖥️ Depuis un Système Linux (Debian)
