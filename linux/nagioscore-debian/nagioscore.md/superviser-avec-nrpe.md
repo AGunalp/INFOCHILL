@@ -65,9 +65,9 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 
 <div style="background-color: #343A40; padding: 10px; border-radius: 5px; border: 1px solid #c3e6cb;">
 
-## 🖥️ Depuis un Système Linux (Debian) <a name="supervision-linux"></a>
+## 🖥️ Depuis un Système Linux (Debian)
 
-  Pour superviser un système Linux (Debian) avec le plugin NRPE, suivez les étapes ci-dessous. Cela vous permettra de configurer efficacement la machine afin qu'elle soit surveillée par votre serveur Nagios.
+Pour superviser un système Linux (Debian) avec le plugin NRPE, suivez les étapes ci-dessous. Cela vous permettra de configurer efficacement la machine afin qu'elle soit surveillée par votre serveur Nagios.
 
   ### Étapes à Suivre
 
