@@ -23,19 +23,3 @@ h1, h2, h3 {
 a {
     color: #66d9ef; /* Couleur des liens */
 }
-
-table {
-    background-color: #333; /* Couleur de fond du tableau */
-    color: #fff; /* Couleur du texte */
-    border-collapse: collapse; /* Pour des bordures plus nettes */
-    width: 100%; /* Pour occuper toute la largeur */
-}
-
-th, td {
-    padding: 10px; /* Espace autour du texte */
-    border: 1px solid #444; /* Bordures des cellules */
-}
-
-th {
-    background-color: #555; /* Couleur de fond des en-têtes */
-}
