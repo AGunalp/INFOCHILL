@@ -89,8 +89,8 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 </style>
 
 <!-- Les boutons -->
-<a class="button" href="linux-debian.md" target="_blank">Superviser un Système Linux (Debian)</a>
+<a class="button" href="supervision/linux-debian.md" target="_blank">Superviser un Système Linux (Debian)</a>
 
-<a class="button" href="windows.md">Superviser un Système Windows</a>
-<a class="button" href="switch-cisco.md">Superviser un Switch Cisco</a>
-<a class="button" href="switch-hp.md">Superviser un Switch HP</a>
+<a class="button" href="supervision/windows.md">Superviser un Système Windows</a>
+<a class="button" href="supervision/switch-cisco.md">Superviser un Switch Cisco</a>
+<a class="button" href="supervision/switch-hp.md">Superviser un Switch HP</a>
