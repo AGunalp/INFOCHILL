@@ -57,12 +57,9 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 ## Sélectionnez le type de système à superviser :
 
 
-<details>
-
- Superviser un Système Linux (Debian)
 
 
-
+Superviser un Système Linux (Debian)
 
 
 ## 🖥️ Depuis un Système Linux (Debian)
@@ -181,7 +178,6 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 
 - Définition de l'hôte dans un fichier de configuration dans le répertoire `/usr/local/nagios/etc/servers/`
 
-</details>
 
 <!-- -->
 <!-- -->
