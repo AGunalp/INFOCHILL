@@ -1,39 +1,45 @@
 body {
     background-color: #121212; /* Fond sombre */
     color: #e0e0e0; /* Texte clair */
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Utilisation d'une police moderne */
 }
 
 pre, code {
-    background-color: #2e2e2e !important; /* Fond pour le code */
+    background: linear-gradient(135deg, #2e2e2e, #3a3a3a); /* Dégradé pour le fond du code */
     color: #ffffff !important; /* Couleur du texte du code */
-    padding: 15px; /* Plus de padding pour un meilleur espacement */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
-    transition: transform 0.2s, box-shadow 0.2s; /* Transition pour l'animation */
+    padding: 20px; /* Plus de padding pour un meilleur espacement */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s; /* Transition pour l'animation */
 }
 
 pre:hover, code:hover {
-    transform: translateY(-2px); /* Légère élévation au survol */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Ombre plus prononcée au survol */
+    transform: scale(1.05); /* Légère échelle au survol */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7); /* Ombre plus prononcée au survol */
+    background: linear-gradient(135deg, #3a3a3a, #2e2e2e); /* Changer le dégradé au survol */
 }
 
 code {
-    padding: 2px 6px; /* Un peu de padding pour le code en ligne */
+    padding: 5px 10px; /* Un peu de padding pour le code en ligne */
     border-radius: 8px; /* Coins arrondis */
-    background-color: #444; /* Fond légèrement plus clair pour le code en ligne */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond translucide pour le code en ligne */
+    backdrop-filter: blur(5px); /* Flou d'arrière-plan pour le code en ligne */
 }
 
 h1, h2, h3 {
     color: #f8f8f2; /* Couleur des titres */
+    text-transform: uppercase; /* Mettre les titres en majuscules pour un aspect moderne */
+    letter-spacing: 1px; /* Espacement des lettres */
 }
 
 a {
     color: #66d9ef; /* Couleur des liens */
     text-decoration: none; /* Supprime le soulignement */
-    transition: color 0.2s; /* Transition pour les liens */
+    transition: color 0.3s, transform 0.3s; /* Transition pour les liens */
 }
 
 a:hover {
     color: #ff79c6; /* Changer la couleur au survol */
+    transform: translateY(-2px); /* Légère élévation au survol */
+    border-bottom: 2px solid #ff79c6; /* Soulignement au survol */
 }
