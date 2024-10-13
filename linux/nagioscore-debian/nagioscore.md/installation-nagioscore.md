@@ -1,5 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/light-theme.css">
 
+
 # Installation de Nagios Core sur Debian
 
 Pour commencer, assurez-vous que votre système est à jour. Exécutez la commande suivante : 
