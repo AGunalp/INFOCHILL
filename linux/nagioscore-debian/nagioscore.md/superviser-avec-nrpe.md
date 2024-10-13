@@ -57,8 +57,13 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 ## Sélectionnez le type de système à superviser :
 
 
+<details>
 
+<summary style="background-color: #212529   ; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
+    <strong>Superviser un Système Linux (Debian)</strong>
+  </summary>
 
+<div style="background-color: #343A40; padding: 10px; border-radius: 5px; border: 1px solid #c3e6cb;">
 
 ## 🖥️ Depuis un Système Linux (Debian)
 
@@ -179,7 +184,9 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 </div>
 </details>
 
-***
+<!-- -->
+<!-- -->
+<!-- -->
 
 <details>
 <summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
@@ -191,8 +198,12 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 EN COURS
 </div>
 </details>
+</details>
 
-***
+<!-- -->
+<!-- -->
+<!-- -->
+
 <details>
 <summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
     <strong>Superviser un Switch Cisco</strong>
@@ -204,7 +215,10 @@ EN COURS
 </div>
 </details>
 
-***
+<!-- -->
+<!-- -->
+<!-- -->
+
 <details>
 <summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
     <strong>Superviser un Switch HP</strong>
