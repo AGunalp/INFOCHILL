@@ -85,9 +85,14 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 
 ## Choisissez le système à superviser :
 
-| **Type de Système**        | **Description**                                              | **Lien de Supervision**                         |
-|----------------------------|------------------------------------------------------------|-------------------------------------------------|
-| Système Linux (Debian)     | Pour surveiller un serveur ou une machine Debian (Linux). | [Configurer la supervision](./supervision/linux-debian.md) |
-| Système Windows            | Pour surveiller des postes ou serveurs sous Windows.      | [Configurer la supervision](./supervision/windows.md)      |
-| Switch Cisco               | Pour superviser des équipements réseau Cisco.              | [Configurer la supervision](./supervision/switch-cisco.md) |
-| Switch HP                  | Pour superviser des switches réseau de marque HP.          | [Configurer la supervision](./supervision/switch-hp.md)    |
+- [**Système Linux (Debian)**](./supervision/linux-debian.md)  
+  Pour surveiller un serveur ou une machine Debian (Linux).
+
+- [**Système Windows**](./supervision/windows.md)  
+  Pour surveiller des postes ou serveurs sous Windows.
+
+- [**Switch Cisco**](./supervision/switch-cisco.md)  
+  Pour superviser des switches réseau de marque Cisco.
+
+- [**Switch HP**](./supervision/switch-hp.md)  
+  Pour superviser des switches réseau de marque HP.
