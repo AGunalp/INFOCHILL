@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/blue-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore sur Debian](../index.md) > [Superviser des machines avec le plugin NRPE](linux-debian.md)
+###### 📂 Vous êtes ici : [Accueil](/index.md) > [NagiosCore sur Debian](/linux/nagioscore-debian/index.md) > [Superviser des machines avec le plugin NRPE](/linux/nagioscore-debian/supervision-nrpe.md) > [Supervisier Système Linux](/linux/nagioscore-debian/supervision/linux-debian.md)
 
 # 📚 Superviser des machines avec le plugin NRPE
 

@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](index.md)
+###### 📂 Vous êtes ici : [Accueil](/index.md) > [NagiosCore sur Debian](/linux/nagioscore-debian/index.md)
 
 # 📚 Nagios Core sur Debian
 
