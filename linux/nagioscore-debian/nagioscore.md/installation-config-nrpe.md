@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/light-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](../index.md) > [Installation et configuration du plugin NRPE](.)
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](../index.md) > [Installation et configuration du plugin NRPE](installation-config-nrpe.md)
 
 # 📚 Installation et configuration du plugin NRPE
 
