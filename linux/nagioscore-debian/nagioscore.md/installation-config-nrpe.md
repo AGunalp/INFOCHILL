@@ -1,5 +1,4 @@
-
-
+<link rel="stylesheet" type="text/css" href="/assets/css/light-theme.css">
 
 # Installation et configuration du plugin NRPE
 
