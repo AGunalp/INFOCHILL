@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/blue-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](/index.md) > [NagiosCore Debian](/linux/nagioscore-debian/) > [Installation Nagios Core Debian](/linux/nagioscore-debian/installation-nagioscore.md)
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > [Installation Nagios Core Debian](installation-nagioscore.md)
 
 # 📚 Installation de Nagios Core sur Debian
 
