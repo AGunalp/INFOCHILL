@@ -39,10 +39,9 @@ Documentation complète sur l'installation et la configuration de Windows Server
 ## Contact
 
 Pour toute question ou suggestion, n'hésitez pas à nous contacter :
-- [Twitter](#)  
-- [LinkedIn](#)  
-- [GitHub](#)  
-
+- [Twitter](https://ih1.redbubble.net/image.175911116.4459/flat,750x1000,075,f.u1.jpg)  
+- [LinkedIn](https://ih1.redbubble.net/image.175911116.4459/flat,750x1000,075,f.u1.jpg)
+- [GitHub](https://ih1.redbubble.net/image.175911116.4459/flat,750x1000,075,f.u1.jpg)
 ---
 
 &copy; 2024 InfoChill - Tous droits réservés

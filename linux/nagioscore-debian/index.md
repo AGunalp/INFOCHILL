@@ -2,7 +2,7 @@
 
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](index.md)
 
-# 📚 Documentation de Nagios Core
+# 📚 Documentation pour Nagios Core
 
 Bienvenue sur la documentation de **Nagios**. Vous êtes actuellement dans la section **NagiosCore sur Debian**. Retrouvez ici les guides d'installation et de configuration pour Linux.
 
@@ -10,12 +10,10 @@ Bienvenue sur la documentation de **Nagios**. Vous êtes actuellement dans la se
 
 ## Guides 
 
-### Étapes :
-
-1. **[Installation de NagiosCore sur Debian](nagioscore.md/installation-nagioscore.md)**  
+* **Étape 1 : [Installation de NagiosCore sur Debian](nagioscore.md/installation-nagioscore.md)**  
    Apprenez à installer NagiosCore sur un système Debian.
 
-2. **[Superviser des machines avec le plugin NRPE](nagioscore.md/superviser-avec-nrpe.md)**  
+* **Étape 2 : [Superviser des machines avec le plugin NRPE](nagioscore.md/superviser-avec-nrpe.md)**  
    Suivez ces étapes pour installer et configurer NRPE.
 
 ---

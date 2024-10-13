@@ -7,14 +7,23 @@
 Bienvenue dans la section dédiée à l'installation et à la configuration du plugin **NRPE**. Vous êtes actuellement dans le guide d'installation du plugin NRPE pour Nagios.
 
 ---
+<!-- Alerte importante concernant les droits d'utilisateur -->
+<div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
+  ⚠️ <strong>Important :</strong>
+  <ul>
+    <li>Ce guide part du principe que vous êtes connecté en tant que <code>root</code> (via <code>su -</code>).</li>
+    <li>Si ce n'est pas le cas, ajoutez <code>sudo</code> devant chaque commande.</li>
+  </ul>
+</div>
 
+---
 Après avoir terminé l'installation et vérifié que votre serveur Nagios est en "Daemon running" via votre navigateur, l'objectif est désormais de comprendre comment superviser efficacement vos machines et collecter des informations sur leur état. À savoir : Pour faire un lien Nagios entre notre serveur Nagios et un hôte (cible que nous allons remonter sur Nagios), il faut que dans les deux machines nous installions le plugin NRPE et que nous le configurions.  
 
-## Depuis votre serveur Nagios
+## 🖥️ Depuis votre serveur Nagios
 Depuis votre serveur Nagios, installez d’abord ces paquets :
 
 ```bash
-sudo apt install nagios-nrpe-server nagios-plugins
+apt install nagios-nrpe-server nagios-plugins
 ```
 
 Copiez tous les fichiers de `/usr/lib/nagios/plugins/*` vers le répertoire `/usr/local/nagios/libexec/`. C'est ici que Nagios attend les plugins nécessaires pour effectuer les vérifications sur les machines distantes.
@@ -45,84 +54,168 @@ Après avoir créé le répertoire, il est important de transmettre le répertoi
 ```bash
 chown -R nagios:nagios /usr/local/nagios/etc/servers
 ```
+## Sélectionnez le type de système à superviser :
 
-## Depuis une machine debian (que vous souhaitez superviser)
-Exécutez ces commandes sur la machine Debian que vous souhaitez superviser (que nous appellerons **SrvDeb**) :
+
+
+<details>
+<summary style="background-color: #212529   ; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
+    <strong>Superviser un Système Linux (Debian)</strong>
+  </summary>
+
+<div style="background-color: #343A40 ; padding: 20px; border-radius: 5px; border: 1px solid #c3e6cb;">
+
+## 🖥️ Depuis un Système Linux (Debian) <a name="supervision-linux"></a>
+
+  Pour superviser un système Linux (Debian) avec le plugin NRPE, suivez les étapes ci-dessous. Cela vous permettra de configurer efficacement la machine afin qu'elle soit surveillée par votre serveur Nagios.
+
+  ### Étapes à Suivre
+
+  1. **Mettre à jour le système :**
+     Assurez-vous que votre système est à jour pour éviter les problèmes de compatibilité.
+
+     ```bash
+     apt update && apt upgrade
+     ```
+
+  2. **Installer les paquets nécessaires :**
+     Installez le serveur NRPE et les plugins Nagios.
+
+     ```bash
+     apt install nagios-nrpe-server nagios-plugins
+     ```
+
+  3. **Modifier le fichier de configuration NRPE :**
+     Ouvrez le fichier de configuration NRPE pour autoriser les connexions depuis votre serveur Nagios.
+
+     ```bash
+     vim /etc/nagios/nrpe.cfg
+     ```
+
+     - **Configurer les adresses IP autorisées :**
+       Ajoutez l'adresse IP de votre serveur Nagios à la ligne suivante (par exemple, pour l'IP `192.168.13.2`):
+
+       ```bash
+       allowed_hosts=127.0.0.1,::1,192.168.13.2
+       ```
+
+  4. **Redémarrer le service NRPE :**
+     Appliquez vos modifications en redémarrant le service NRPE.
+
+     ```bash
+     systemctl restart nagios-nrpe-server.service
+     ```
+
+  ## 🖥️ Retournez sur Nagios pour définir des Hôtes
+
+  Après avoir configuré votre machine Debian pour NRPE, vous devez maintenant définir cet hôte sur votre serveur Nagios. Cela permettra à Nagios de commencer à surveiller la machine.
+
+<div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;">
+    <strong>📝 Méthodes de Configuration</strong>
+    <p>Il existe deux approches pour gérer les fichiers de configuration des hôtes dans Nagios :</p>
+    <ol>
+        <li><strong>Un seul fichier .cfg :</strong> Regroupez toutes les machines dans un seul fichier. Cette méthode peut rendre la gestion plus complexe.</li>
+        <li><strong>Fichiers séparés :</strong> Créez un fichier .cfg pour chaque machine. C'est la méthode recommandée car elle facilite la gestion et la maintenance.</li>
+    </ol>
+    <p>Dans ce guide, nous allons opter pour la méthode des <strong>fichiers séparés</strong>.</p>
+</div>
+
+
+  #### Création du Fichier de Configuration pour l'Hôte (SrvDeb)
+
+  1. **Créer le fichier de configuration :**
+     Accédez au répertoire approprié et créez le fichier pour votre machine (SrvDeb).
+
+     ```bash
+     touch /usr/local/nagios/etc/servers/SrvDeb.cfg
+     ```
+
+  2. **Éditer le fichier :**
+     Ouvrez le fichier créé pour ajouter les informations nécessaires.
+
+     ```bash
+     vim /usr/local/nagios/etc/servers/SrvDeb.cfg
+     ```
+
+  3. **Ajouter les définitions de l'hôte :**
+     Insérez le code suivant dans le fichier :
+
+     ```plaintext
+     define host {
+         use                     linux-server          ; Modèle prédéfini pour les serveurs Linux
+         host_name               SrvDeb                ; Nom de l'hôte
+         alias                   Serveur de Test       ; Alias pour afficher dans Nagios
+         address                 192.168.13.2          ; Adresse IP de la machine
+         max_check_attempts      5                     ; Nombre de tentatives avant une alerte
+         check_period            24x7                  ; Vérification continue
+         notification_interval    30                   ; Intervalle de notification
+         notification_period     24x7                  ; Période de notification
+     }
+     ```
+#### Redémarrez vos services :
 
 ```bash
-sudo apt update && sudo apt upgrade
+systemctl restart apache2
+systemctl restart nagios
 ```
-```bash
-apt install nagios-nrpe-server nagios-plugins
-```
+Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine qui y est référenciée, pour mon cas j'ai remonté une machine debian ayant pour nom `AP4-GLPI` :
 
-Modifiez le fichier de configuration NRPE : 
+![alt text](/assets/images/host_debian_nagios.png)
 
-```bash
-vim /etc/nagios/nrpe.cfg
-```
-
-Référenciez l'IP de votre serveur Debian à la fin de la ligne ci-dessous (pour mon cas c'est 192.168.13.2) :
-
-```bash
-allowed_hosts=127.0.0.1,::1, 192.168.13.2
-```
-
-Redémarrez le service : 
-
-```bash
-systemctl restart nagios-nrpe-server.service
-```
-
-## Depuis votre serveur Nagios
-Une fois que vous êtes sur votre serveur Nagios et que la machine cible **SrvDeb**, a correctement référencé l'adresse IP de votre serveur Nagios dans ses fichiers de configuration, il est maintenant temps de définir l'hôte depuis le serveur Nagios.
-
-### Les 2 méthodes pour définir l'host :
-Il existe deux solutions pour gérer les fichiers de configuration des hôtes :
-
-1. **Un seul fichier .cfg :** Vous pouvez mettre toutes les machines dans un seul fichier. Cela peut être plus compliqué à gérer.
-2. **Fichiers séparés :** Il est préférable de créer un fichier .cfg pour chaque machine. Cela rend la gestion et la maintenance plus faciles.
-
-Dans notre exemple, nous choisissons la méthode des fichiers séparés (recommandée).
-
-### Définir l'host :
-Créer le fichier de configuration : Créez ou modifiez le fichier de configuration pour SrvDeb en y spécifiant le nom de l'hôte, l'adresse IP et les services à surveiller.
-
-
-Depuis votre serveur Nagios, allez dans le répertoire approprié et créez le fichier `/usr/local/nagios/etc/server/SrvDeb.cfg` Ce fichier définira l'hôte avec l'extension `.cfg` : 
-
-```bash
-touch /usr/local/nagios/etc/server/SrvDeb.cfg
-```
-
-Et nous pouvons rajouter les lignes suivantes : 
-
-```
-define host {
-    use                     linux-server          ; Modèle prédéfini pour les serveurs Linux
-    host_name               SrvDeb                ; Nom de l'hôte
-    alias                   Serveur de Test       ; Alias pour afficher dans Nagios
-    address                 192.168.13.2          ; Adresse IP de la machine
-    max_check_attempts      5                     ; Nombre de tentatives avant une alerte
-    check_period            24x7                  ; Vérification continue
-    notification_interval    30                   ; Intervalle de notification
-    notification_period     24x7                  ; Période de notification
-}
-```
+---
 
 ### Récapitulatif des Étapes de Configuration de Nagios et NRPE
 
-#### Sur le Serveur Nagios :
+#### Sur le Serveur Nagios (étape précédente):
 
-* Installation du plugin NRPE
-* Copie des plugins dans le bon répertoire `/usr/local/nagios/libexec/`
-
-* Activation et création du répertoire contenant les futurs emplacement pour définir l'les hôtes (cibles) en modifiant le fichier `nagios.cfg`
+- Installation du plugin NRPE
+- Copie des plugins dans le bon répertoire `/usr/local/nagios/libexec/`
+- Activation et création du répertoire contenant les futurs emplacements pour définir les hôtes en modifiant le fichier `nagios.cfg`
 
 #### Sur la Machine Cible (SrvDeb) :
-* Installation du plugin NRPE
 
-* Configuration du fichier de configuration NRPE pour autoriser l'adresse IP du serveur Nagios
+- Installation du plugin NRPE
+- Configuration du fichier de configuration NRPE pour autoriser l'adresse IP du serveur Nagios
 
 #### Retour sur le Serveur Nagios :
-* Définition de l'hôte dans un fichier de configuration dans le répertoire `/usr/local/nagios/etc/servers/`
+
+- Définition de l'hôte dans un fichier de configuration dans le répertoire `/usr/local/nagios/etc/servers/`
+
+</div>
+</details>
+
+---
+<details>
+<summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
+    <strong>Superviser un Système Windows</strong>
+</summary>
+
+<div style="background-color: #343A40; padding: 20px; border-radius: 5px; border: 1px solid #c3e6cb;">
+<!-- Contenu de la section Windows ici -->
+EN COURS
+</div>
+</details>
+
+---
+<details>
+<summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
+    <strong>Superviser un Switch Cisco</strong>
+</summary>
+
+<div style="background-color: #343A40; padding: 20px; border-radius: 5px; border: 1px solid #c3e6cb;">
+<!-- Contenu de la section Switch Cisco ici -->
+EN COURS
+</div>
+</details>
+
+---
+<details>
+<summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
+    <strong>Superviser un Switch HP</strong>
+</summary>
+
+<div style="background-color: #343A40; padding: 20px; border-radius: 5px; border: 1px solid #c3e6cb;">
+<!-- Contenu de la section Switch HP ici -->
+EN COURS
+</div>
+</details>
