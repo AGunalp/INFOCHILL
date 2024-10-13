@@ -11,20 +11,20 @@ Bienvenue sur **InfoChill**, votre référence pour la documentation informatiqu
 
 ### Systèmes Linux :
 -  **[GLPI sur Debian](linux/glpi-debian/index.md)**  
-  Un guide complet pour installer et configurer GLPI sur votre système Debian.
+  Un guide pour installer et configurer GLPI sur votre système Debian.
   
 -  **[NagiosCore sur Debian](linux/nagioscore-debian/index.md)**  
-  Instructions détaillées pour mettre en place NagiosCore sur Debian.
+  Un guide pour installer et configurer Nagios Core sur votre système Debian.
 
 -  **[Postfix sur Debian](linux/postfix-debian/index.md)**  
-  Tutoriel pour configurer un serveur de messagerie Postfix sur Debian.
+  Un guide pour installer et configurer Postfix sur votre système Debian.
 
 -  **[Proxmox sur Debian](linux/proxmox-debian/index.md)**  
-  Guide pour installer et gérer Proxmox sur Debian.
+  Un guide pour installer et configurer Proxmox sur votre système Debian.
 
 ### Systèmes Windows :
 -  **[Windows Server 2022](windows/winserv2022/index.md)**  
-Documentation complète sur l'installation et la configuration de Windows Server 2022.
+Un guide pour installer et configurer Windows Server 2022 sur votre système Debian.
 
 ---
 
