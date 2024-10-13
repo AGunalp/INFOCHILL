@@ -1,15 +1,13 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
-# Documentation GLPI
+###### 📂 Vous êtes ici : [Accueil](index.md) > [GLPI](./index.md)
 
-Bienvenue sur la documentation de GLPI. Retrouvez les guides d'installation et de configuration.
+## En cours
 
----
-
-## Documentation
-
-- [Installation de GLPI sur Debian](glpi) 
-- [Installation de MariaDB sur Debian]() 
+<div style="border: 2px dashed #d9534f; border-radius: 5px; padding: 15px; margin: 20px 0; background-color: #f8d7da; color: #721c24;">
+  <strong>🚧 En cours de rédaction :</strong>
+  <p>Le guide d'installation et de configuration de GLPI sur Debian est actuellement en cours de préparation. Revenez bientôt pour des instructions détaillées et des conseils pratiques !</p>
+</div>
 
 ---
 
