@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/dark-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](.)
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](index.md)
 
 # 📚 Documentation de Nagios
 
