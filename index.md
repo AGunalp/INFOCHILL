@@ -1,12 +1,9 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/dark-theme.css">
 
-# InfoChill
+###### 📂 Vous êtes ici : [Accueil](index.md)
+
 
 Bienvenue sur **InfoChill**, votre référence pour la documentation informatique. Retrouvez des guides détaillés pour installer et configurer vos systèmes d'exploitation et logiciels.
-
----
-
-## 📂 Vous êtes ici : [Accueil](index.md)
 
 ---
 

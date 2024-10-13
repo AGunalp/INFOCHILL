@@ -1,12 +1,14 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/light-theme.css">
 
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](../index.md) > [Installation de Nagios Core sur Debian]()
+
 # 📚 Installation de Nagios Core sur Debian
 
 Vous êtes actuellement dans le guide d'installation de **Nagios Core** sur Debian. Suivez les étapes ci-dessous pour compléter l'installation.
 
 ---
 
-## 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](../index.md) > [Installation de Nagios Core sur Debian]()
+
 Pour commencer, assurez-vous que votre système est à jour. Exécutez la commande suivante : 
 
 ```bash

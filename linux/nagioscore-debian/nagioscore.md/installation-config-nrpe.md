@@ -1,12 +1,10 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/light-theme.css">
 
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](../index.md) > [Installation et configuration du plugin NRPE](.)
+
 # 📚 Installation et configuration du plugin NRPE
 
 Bienvenue dans la section dédiée à l'installation et à la configuration du plugin **NRPE**. Vous êtes actuellement dans le guide d'installation du plugin NRPE pour Nagios.
-
----
-
-## 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](../index.md) > [Installation et configuration du plugin NRPE](.)
 
 ---
 
