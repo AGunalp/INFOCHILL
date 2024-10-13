@@ -56,6 +56,33 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 ```
 
 
+<style>
+    table {
+        width: 100%; /* Prendre toute la largeur */
+        border-collapse: collapse; /* Fusionner les bordures */
+        background-color: black; /* Fond noir */
+        color: white; /* Texte blanc */
+    }
+
+    th, td {
+        border: 1px solid white; /* Bordure blanche */
+        padding: 10px; /* Espacement intérieur */
+        text-align: left; /* Alignement à gauche */
+    }
+
+    th {
+        background-color: #333; /* Fond des en-têtes en gris foncé */
+    }
+
+    tr:nth-child(even) {
+        background-color: #444; /* Fond des lignes paires en gris */
+    }
+
+    tr:hover {
+        background-color: #555; /* Fond des lignes au survol */
+    }
+</style>
+
 ## Choisissez le système à superviser :
 
 | **Type de Système**        | **Description**                                              | **Lien de Supervision**                         |
