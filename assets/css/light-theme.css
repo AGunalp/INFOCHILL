@@ -1,71 +1,25 @@
 body {
     background-color: #0f0f0f; /* Fond sombre */
     color: #e0e0e0; /* Texte clair */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Typographie moderne */
-    line-height: 1.6; /* Meilleure lisibilité */
-    margin: 0; /* Suppression des marges par défaut */
-    padding: 20px; /* Ajout de l'espace autour du contenu */
+    font-family: Arial, sans-serif;
+}
+
+pre, code {
+    background-color: #2e2e2e !important; /* Fond pour le code */
+    color: #ffffff !important; /* Couleur du texte du code */
+    padding: 10px;
+    border-radius: 1px; /* Coins arrondis */
+}
+
+code {
+    padding: 1px 4px; /* Un peu de padding pour le code en ligne */
+    border-radius: 10px; /* Coins arrondis */
 }
 
 h1, h2, h3 {
     color: #f8f8f2; /* Couleur des titres */
-    border-bottom: 2px solid #66d9ef; /* Soulignement des titres */
-    padding-bottom: 5px; /* Espacement sous les titres */
-}
-
-h1 {
-    font-size: 2.5rem; /* Taille du titre principal */
-}
-
-h2 {
-    font-size: 2rem; /* Taille du sous-titre */
-}
-
-h3 {
-    font-size: 1.5rem; /* Taille du sous-sous-titre */
-}
-
-pre, code {
-    background-color: #2e2e2e; /* Fond pour le code */
-    color: #ffffff; /* Couleur du texte du code */
-    padding: 10px; /* Espacement intérieur */
-    border-radius: 8px; /* Coins arrondis */
-    overflow-x: auto; /* Permet de faire défiler horizontalement si nécessaire */
-    border: 1px solid #66d9ef; /* Bordure pour les blocs de code */
-}
-
-code {
-    padding: 2px 6px; /* Un peu de padding pour le code en ligne */
-    border-radius: 4px; /* Coins arrondis pour le code en ligne */
-    background-color: rgba(102, 217, 239, 0.1); /* Fond léger pour le code en ligne */
 }
 
 a {
     color: #66d9ef; /* Couleur des liens */
-    text-decoration: none; /* Suppression du soulignement par défaut */
-    transition: color 0.3s; /* Animation de la couleur lors du survol */
-}
-
-a:hover {
-    color: #ff79c6; /* Couleur des liens au survol */
-    text-decoration: underline; /* Ajout d'un soulignement au survol */
-}
-
-/* Styles pour les listes */
-ul {
-    list-style-type: disc; /* Style de liste */
-    padding-left: 20px; /* Espacement à gauche */
-}
-
-li {
-    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
-}
-
-/* Styles pour les blocs d'alerte */
-.alert {
-    background-color: #ff4444; /* Fond rouge pour les alertes */
-    color: #ffffff; /* Texte blanc */
-    padding: 10px; /* Espacement intérieur */
-    border-radius: 4px; /* Coins arrondis */
-    margin: 20px 0; /* Marges autour du bloc d'alerte */
 }
