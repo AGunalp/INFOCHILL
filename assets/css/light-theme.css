@@ -26,6 +26,7 @@ code {
     color: #66d9ef; /* Couleur du texte du code */
     padding: 2px 6px; /* Espacement interne */
     border-radius: 4px; /* Coins arrondis */
+    font-family: 'Courier New', Courier, monospace; /* Changer la police pour le code */
 }
 
 /* Style des titres */
@@ -40,12 +41,13 @@ h1, h2, h3 {
 a {
     color: #66d9ef; /* Couleur des liens */
     text-decoration: none; /* Retire le soulignement par défaut */
-    transition: color 0.3s; /* Transition pour le survol */
+    transition: color 0.3s, transform 0.3s; /* Transition pour le survol */
 }
 
 a:hover {
     text-decoration: underline; /* Souligne les liens au survol */
     color: #9ae0f4; /* Couleur au survol */
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
 }
 
 /* Style pour les listes */
