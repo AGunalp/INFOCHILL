@@ -29,7 +29,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: #66d9ef; /* Couleur des liens */
+    color: #5eff00; /* Couleur des liens */
     text-decoration: none; /* Supprime le soulignement */
     transition: color 0.2s; /* Transition pour les liens */
 }
