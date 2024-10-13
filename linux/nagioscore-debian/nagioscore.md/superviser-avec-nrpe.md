@@ -59,9 +59,8 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 
 <details>
 
-<summary style="background-color: #212529; ">
  Superviser un Système Linux (Debian)
-  </summary>
+
 
 
 
@@ -182,7 +181,6 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 
 - Définition de l'hôte dans un fichier de configuration dans le répertoire `/usr/local/nagios/etc/servers/`
 
-</div>
 </details>
 
 <!-- -->
