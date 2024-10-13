@@ -1,8 +1,16 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/light-theme.css">
 
-# Installation et configuration du plugin NRPE
+# 📚 Installation et configuration du plugin NRPE
 
-Après avoir terminé l'installation et vérifié que votre serveur Nagios est en "Daemon running" via votre navigateur, l'objectif est désormais de comprendre comment superviser efficacement vos machines et collecter des informations sur leur état. À savoir : Pour faire un lien Nagios entre notre serveur Nagios et un hôte (cible que nous allons remonter sur Nagios), il faut que dans les deux machines nous installions le plugin NRPE et que nous le configurions. 
+Bienvenue dans la section dédiée à l'installation et à la configuration du plugin **NRPE**. Vous êtes actuellement dans le guide d'installation du plugin NRPE pour Nagios.
+
+---
+
+## 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](../index.md) > [Installation et configuration du plugin NRPE](.)
+
+---
+
+Après avoir terminé l'installation et vérifié que votre serveur Nagios est en "Daemon running" via votre navigateur, l'objectif est désormais de comprendre comment superviser efficacement vos machines et collecter des informations sur leur état. À savoir : Pour faire un lien Nagios entre notre serveur Nagios et un hôte (cible que nous allons remonter sur Nagios), il faut que dans les deux machines nous installions le plugin NRPE et que nous le configurions.  
 
 ## Depuis votre serveur Nagios
 Depuis votre serveur Nagios, installez d’abord ces paquets :
