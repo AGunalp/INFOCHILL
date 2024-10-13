@@ -60,15 +60,15 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 <!-- Styles CSS intégrés pour les boutons -->
 <style>
     .button {
-        display: block; /* Affiche le bouton comme un bloc pour qu'il prenne toute la largeur */
-        width: 100%; /* Prend toute la largeur de la page */
+        display: block; /* Le bouton prend toute la largeur */
+        width: 100%; /* Largeur complète */
         border: 2px solid white; /* Contour blanc */
-        border-radius: 5px; /* Arrondir les coins */
-        padding: 15px; /* Espacement intérieur */
-        text-align: center; /* Centrer le texte */
-        cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+        border-radius: 5px; /* Coins arrondis */
+        padding: 15px; /* Espacement interne */
+        text-align: center; /* Texte centré */
+        cursor: pointer; /* Curseur pour montrer qu'il est cliquable */
         margin: 10px 0; /* Espacement vertical entre les boutons */
-        transition: background-color 0.3s; /* Animation de transition pour le survol */
+        transition: background-color 0.3s; /* Animation du changement de couleur */
         color: white; /* Couleur du texte */
         text-decoration: none; /* Pas de soulignement */
     }
@@ -77,20 +77,19 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
         background-color: rgba(255, 255, 255, 0.1); /* Changement de couleur au survol */
     }
 
-    /* Ajout de cette règle pour empêcher le changement de couleur par défaut des liens */
+    /* Pour empêcher le changement de couleur des liens */
     .button:visited,
     .button:link {
-        color: white; /* Couleur du texte pour les liens */
+        color: white; /* Couleur des liens */
     }
 
     .button:focus {
-        outline: none; /* Supprimer le contour par défaut au focus */
+        outline: none; /* Enlever les contours au focus */
     }
 </style>
 
-<!-- Les boutons -->
+<!-- Boutons avec des liens relatifs -->
 <a class="button" href="./supervision/linux-debian.md">Superviser un Système Linux (Debian)</a>
-
-<a class="button" href="supervision/windows.md">Superviser un Système Windows</a>
-<a class="button" href="supervision/switch-cisco.md">Superviser un Switch Cisco</a>
-<a class="button" href="supervision/switch-hp.md">Superviser un Switch HP</a>
+<a class="button" href="./supervision/windows.md">Superviser un Système Windows</a>
+<a class="button" href="./supervision/switch-cisco.md">Superviser un Switch Cisco</a>
+<a class="button" href="./supervision/switch-hp.md">Superviser un Switch HP</a>
