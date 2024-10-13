@@ -2,7 +2,7 @@
 
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](index.md)
 
-# 📚 Documentation pour Nagios Core
+# 📚 Nagios Core sur Debian
 
 Bienvenue sur la documentation de **Nagios**. Vous êtes actuellement dans la section **NagiosCore sur Debian**. Retrouvez ici les guides d'installation et de configuration pour Linux.
 
