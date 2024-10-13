@@ -184,7 +184,7 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 </div>
 </details>
 
----
+***
 <details>
 <summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
     <strong>Superviser un Système Windows</strong>
@@ -196,7 +196,7 @@ EN COURS
 </div>
 </details>
 
----
+***
 <details>
 <summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
     <strong>Superviser un Switch Cisco</strong>
@@ -208,7 +208,7 @@ EN COURS
 </div>
 </details>
 
----
+***
 <details>
 <summary style="background-color: #212529; color: white; padding: 10px; border-radius: 5px; cursor: pointer; border: 2px solid #c3e6cb;">
     <strong>Superviser un Switch HP</strong>
@@ -219,3 +219,4 @@ EN COURS
 EN COURS
 </div>
 </details>
+
