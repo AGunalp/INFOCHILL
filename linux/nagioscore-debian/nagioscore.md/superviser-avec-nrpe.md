@@ -1,8 +1,8 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/light-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](../index.md) > [Installation et configuration du plugin NRPE](installation-config-nrpe.md)
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](../index.md) > [Superviser des machines avec le plugin NRPE](superviser-avec-nrpe.md)
 
-# 📚 Installation et configuration du plugin NRPE
+# 📚 Superviser des machines avec le plugin NRPE
 
 Bienvenue dans la section dédiée à l'installation et à la configuration du plugin **NRPE**. Vous êtes actuellement dans le guide d'installation du plugin NRPE pour Nagios.
 
