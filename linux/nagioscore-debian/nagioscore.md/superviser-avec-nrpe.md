@@ -63,7 +63,7 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
  Superviser un Système Linux (Debian)
   </summary>
 
-<div style="background-color: #343A40; padding: 10px; border-radius: 5px; border: 1px solid #c3e6cb; margin-bottom: 20px;">
+<div style="background-color: #343A40; >
 
 
 ## 🖥️ Depuis un Système Linux (Debian)
