@@ -27,48 +27,48 @@ L'objectif de ce guide est de comprendre comment superviser efficacement vos mac
 
 ### 🖥️ Depuis un Système Linux (Debian)
 
-  Pour superviser un système Linux (Debian) avec le plugin NRPE, suivez les étapes ci-dessous. Cela vous permettra de configurer efficacement la machine afin qu'elle soit surveillée par votre serveur Nagios.
+Pour superviser un système Linux (Debian) avec le plugin NRPE, suivez les étapes ci-dessous. Cela vous permettra de configurer efficacement la machine afin qu'elle soit surveillée par votre serveur Nagios.
 
-  ### Étapes à Suivre
+### Étapes à Suivre
 
-  1. **Mettre à jour le système :**
-     Assurez-vous que votre système est à jour pour éviter les problèmes de compatibilité.
+**Mettre à jour le système :**  
+Assurez-vous que votre système est à jour pour éviter les problèmes de compatibilité.
 
-     ```bash
-     apt update && apt upgrade
-     ```
+```bash
+apt update && apt upgrade
+```
 
-  2. **Installer les paquets nécessaires :**
-     Installez le serveur NRPE et les plugins Nagios.
+**Installer les paquets nécessaires :**  
+Installez le serveur NRPE et les plugins Nagios.
 
-     ```bash
-     apt install nagios-nrpe-server nagios-plugins
-     ```
+```bash
+apt install nagios-nrpe-server nagios-plugins
+```
 
-  3. **Modifier le fichier de configuration NRPE :**
-     Ouvrez le fichier de configuration NRPE pour autoriser les connexions depuis votre serveur Nagios.
+**Modifier le fichier de configuration NRPE :**  
+Ouvrez le fichier de configuration NRPE pour autoriser les connexions depuis votre serveur Nagios.
 
-     ```bash
-     vim /etc/nagios/nrpe.cfg
-     ```
+```bash
+vim /etc/nagios/nrpe.cfg
+```
 
-     - **Configurer les adresses IP autorisées :**
-       Ajoutez l'adresse IP de votre serveur Nagios à la ligne suivante (par exemple, pour l'IP `192.168.13.2`):
+- **Configurer les adresses IP autorisées :**  
+  Ajoutez l'adresse IP de votre serveur Nagios à la ligne suivante (par exemple, pour l'IP `192.168.13.2`):
 
-       ```bash
-       allowed_hosts=127.0.0.1,::1,192.168.13.2
-       ```
+  ```bash
+  allowed_hosts=127.0.0.1,::1,192.168.13.2
+  ```
 
-  4. **Redémarrer le service NRPE :**
-     Appliquez vos modifications en redémarrant le service NRPE.
+**Redémarrer le service NRPE :**  
+Appliquez vos modifications en redémarrant le service NRPE.
 
-     ```bash
-     systemctl restart nagios-nrpe-server.service
-     ```
+```bash
+systemctl restart nagios-nrpe-server.service
+```
 
-  ### 🖥️ Retournez sur Nagios pour définir des Hôtes
+### 🖥️ Retournez sur Nagios pour définir des Hôtes
 
-  Après avoir configuré votre machine Debian pour NRPE, vous devez maintenant définir cet hôte sur votre serveur Nagios. Cela permettra à Nagios de commencer à surveiller la machine.
+Après avoir configuré votre machine Debian pour NRPE, vous devez maintenant définir cet hôte sur votre serveur Nagios. Cela permettra à Nagios de commencer à surveiller la machine.
 
 <div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;">
     <strong>📝 Méthodes de Configuration</strong>
@@ -80,45 +80,46 @@ L'objectif de ce guide est de comprendre comment superviser efficacement vos mac
     <p>Dans ce guide, nous allons opter pour la méthode des <strong>fichiers séparés</strong>.</p>
 </div>
 
+#### Création du Fichier de Configuration pour l'Hôte (SrvDeb)
 
-  #### Création du Fichier de Configuration pour l'Hôte (SrvDeb)
+**Créer le fichier de configuration :**  
+Accédez au répertoire approprié et créez le fichier pour votre machine (SrvDeb).
 
-  1. **Créer le fichier de configuration :**
-     Accédez au répertoire approprié et créez le fichier pour votre machine (SrvDeb).
+```bash
+touch /usr/local/nagios/etc/servers/SrvDeb.cfg
+```
 
-     ```bash
-     touch /usr/local/nagios/etc/servers/SrvDeb.cfg
-     ```
+**Éditer le fichier :**  
+Ouvrez le fichier créé pour ajouter les informations nécessaires.
 
-  2. **Éditer le fichier :**
-     Ouvrez le fichier créé pour ajouter les informations nécessaires.
+```bash
+vim /usr/local/nagios/etc/servers/SrvDeb.cfg
+```
 
-     ```bash
-     vim /usr/local/nagios/etc/servers/SrvDeb.cfg
-     ```
+- **Ajouter les définitions de l'hôte :**  
+Insérez le code suivant dans le fichier :
 
-  3. **Ajouter les définitions de l'hôte :**
-     Insérez le code suivant dans le fichier :
+   ```plaintext
+   define host {
+      use                     linux-server          ; Modèle prédéfini pour les serveurs Linux
+      host_name               SrvDeb                ; Nom de l'hôte
+      alias                   Serveur de Test       ; Alias pour afficher dans Nagios
+      address                 192.168.13.2          ; Adresse IP de la machine
+      max_check_attempts      5                     ; Nombre de tentatives avant une alerte
+      check_period            24x7                  ; Vérification continue
+      notification_interval    30                   ; Intervalle de notification
+      notification_period     24x7                  ; Période de notification
+   }
+   ```
 
-     ```plaintext
-     define host {
-         use                     linux-server          ; Modèle prédéfini pour les serveurs Linux
-         host_name               SrvDeb                ; Nom de l'hôte
-         alias                   Serveur de Test       ; Alias pour afficher dans Nagios
-         address                 192.168.13.2          ; Adresse IP de la machine
-         max_check_attempts      5                     ; Nombre de tentatives avant une alerte
-         check_period            24x7                  ; Vérification continue
-         notification_interval    30                   ; Intervalle de notification
-         notification_period     24x7                  ; Période de notification
-     }
-     ```
 #### Redémarrez vos services :
 
 ```bash
 systemctl restart apache2
 systemctl restart nagios
 ```
-Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine qui y est référenciée, pour mon cas j'ai remonté une machine debian ayant pour nom `AP4-GLPI` :
+
+Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine qui y est référencée, pour mon cas j'ai remonté une machine debian ayant pour nom `AP4-GLPI` :
 
 ![alt text](/assets/images/host_debian_nagios.png)
 
