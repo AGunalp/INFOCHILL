@@ -58,9 +58,9 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 
 ## Choisissez le système à superviser :
 
-| **Type de Système**                      | **Description**                                                    | **Lien de Supervision**                         |
-|------------------------------------------|--------------------------------------------------------------------|-------------------------------------------------|
-| **Système Linux (Debian)**               | Pour surveiller un serveur ou une machine Debian (Linux).           | [Configurer la supervision](./supervision/linux-debian.md) |
-| **Système Windows**                      | Pour surveiller des postes ou serveurs fonctionnant sous Windows.   | [Configurer la supervision](./supervision/windows.md)      |
-| **Switch Cisco**                         | Pour superviser des équipements réseau Cisco (switches/routeurs).   | [Configurer la supervision](./supervision/switch-cisco.md) |
-| **Switch HP**                            | Pour superviser des switches réseau de marque HP.                   | [Configurer la supervision](./supervision/switch-hp.md)    |
+| Type de Système             | Description                                                    | Lien de Supervision                                  |
+|-----------------------------|----------------------------------------------------------------|------------------------------------------------------|
+| **Système Linux (Debian)**   | Surveiller un serveur ou une machine sous Debian (Linux).      | [Configurer la supervision](./supervision/linux-debian.md) |
+| **Système Windows**          | Surveiller des postes ou serveurs sous Windows.                | [Configurer la supervision](./supervision/windows.md)      |
+| **Switch Cisco**             | Superviser des équipements réseau Cisco (switches/routeurs).   | [Configurer la supervision](./supervision/switch-cisco.md) |
+| **Switch HP**                | Superviser des switches réseau de marque HP.                   | [Configurer la supervision](./supervision/switch-hp.md)    |
