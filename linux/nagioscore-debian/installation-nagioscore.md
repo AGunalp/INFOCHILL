@@ -18,13 +18,17 @@ Vous êtes actuellement dans le guide d'installation de **Nagios Core** sur Debi
 
 ---
 
+**Mettre à jour le système**
+
 Pour commencer, assurez-vous que votre système est à jour. Exécutez la commande suivante : 
 
 ```bash
 apt update && apt upgrade
 ```
 
-Lancez l'installation des paquets nécessaires pour Nagios :
+**Installer les paquets nécessaires**
+
+Lancez l'installation des paquets nécessaires pour Nagios : 
 
 ```bash
 apt install openssh-server
@@ -32,13 +36,17 @@ apt install autoconf gcc libc6 make wget unzip apache2 apache2-utils php libgd-d
 apt install openssl libssl-dev
 ```
 
-Accédez à un répertoire temporaire
+**Accéder à un répertoire temporaire**
+
+Accédez à un répertoire temporaire :
 
 ```bash
 cd /tmp
 ```
 
-Téléchargez le fichier pour installer Nagios Core depuis Internet :
+**Télécharger Nagios Core**
+
+Téléchargez le fichier pour installer Nagios Core depuis Internet : 
 
 ```bash
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.6.tar.gz
@@ -46,11 +54,15 @@ wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.6.tar.gz
 
 **Info importante :** Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons ce document. Si vous voulez installer la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
 
+**Extraire le fichier téléchargé**
+
 Une fois le téléchargement terminé, extrayez le fichier compressé : 
 
 ```bash
 tar -xzvf nagios-4.5.6.tar.gz
 ```
+
+**Naviguer dans le répertoire extrait**
 
 Naviguez dans le répertoire que vous venez d'extraire : 
 
@@ -58,11 +70,15 @@ Naviguez dans le répertoire que vous venez d'extraire :
 cd nagios-4.5.6
 ```
 
+**Exécuter le script de configuration**
+
 Exécutez le script de configuration de Nagios Core : 
 
 ```bash
 ./configure --with-httpd-conf=/etc/apache2/sites-enabled
 ```
+
+**Compiler les fichiers**
 
 Compilez les fichiers avec la commande suivante : 
 
@@ -70,17 +86,23 @@ Compilez les fichiers avec la commande suivante :
 make all
 ```
 
+**Créer le groupe et l'utilisateur Nagios**
+
 Créez le groupe et l'utilisateur Nagios sur le système : 
 
 ```bash
 make install-groups-users
 ```
 
+**Installer les fichiers principaux**
+
 Installez les fichiers principaux : 
 
 ```bash
 make install
 ```
+
+**Installer les fichiers de configuration et démarrer Nagios**
 
 Pour installer Nagios Core et le configurer correctement, vous devez exécuter plusieurs commandes. Cela inclut l'installation des fichiers principaux, la configuration du démarrage automatique de Nagios en tant que service, et l'installation des fichiers de configuration nécessaires pour l'interface web. Voici les commandes à exécuter : 
 
@@ -92,12 +114,16 @@ make install-config
 make install-webconf
 ```
 
+**Activer les modules nécessaires pour Apache**
+
 Activez les modules nécessaires pour Apache : 
 
 ```bash
 a2enmod rewrite
 a2enmod cgi
 ```
+
+**Créer un compte administrateur**
 
 Une fois l'installation terminée, vous devez créer un compte administrateur pour accéder à l'interface web de Nagios. Utilisez la commande suivante pour configurer les identifiants :
 
@@ -107,6 +133,8 @@ htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 
 Ici, le `-c` indique de créer un nouveau fichier pour stocker les identifiants (il n'est pas nécessaire de réutiliser cette option si vous créez d'autres utilisateurs). Le `nagiosadmin` est le nom du login.
 
+**Redémarrer les services**
+
 Ensuite, redémarrez les services Apache et Nagios pour appliquer les modifications :
 
 ```bash
@@ -114,14 +142,20 @@ systemctl restart apache2
 systemctl restart nagios
 ```
 
+**Accéder à l'interface Nagios**
+
 Ouvrez un navigateur web et accédez à votre interface Nagios à l'adresse suivante (en remplaçant par l'IP de votre serveur) :
+
 ```bash
 http://[votre-serveur]/nagios
 ```
+
 Par exemple (pour mon cas) :
+
 ```bash
 http://192.168.13.2/nagios
 ```
+
 Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, comme illustré ci-dessous :
 
 ![alt text](/assets/images/interface_nagios.png)

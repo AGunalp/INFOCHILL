@@ -2,9 +2,10 @@
 
 ###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > [Supervisier Système Linux](linux-debian.md)
 
-# 📚 Superviser des machines avec le plugin NRPE
+# 📚 Superviser un sysème Linux (debian) avec le plugin NRPE
 
-Bienvenue dans la section dédiée à l'installation et à la configuration du plugin **NRPE**. Ce guide vous accompagnera pas à pas pour configurer NRPE avec Nagios sur un système Debian.
+Bienvenue dans ce guide dédié à l'installation et à la configuration du plugin **NRPE** sur un système Debian. Vous allez apprendre comment mettre en place NRPE pour assurer la supervision de votre machine par le serveur Nagios.
+
 
 ---
 
@@ -141,3 +142,6 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 #### Retour sur le Serveur Nagios :
 
 - Définition de l'hôte dans un fichier de configuration dans le répertoire `/usr/local/nagios/etc/servers/`
+
+# A VENIR : 
+* ajout commandes pour supervisier les services
