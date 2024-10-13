@@ -1,12 +1,10 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/dark-theme.css">
 
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](/nagioscore.md)
+
 # 📚 Documentation de Nagios
 
 Bienvenue sur la documentation de **Nagios**. Vous êtes actuellement dans la section **NagiosCore sur Debian**. Retrouvez ici les guides d'installation et de configuration pour Linux.
-
----
-
-## 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore sur Debian](/nagioscore.md)
 
 ---
 
