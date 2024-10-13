@@ -55,41 +55,12 @@ Après avoir créé le répertoire, il est important de transmettre le répertoi
 chown -R nagios:nagios /usr/local/nagios/etc/servers
 ```
 
-## Sélectionnez le type de système à superviser :
 
-<!-- Styles CSS intégrés pour les boutons -->
-<style>
-    .button {
-        display: block; /* Le bouton prend toute la largeur */
-        width: 100%; /* Largeur complète */
-        border: 2px solid white; /* Contour blanc */
-        border-radius: 5px; /* Coins arrondis */
-        padding: 15px; /* Espacement interne */
-        text-align: center; /* Texte centré */
-        cursor: pointer; /* Curseur pour montrer qu'il est cliquable */
-        margin: 10px 0; /* Espacement vertical entre les boutons */
-        transition: background-color 0.3s; /* Animation du changement de couleur */
-        color: white; /* Couleur du texte */
-        text-decoration: none; /* Pas de soulignement */
-    }
+## Choisissez le système à superviser :
 
-    .button:hover {
-        background-color: rgba(255, 255, 255, 0.1); /* Changement de couleur au survol */
-    }
-
-    /* Pour empêcher le changement de couleur des liens */
-    .button:visited,
-    .button:link {
-        color: white; /* Couleur des liens */
-    }
-
-    .button:focus {
-        outline: none; /* Enlever les contours au focus */
-    }
-</style>
-
-<!-- Boutons avec des liens relatifs -->
-<a class="button" href="./supervision/linux-debian.md">Superviser un Système Linux (Debian)</a>
-<a class="button" href="./supervision/windows.md">Superviser un Système Windows</a>
-<a class="button" href="./supervision/switch-cisco.md">Superviser un Switch Cisco</a>
-<a class="button" href="./supervision/switch-hp.md">Superviser un Switch HP</a>
+| **Type de Système**                      | **Description**                                                    | **Lien de Supervision**                         |
+|------------------------------------------|--------------------------------------------------------------------|-------------------------------------------------|
+| **Système Linux (Debian)**               | Pour surveiller un serveur ou une machine Debian (Linux).           | [Configurer la supervision](./supervision/linux-debian.md) |
+| **Système Windows**                      | Pour surveiller des postes ou serveurs fonctionnant sous Windows.   | [Configurer la supervision](./supervision/windows.md)      |
+| **Switch Cisco**                         | Pour superviser des équipements réseau Cisco (switches/routeurs).   | [Configurer la supervision](./supervision/switch-cisco.md) |
+| **Switch HP**                            | Pour superviser des switches réseau de marque HP.                   | [Configurer la supervision](./supervision/switch-hp.md)    |
