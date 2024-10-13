@@ -1,81 +1,27 @@
 body {
     background-color: #0f0f0f; /* Fond sombre */
     color: #e0e0e0; /* Texte clair */
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0 20px;
+    font-family: Arial, sans-serif;
 }
 
 
 pre, code {
     background-color: #2e2e2e; /* Fond pour le code */
     color: #ffffff; /* Couleur du texte du code */
-    padding: 15px; /* Ajout de padding pour espacer le contenu */
-    border-radius: 10px; /* Coins plus arrondis */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre pour un effet de relief */
-    border: 1px solid #3c3c3c; /* Légère bordure pour démarquer le bloc */
+    padding: 10px;
+    border-radius: 10px; /* Coins arrondis uniquement pour les blocs de code */
+    border: 1px solid #3c3c3c; /* Ajout d'une bordure subtile pour mieux les démarquer */
 }
 
 code {
-    padding: 5px 10px; /* Plus de padding pour les blocs en ligne */
-    border-radius: 12px; /* Coins arrondis pour le code en ligne */
-    font-size: 0.95em; /* Légèrement plus petit pour le code en ligne */
-    background-color: #3a3a3a; /* Fond plus foncé pour contraster */
+    padding: 1px 4px; /* Padding pour le code en ligne */
+    border-radius: 5px; /* Coins arrondis pour le code en ligne */
 }
 
 h1, h2, h3 {
     color: #f8f8f2; /* Couleur des titres */
-    font-weight: 600;
-    margin-top: 20px;
-}
-
-h1 {
-    font-size: 2.2em;
-    border-bottom: 2px solid #3c3c3c; /* Ligne fine sous le titre principal */
-    padding-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.8em;
-    border-bottom: 1px solid #3c3c3c; /* Ligne fine sous le titre */
-    padding-bottom: 8px;
-}
-
-h3 {
-    font-size: 1.5em;
 }
 
 a {
     color: #66d9ef; /* Couleur des liens */
-    text-decoration: none;
-    border-bottom: 1px solid #66d9ef;
-    transition: color 0.3s, border-bottom 0.3s; /* Transition douce pour l'effet hover */
-}
-
-a:hover {
-    color: #88e1ff; /* Couleur plus claire au survol */
-    border-bottom: 1px solid #88e1ff;
-}
-
-/* Style des boutons */
-button, .button {
-    background-color: #66d9ef;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s, transform 0.2s; /* Ajout d'une transition douce */
-}
-
-button:hover, .button:hover {
-    background-color: #88e1ff;
-    transform: scale(1.05); /* Léger agrandissement au survol */
-}
-
-/* Ajout d'une légère animation de transition pour les titres */
-h1, h2, h3 {
-    transition: color 0.3s, background-color 0.3s;
 }
