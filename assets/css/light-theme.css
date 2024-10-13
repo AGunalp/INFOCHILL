@@ -23,7 +23,7 @@ pre {
 /* Style pour le code en ligne */
 code {
     background-color: rgba(255, 255, 255, 0.1); /* Fond translucide pour le code en ligne */
-    color: #66d9ef; /* Couleur du texte du code */
+    color: #007188; /* Couleur du texte du code */
     padding: 2px 6px; /* Espacement interne */
     border-radius: 4px; /* Coins arrondis */
     font-family: 'Courier New', Courier, monospace; /* Changer la police pour le code */
@@ -32,21 +32,21 @@ code {
 /* Style des titres */
 h1, h2, h3 {
     color: #f8f8f2; /* Couleur des titres */
-    border-bottom: 2px solid #66d9ef; /* Soulignement des titres */
+    border-bottom: 2px solid #014e5e; /* Soulignement des titres */
     padding-bottom: 5px; /* Espacement en bas des titres */
     margin: 20px 0; /* Marges pour l'espacement */
 }
 
 /* Style des liens */
 a {
-    color: #66d9ef; /* Couleur des liens */
+    color: #017086; /* Couleur des liens */
     text-decoration: none; /* Retire le soulignement par défaut */
     transition: color 0.3s, transform 0.3s; /* Transition pour le survol */
 }
 
 a:hover {
     text-decoration: underline; /* Souligne les liens au survol */
-    color: #9ae0f4; /* Couleur au survol */
+    color: #00627e; /* Couleur au survol */
     transform: scale(1.05); /* Légère augmentation de taille au survol */
 }
 
