@@ -59,7 +59,6 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 
 
 
-<div style="background-color: #343A40; padding: 10px; border-radius: 5px; border: 1px solid #c3e6cb;">
 
 ## 🖥️ Depuis un Système Linux (Debian)
 
