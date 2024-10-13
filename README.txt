@@ -24,6 +24,6 @@ git push origin main
 
     Si vous avez une erreur, utilisez :
 
-git pull origin main
+git pull origin main ensuite git push origin main
 ou
 git push --force origin main

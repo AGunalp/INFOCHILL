@@ -1,25 +1,67 @@
+/* Style général de la page */
 body {
     background-color: #121212; /* Fond sombre */
     color: #e0e0e0; /* Texte clair */
     font-family: Arial, sans-serif;
+    line-height: 1.6; /* Amélioration de la lisibilité */
+    margin: 0; /* Suppression de la marge par défaut */
+    padding: 20px; /* Ajout d'un padding */
 }
 
-pre, code {
-    background-color: #2e2e2e !important; /* Fond pour le code */
-    color: #ffffff !important; /* Couleur du texte du code */
-    padding: 10px;
-    border-radius: 1px; /* Coins arrondis */
+/* Style pour les blocs de code */
+pre {
+    background-color: #2e2e2e; /* Fond pour le code */
+    color: #ffffff; /* Couleur du texte du code */
+    padding: 15px; /* Espacement interne du bloc */
+    border-radius: 8px; /* Coins arrondis */
+    overflow: auto; /* Permet le défilement si le contenu dépasse */
+    border: 1px solid #444; /* Bordure discrète */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour un effet de profondeur */
+    margin: 20px 0; /* Marges en haut et en bas */
 }
 
+/* Style pour le code en ligne */
 code {
-    padding: 1px 4px; /* Un peu de padding pour le code en ligne */
-    border-radius: 10px; /* Coins arrondis */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond translucide pour le code en ligne */
+    color: #66d9ef; /* Couleur du texte du code */
+    padding: 2px 6px; /* Espacement interne */
+    border-radius: 4px; /* Coins arrondis */
 }
 
+/* Style des titres */
 h1, h2, h3 {
     color: #f8f8f2; /* Couleur des titres */
+    border-bottom: 2px solid #66d9ef; /* Soulignement des titres */
+    padding-bottom: 5px; /* Espacement en bas des titres */
+    margin: 20px 0; /* Marges pour l'espacement */
 }
 
+/* Style des liens */
 a {
     color: #66d9ef; /* Couleur des liens */
+    text-decoration: none; /* Retire le soulignement par défaut */
+    transition: color 0.3s; /* Transition pour le survol */
+}
+
+a:hover {
+    text-decoration: underline; /* Souligne les liens au survol */
+    color: #9ae0f4; /* Couleur au survol */
+}
+
+/* Style pour les listes */
+ul {
+    list-style-type: none; /* Retire les puces par défaut */
+    padding: 0; /* Supprime le padding par défaut */
+}
+
+ul li {
+    background-color: rgba(255, 255, 255, 0.05); /* Fond translucide pour les éléments de liste */
+    margin: 10px 0; /* Marge entre les éléments de liste */
+    padding: 10px; /* Espacement interne */
+    border-radius: 8px; /* Coins arrondis */
+    transition: background 0.3s; /* Transition pour le survol */
+}
+
+ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Changement de couleur au survol */
 }
