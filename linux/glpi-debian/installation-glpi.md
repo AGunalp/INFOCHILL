@@ -120,7 +120,7 @@ systemctl restart apache2
 
 Lorsque vous arrivez à l'étape de la configuration de la base de données dans l'interface GLPI, vous devez indiquer l'adresse IP de votre serveur MariaDB, ainsi que les informations d'utilisateur et de mot de passe associés.
 
-* [Voir comment installer et configurer une base de données MariaDB](../mariadb-configuration/index.md)
+* **[<font color="red">Voir comment installer et configurer une base de données MariaDB](../mariadb-configuration/index.md)**</font>
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 

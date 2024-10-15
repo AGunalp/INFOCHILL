@@ -164,4 +164,6 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 - Définition de l'hôte dans un fichier de configuration dans le répertoire `/usr/local/nagios/etc/servers/`
 
 # A VENIR : 
-* ajout commandes pour supervisier les services
+<div style="border: 2px solid red; color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; width: fit-content; margin: 10px 0;">
+    ⚠️ <strong>Avis :</strong> La rédaction des commandes pour superviser les services arrive très bientôt. Merci de votre patience !
+</div>
