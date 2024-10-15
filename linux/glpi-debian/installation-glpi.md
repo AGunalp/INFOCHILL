@@ -30,7 +30,7 @@ apt install apache2 && apt install php
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-**Télécharger GLPI**
+**Télécharger l'archive GLPI**
 
 Accédez à un répertoire temporaire pour télécharger l'archive de GLPI :
 
@@ -76,8 +76,15 @@ chown -R www-data:www-data /var/www/html/glpi/
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
+**Connectez-vous à l'interface depuis votre navigateur**
+
+![alt text](/assets/images/glpi-connexion-navigateur.png)
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Installer les extensions PHP nécessaires**
+
+``[SCREEN A INSERER]``
 
 GLPI nécessite plusieurs extensions PHP pour fonctionner correctement. Installez-les avec la commande suivante :
 
@@ -103,7 +110,7 @@ systemctl restart apache2
 
 Lorsque vous arrivez à l'étape de la configuration de la base de données dans l'interface GLPI, vous devez indiquer l'adresse IP de votre serveur MariaDB, ainsi que les informations d'utilisateur et de mot de passe associés.
 
-[Voir comment installer et configurer une base de données MariaDB](../mariadb-configuration/index.md)
+* [Voir comment installer et configurer une base de données MariaDB](../mariadb-configuration/index.md)
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
@@ -112,6 +119,7 @@ Lorsque vous arrivez à l'étape de la configuration de la base de données dans
 
 Une fois la base de données et l'utilisateur créés, renseignez les informations dans l'interface de GLPI :
 
+![alt text](/assets/images/glpi-setup-1b.png)
 - **Serveur SQL MariaDB ou MySQL :** l'IP de votre serveur MariaDB.
 - **Utilisateur GLPI :** le nom d'utilisateur créé pour la base de données.
 - **Mot de passe :** le mot de passe associé.
@@ -121,13 +129,15 @@ Une fois la base de données et l'utilisateur créés, renseignez les informatio
 
 **Sélectionner la base de données**
 
-Sur la page suivante, sélectionnez votre base de données existante.
+![alt text](/assets/images/glpi-setup-2.png)
+Sur la page ci-dessus, sélectionnez votre base de données existante.
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 
 **Connexion à GLPI**
 
 Une fois l'installation terminée, vous arrivez à la page de connexion. Le compte super-administrateur par défaut est `glpi` avec le mot de passe `glpi`. Utilisez ces identifiants pour accéder à toutes les fonctionnalités de gestion de GLPI.
 
-![alt text](/assets/images/interface_glpi.png)
+![alt text](/assets/images/glpi-interface-connexion.png)
