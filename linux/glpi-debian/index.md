@@ -32,5 +32,14 @@ Bienvenue sur la documentation de **GLPI**. Vous êtes actuellement dans la sect
 Pour toute question, consultez nos forums ou la [documentation officielle de GLPI](https://glpi-project.org/documentation/).
 
 ---
+---
+### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md)
 
-🔗 [Retour à l'accueil](../../index.md)
+<div style="margin: 20px 0; display: flex; justify-content: flex-end; align-items: center;">
+    <a href="../../index.md" style="padding: 6px 10px; background-color: #003366; color: white; text-decoration: none; border: 1px solid white; border-radius: 4px;">
+        Retour à l'Accueil
+    </a>
+</div>
+
+---
+---

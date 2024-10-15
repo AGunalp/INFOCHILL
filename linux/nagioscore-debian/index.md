@@ -34,5 +34,15 @@ Bienvenue sur la documentation de **Nagios**. Vous êtes actuellement dans la se
 Pour toute question, consultez nos forums ou la [documentation officielle de Nagios](https://www.nagios.org/documentation/).
 
 ---
+---
 
-🔗 [Retour à l'accueil](../../index.md)
+### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md)
+
+<div style="margin: 20px 0; display: flex; justify-content: flex-end; align-items: center;">
+    <a href="../../index.md" style="padding: 6px 10px; background-color: #003366; color: white; text-decoration: none; border: 1px solid white; border-radius: 4px;">
+        Retour à l'Accueil
+    </a>
+</div>
+
+---
+---

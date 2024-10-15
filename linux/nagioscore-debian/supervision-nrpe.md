@@ -85,11 +85,11 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 - [**Système Linux (Debian)**](./supervision/linux-debian.md)  
   Pour surveiller un serveur ou une machine Debian (Linux).
 
-- [**<font color="red">Système Windows**</font>](./supervision/windows.md)  
+- [**<font color="red">Système Windows</font>**](./supervision/windows.md)  
   Pour surveiller des postes ou serveurs sous Windows.
 
-- [**<font color="red">Switch Cisco**</font>](./supervision/switch-cisco.md)  
+- [**<font color="red">Switch Cisco</font>**](./supervision/switch-cisco.md)  
   Pour superviser des switches réseau de marque Cisco.
 
-- [**<font color="red">Switch HP**</font>](./supervision/switch-hp.md)  
+- [**<font color="red">Switch HP</font>**](./supervision/switch-hp.md)  
   Pour superviser des switches réseau de marque HP.

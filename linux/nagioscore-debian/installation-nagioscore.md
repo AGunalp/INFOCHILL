@@ -204,12 +204,10 @@ Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, c
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > [Installation Nagios Core Debian](installation-nagioscore.md)
+### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > [Installation Nagios Core Debian](installation-nagioscore.md)
 
-<div style="text-align: center; margin: 20px 0;">
-    <a href="../../index.md" style="display: inline-block; padding: 8px 12px; background-color: transparent; color: #007bff; text-decoration: none; border: 1px solid #007bff; border-radius: 4px; transition: background-color 0.3s;">
+<div style="margin: 20px 0; display: flex; justify-content: flex-end; align-items: center;">
+    <a href="../../index.md" style="padding: 6px 10px; background-color: #003366; color: white; text-decoration: none; border: 1px solid white; border-radius: 4px;">
         Retour à l'Accueil
     </a>
 </div>
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">

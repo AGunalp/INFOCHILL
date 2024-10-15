@@ -120,7 +120,7 @@ systemctl restart apache2
 
 Lorsque vous arrivez à l'étape de la configuration de la base de données dans l'interface GLPI, vous devez indiquer l'adresse IP de votre serveur MariaDB, ainsi que les informations d'utilisateur et de mot de passe associés.
 
-* **[<font color="red">Voir comment installer et configurer une base de données MariaDB](../mariadb-configuration/index.md)**</font>
+* **[<font color="red">Voir comment installer et configurer une base de données MariaDB](../mariadb-configuration/index.md)</font>**
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
@@ -151,3 +151,16 @@ Sur la page ci-dessus, sélectionnez votre base de données existante.
 Une fois l'installation terminée, vous arrivez à la page de connexion. Le compte super-administrateur par défaut est `glpi` avec le mot de passe `glpi`. Utilisez ces identifiants pour accéder à toutes les fonctionnalités de gestion de GLPI.
 
 ![alt text](/assets/images/glpi-interface-connexion.png)
+
+---
+---
+### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md) > [Installation GLPI Debian](installation-glpi.md)
+
+<div style="margin: 20px 0; display: flex; justify-content: flex-end; align-items: center;">
+    <a href="../../index.md" style="padding: 6px 10px; background-color: #003366; color: white; text-decoration: none; border: 1px solid white; border-radius: 4px;">
+        Retour à l'Accueil
+    </a>
+</div>
+
+---
+---

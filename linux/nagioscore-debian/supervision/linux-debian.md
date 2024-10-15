@@ -167,3 +167,17 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 <div style="border: 2px solid red; color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; width: fit-content; margin: 10px 0;">
     ⚠️ <strong>Avis :</strong> La rédaction des commandes pour superviser les services arrive très bientôt. Merci de votre patience !
 </div>
+
+
+---
+---
+### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > [Supervisier Système Linux](linux-debian.md)
+
+<div style="margin: 20px 0; display: flex; justify-content: flex-end; align-items: center;">
+    <a href="../../index.md" style="padding: 6px 10px; background-color: #003366; color: white; text-decoration: none; border: 1px solid white; border-radius: 4px;">
+        Retour à l'Accueil
+    </a>
+</div>
+
+---
+---
