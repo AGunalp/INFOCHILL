@@ -16,7 +16,7 @@ Vous êtes actuellement dans le guide d'installation de **GLPI** sur Debian. Sui
   </ul>
 </div>
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+---
 
 
 **Installer les paquets nécessaires**
