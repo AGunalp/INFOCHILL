@@ -44,7 +44,7 @@ Pour toute question, consultez nos forums ou la [documentation officielle de Nag
 <div style="display: flex; flex-direction: column; gap: 10px; margin: 20px 0;">
 
 <!-- Bouton 1 : Simple avec couleur de fond -->
-<a href="../../index.md" style="padding: 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; border: 1px solid #0056b3; text-align: center;">
+<a href="https://infochill.com" style="padding: 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; border: 1px solid #0056b3; text-align: center;">
    Retour à l'Accueil
 </a>
 
