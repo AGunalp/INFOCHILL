@@ -38,8 +38,5 @@ Pour toute question, consultez nos forums ou la [documentation officielle de Nag
 
 ### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md)
 
-<p style="text-align: right; margin: 20px 0;">
-    <a href="../../index.md">
-        Retour à l'Accueil
-    </a>
-</p>
+
+### [Retour à l'Accueil](../../index.md)
