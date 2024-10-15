@@ -13,6 +13,7 @@
 ---
 ### 📂 Vous êtes ici : [Accueil](../../index.md) > [Windows Server 2022](./index.md)
 
+
 <p style="text-align: right; margin: 20px 0;">
     <a href="https://infochill.com" style="display: inline-block; padding: 8px 12px; background-color: #003366; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold;">
         Retour à l'Accueil
