@@ -93,48 +93,49 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
         align-items: center;
         justify-content: center;
         width: 100%; /* Prendre toute la largeur du conteneur */
-        height: 60px; /* Hauteur du bouton */
+        height: 45px; /* Hauteur du bouton */
         background-color: transparent; /* Pas de couleur de fond */
         color: white; /* Couleur du texte */
         text-decoration: none; /* Pas de soulignement */
-        border: 2px solid white; /* Contour blanc */
-        border-radius: 5px; /* Coins arrondis */
-        margin: 10px 0; /* Marges verticales */
-        transition: background-color 0.3s, color 0.3s; /* Transition de couleur */
-        font-size: 18px; /* Taille de police plus grande */
+        border: 2px solid #ffffff; /* Contour blanc */
+        border-radius: 7px; /* Coins arrondis */
+        margin: 5px 0; /* Marges verticales */
+        transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition de couleur et transform */
+        font-size: 17px; /* Taille de police plus grande */
         font-weight: 500; /* Poids de police moyen */
         text-transform: uppercase; /* Texte en majuscules pour un look moderne */
         letter-spacing: 1px; /* Espacement des lettres */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 1px 5px rgba(255, 255, 255, 0.5); /* Ombre externe et interne */
+        background-clip: padding-box; /* Pour le dégradé de bordure */
     }
 
     .button:hover {
         background-color: rgba(255, 255, 255, 0.2); /* Couleur au survol (semi-transparent) */
         color: white; /* Garder la couleur blanche au survol */
         text-decoration: none; /* Pas de soulignement au survol */
-        transform: translateY(-2px); /* Léger effet de soulèvement */
+        transform: scale(1.01); /* Légère augmentation de taille au survol */
     }
 
     .icon {
         margin-right: 10px; /* Espace entre l'icône et le texte */
-        font-size: 20px; /* Taille de l'icône légèrement plus grande */
+        font-size: 15px; /* Taille de l'icône légèrement plus grande */
     }
 </style>
 
 <a href="https://infochill.com/linux/nagioscore-debian/supervision/linux-debian.html" class="button">
-    <span class="icon">➔</span> Système Linux
+    <span class="icon">➤</span> Superviser un Système Linux (Debian)
 </a>
 
 <a href="https://infochill.com/linux/nagioscore-debian/supervision/windows.html" class="button">
-    <span class="icon">➔</span> Système Windows
+    <span class="icon">➤</span> Superviser un Système Windows
 </a>
 
 <a href="https://infochill.com/linux/nagioscore-debian/supervision/switch-cisco.html" class="button">
-    <span class="icon">➔</span> Switch Cisco
+    <span class="icon">➤</span> Superviser un Switch Cisco
 </a>
 
 <a href="https://infochill.com/linux/nagioscore-debian/supervision/switch-hp.html" class="button">
-    <span class="icon">➔</span> Switch HP
+    <span class="icon">➤</span> Superviser un Switch HP
 </a>
 
 
