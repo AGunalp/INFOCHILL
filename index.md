@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/assets/css/blue-theme.css">
+    <title>Accueil</title>
+</head>
+<body style="background-color: black; color: white;">
+    <!-- Contenu de la page d'accueil -->
+</body>
+</html>
+
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
 ###### 📂 Vous êtes ici : [Accueil](index.md)
