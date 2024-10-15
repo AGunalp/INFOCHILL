@@ -199,15 +199,13 @@ Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, c
 
 ![alt text](/assets/images/interface_nagios.png)
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+---
+---
 
 ### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > [Installation Nagios Core Debian](installation-nagioscore.md)
 
-<div style="margin: 20px 0; display: flex; justify-content: flex-end; align-items: center;">
-    <a href="../../index.md" style="padding: 6px 10px; background-color: #003366; color: white; text-decoration: none; border: 1px solid white; border-radius: 4px;">
+<p style="text-align: right; margin: 20px 0;">
+    <a href="https://infochill.com" style="display: inline-block; padding: 8px 12px; background-color: #003366; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold;">
         Retour à l'Accueil
     </a>
-</div>
+</p>

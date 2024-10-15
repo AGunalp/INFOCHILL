@@ -13,11 +13,8 @@
 ---
 ### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > [Supervisier Switch HP](switch-hp.md)
 
-<div style="margin: 20px 0; display: flex; justify-content: flex-end; align-items: center;">
-    <a href="../../index.md" style="padding: 6px 10px; background-color: #003366; color: white; text-decoration: none; border: 1px solid white; border-radius: 4px;">
+<p style="text-align: right; margin: 20px 0;">
+    <a href="https://infochill.com" style="display: inline-block; padding: 8px 12px; background-color: #003366; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold;">
         Retour à l'Accueil
     </a>
-</div>
-
----
----
+</p>
