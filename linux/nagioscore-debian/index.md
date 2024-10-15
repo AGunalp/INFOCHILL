@@ -39,4 +39,38 @@ Pour toute question, consultez nos forums ou la [documentation officielle de Nag
 ### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md)
 
 
-### [Retour à l'Accueil](../../index.md)
+---
+
+## 🔘 Boutons Retour à l'Accueil
+
+1. **Bouton Simple en Texte**
+   - [Retour à l'Accueil](../../index.md)
+
+2. **Bouton avec Markdown (Style Simple)**
+   - **[Retour à l'Accueil](../../index.md)**
+
+3. **Bouton avec Emoji**
+   - 🏠 **[Retour à l'Accueil](../../index.md)**
+
+4. **Bouton Souligné**
+   - <u>[Retour à l'Accueil](../../index.md)</u>
+
+5. **Bouton en Gras**
+   - **[Retour à l'Accueil](../../index.md)**
+
+6. **Bouton avec Couleur (HTML)**
+   - <a href="../../index.md" style="color: blue; text-decoration: underline;">Retour à l'Accueil</a>
+
+7. **Bouton Style Simple avec Liste**
+   - - [Retour à l'Accueil](../../index.md)
+
+8. **Bouton avec Image (si supporté)**
+   - ![Accueil](https://via.placeholder.com/15/007bff/000000?text=+) [Retour à l'Accueil](../../index.md)
+
+9. **Bouton en Bloc**
+   - <div style="text-align: center;"><a href="../../index.md" style="background-color: #007bff; color: white; padding: 5px 10px; text-decoration: none;">Retour à l'Accueil</a></div>
+
+10. **Bouton Simple en Liste Numérotée**
+   - 1. [Retour à l'Accueil](../../index.md)
+
+---
