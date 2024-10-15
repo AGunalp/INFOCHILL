@@ -16,7 +16,8 @@ Vous êtes actuellement dans le guide d'installation de **GLPI** sur Debian. Sui
   </ul>
 </div>
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Installer les paquets nécessaires**
 
@@ -26,7 +27,8 @@ Pour commencer, installez les paquets requis pour faire de votre serveur une mac
 apt install apache2 && apt install php
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Télécharger GLPI**
 
@@ -39,7 +41,8 @@ cd /tmp
 wget https://github.com/glpi-project/glpi/releases/download/10.0.16/glpi-10.0.16.tgz
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Extraire le fichier téléchargé**
 
@@ -49,7 +52,8 @@ Une fois l'archive téléchargée, extrayez son contenu :
 tar -xvzf glpi-10.0.16.tgz
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Déplacer GLPI dans le répertoire web**
 
@@ -59,7 +63,8 @@ Déplacez le dossier extrait vers le répertoire où Apache pourra rendre GLPI a
 mv /tmp/glpi /var/www/html/
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Ajuster les permissions**
 
@@ -69,7 +74,8 @@ Pour permettre à Apache2 d’accéder et de manipuler correctement les fichiers
 chown -R www-data:www-data /var/www/html/glpi/
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Installer les extensions PHP nécessaires**
 
@@ -79,7 +85,8 @@ GLPI nécessite plusieurs extensions PHP pour fonctionner correctement. Installe
 apt install php-mysqli php-curl php-gd php-intl php-xml
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Redémarrer les services**
 
@@ -89,7 +96,8 @@ Redémarrez Apache après avoir installé les extensions PHP :
 systemctl restart apache2
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Configurer la base de données MariaDB**
 
@@ -97,7 +105,8 @@ Lorsque vous arrivez à l'étape de la configuration de la base de données dans
 
 [Voir comment installer et configurer une base de données MariaDB](../mariadb-configuration/index.md)
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Reprendre l'installation de GLPI**
 
@@ -107,13 +116,15 @@ Une fois la base de données et l'utilisateur créés, renseignez les informatio
 - **Utilisateur GLPI :** le nom d'utilisateur créé pour la base de données.
 - **Mot de passe :** le mot de passe associé.
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Sélectionner la base de données**
 
 Sur la page suivante, sélectionnez votre base de données existante.
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Connexion à GLPI**
 
