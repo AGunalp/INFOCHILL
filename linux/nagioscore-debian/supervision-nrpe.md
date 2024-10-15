@@ -93,7 +93,7 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
         align-items: center;
         justify-content: center;
         width: 100%; /* Prendre toute la largeur du conteneur */
-        height: 45px; /* Hauteur du bouton */
+        height: 48px; /* Hauteur du bouton */
         background-color: transparent; /* Pas de couleur de fond */
         color: white; /* Couleur du texte */
         text-decoration: none; /* Pas de soulignement */
