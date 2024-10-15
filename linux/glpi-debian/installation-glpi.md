@@ -18,6 +18,16 @@ Vous êtes actuellement dans le guide d'installation de **GLPI** sur Debian. Sui
 
 ---
 
+### Étapes à Suivre
+
+**Mettre à jour le système :**  
+Assurez-vous que votre système est à jour pour éviter les problèmes de compatibilité.
+
+```bash
+apt update && apt upgrade
+```
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Installer les paquets nécessaires**
 
