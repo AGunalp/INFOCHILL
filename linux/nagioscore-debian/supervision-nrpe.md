@@ -139,8 +139,8 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 </a>
 
 
----
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 ### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > [Superviser avec NRPE](supervision-nrpe.md)
 
