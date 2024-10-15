@@ -132,11 +132,10 @@ Insérez le code suivant dans le fichier :
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-#### Redémarrez vos services :
+#### Redémarrez votre machine :
 
 ```bash
-systemctl restart apache2
-systemctl restart nagios
+reboot
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
