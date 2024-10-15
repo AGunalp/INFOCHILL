@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/assets/css/blue-theme.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md)
 
