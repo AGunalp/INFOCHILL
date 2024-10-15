@@ -14,7 +14,7 @@
 ### 📂 Vous êtes ici : [Accueil](../../index.md) > [Proxmox](install-configuration-mariadb-for-glpi.md)
 
 <div style="margin: 20px 0; display: flex; justify-content: flex-end; align-items: center;">
-    <a href="../../index.md" style="padding: 6px 10px; background-color: #003366; color: white; text-decoration: none; border: 1px solid white; border-radius: 4px;">
+    <a href="/index.md" style="padding: 6px 10px; background-color: #003366; color: white; text-decoration: none; border: 1px solid white; border-radius: 4px;">
         Retour à l'Accueil
     </a>
 </div>
