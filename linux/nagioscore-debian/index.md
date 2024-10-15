@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md)
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="../nagioscore-debian/index.md" style="color: #ff9900; text-decoration: underline;">NagiosCore Debian</a>
+
 
 # 📚 Nagios Core sur Debian
 
@@ -36,7 +37,8 @@ Pour toute question, consultez nos forums ou la [documentation officielle de Nag
 ---
 ---
 
-### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md)
+### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="../nagioscore-debian/index.md" style="color: #ff9900; text-decoration: underline;">NagiosCore Debian</a>
+
 
 
 <p style="text-align: right; margin: 20px 0;">

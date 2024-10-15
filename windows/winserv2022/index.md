@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [Windows Server 2022](./index.md)
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="./index.md" style="color: #ff9900; text-decoration: underline;">Windows Server 2022</a>
+
 
 ## En cours
 
@@ -11,7 +12,7 @@
 
 ---
 ---
-### 📂 Vous êtes ici : [Accueil](../../index.md) > [Windows Server 2022](./index.md)
+### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="./index.md" style="color: #ff9900; text-decoration: underline;">Windows Server 2022</a>
 
 
 <p style="text-align: right; margin: 20px 0;">

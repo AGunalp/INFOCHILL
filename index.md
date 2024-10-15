@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](index.md)
+###### 📂 Vous êtes ici :  <a href="index.md" style="color: #ff9900; text-decoration: underline;">Accueil</a>
 
 
 Bienvenue sur **InfoChill**, votre référence pour la documentation informatique. Retrouvez des guides détaillés pour installer et configurer vos systèmes d'exploitation et logiciels.

@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md)
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="../glpi-debian/index.md" style="color: #ff9900; text-decoration: underline;">GLPI Debian</a>
+
 
 # 📚 GLPI sur Debian
 
@@ -33,7 +34,8 @@ Pour toute question, consultez nos forums ou la [documentation officielle de GLP
 
 ---
 ---
-### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md)
+### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="../glpi-debian/index.md" style="color: #ff9900; text-decoration: underline;">GLPI Debian</a>
+
 
 <p style="text-align: right; margin: 20px 0;">
     <a href="https://infochill.com" style="display: inline-block; padding: 8px 12px; background-color: #003366; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold;">

@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/blue-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > [Supervisier Système Linux](linux-debian.md)
+###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="linux-debian.md" style="color: #ff9900; text-decoration: underline;">Superviser Système Linux</a>
+
 
 # 📚 Superviser un sysème Linux (debian) avec le plugin NRPE
 
@@ -171,7 +172,8 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 
 ---
 ---
-### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > [Supervisier Système Linux](linux-debian.md)
+### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="linux-debian.md" style="color: #ff9900; text-decoration: underline;">Superviser Système Linux</a>
+
 
 <p style="text-align: right; margin: 20px 0;">
     <a href="https://infochill.com" style="display: inline-block; padding: 8px 12px; background-color: #003366; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold;">

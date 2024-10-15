@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/blue-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md) > [Installation GLPI Debian](installation-glpi.md)
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md) > <a href="installation-glpi.md" style="color: #ff9900; text-decoration: underline;">Installation GLPI Debian</a>
+
 
 # 📚 Installation et Configuration de GLPI sur Debian
 
@@ -159,7 +160,8 @@ Une fois l'installation terminée, vous arrivez à la page de connexion. Le comp
 
 ---
 ---
-### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md) > [Installation GLPI Debian](installation-glpi.md)
+### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md) > <a href="installation-glpi.md" style="color: #ff9900; text-decoration: underline;">Installation GLPI Debian</a>
+
 
 <p style="text-align: right; margin: 20px 0;">
     <a href="https://infochill.com" style="display: inline-block; padding: 8px 12px; background-color: #003366; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold;">
