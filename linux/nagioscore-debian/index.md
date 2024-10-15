@@ -38,11 +38,8 @@ Pour toute question, consultez nos forums ou la [documentation officielle de Nag
 
 ### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md)
 
-<div style="margin: 20px 0; display: flex; justify-content: flex-end; align-items: center;">
-    <a href="../../index.md" style="padding: 6px 10px; background-color: #003366; color: white; text-decoration: none; border: 1px solid white; border-radius: 4px;">
+<div style="margin: 20px 0; text-align: right;">
+    <a href="../../index.md" style="display: inline-block; padding: 8px 12px; background-color: #003366; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; transition: background-color 0.3s;">
         Retour à l'Accueil
     </a>
 </div>
-
----
----
