@@ -40,7 +40,9 @@ apt install autoconf gcc libc6 make wget unzip apache2 apache2-utils php libgd-d
 apt install openssl libssl-dev
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+
 
 **Accéder à un répertoire temporaire**
 
@@ -50,7 +52,8 @@ Accédez à un répertoire temporaire :
 cd /tmp
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Télécharger Nagios Core**
 
@@ -60,11 +63,13 @@ Téléchargez le fichier pour installer Nagios Core depuis Internet :
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.6.tar.gz
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Info importante :** Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons ce document. Si vous voulez installer la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Extraire le fichier téléchargé**
 
@@ -74,7 +79,8 @@ Une fois le téléchargement terminé, extrayez le fichier compressé :
 tar -xzvf nagios-4.5.6.tar.gz
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Naviguer dans le répertoire extrait**
 
@@ -84,7 +90,8 @@ Naviguez dans le répertoire que vous venez d'extraire :
 cd nagios-4.5.6
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Exécuter le script de configuration**
 
@@ -94,7 +101,8 @@ Exécutez le script de configuration de Nagios Core :
 ./configure --with-httpd-conf=/etc/apache2/sites-enabled
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Compiler les fichiers**
 
@@ -104,7 +112,8 @@ Compilez les fichiers avec la commande suivante :
 make all
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Créer le groupe et l'utilisateur Nagios**
 
@@ -114,7 +123,8 @@ Créez le groupe et l'utilisateur Nagios sur le système :
 make install-groups-users
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 
 **Installer les fichiers de configuration et démarrer Nagios**
@@ -129,7 +139,8 @@ make install-config
 make install-webconf
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Activer les modules nécessaires pour Apache**
 
@@ -140,7 +151,8 @@ a2enmod rewrite
 a2enmod cgi
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Créer un compte administrateur**
 
@@ -152,7 +164,7 @@ htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 
 Ici, le `-c` indique de créer un nouveau fichier pour stocker les identifiants (il n'est pas nécessaire de réutiliser cette option si vous créez d'autres utilisateurs). Le `nagiosadmin` est le nom du login.
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Redémarrer les services**
 
@@ -163,7 +175,8 @@ systemctl restart apache2
 systemctl restart nagios
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Accéder à l'interface Nagios**
 
@@ -179,7 +192,8 @@ Par exemple (pour mon cas) :
 http://192.168.13.2/nagios
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, comme illustré ci-dessous :
 
