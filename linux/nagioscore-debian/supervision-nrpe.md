@@ -82,17 +82,61 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 
 ## Choisissez le système à superviser :
 
-- [**Système Linux (Debian)**](./supervision/linux-debian.md)  
-  Pour surveiller un serveur ou une machine Debian (Linux).
+<style>
+    body {
+        font-family: 'Arial', sans-serif; /* Police de base */
+        background-color: #1a1a1a; /* Couleur de fond pour un contraste */
+    }
 
-- [**<font color="red">Système Windows</font>**](./supervision/windows.md)  
-  Pour surveiller des postes ou serveurs sous Windows.
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Prendre toute la largeur du conteneur */
+        height: 60px; /* Hauteur du bouton */
+        background-color: transparent; /* Pas de couleur de fond */
+        color: white; /* Couleur du texte */
+        text-decoration: none; /* Pas de soulignement */
+        border: 2px solid white; /* Contour blanc */
+        border-radius: 5px; /* Coins arrondis */
+        margin: 10px 0; /* Marges verticales */
+        transition: background-color 0.3s, color 0.3s; /* Transition de couleur */
+        font-size: 18px; /* Taille de police plus grande */
+        font-weight: 500; /* Poids de police moyen */
+        text-transform: uppercase; /* Texte en majuscules pour un look moderne */
+        letter-spacing: 1px; /* Espacement des lettres */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    }
 
-- [**<font color="red">Switch Cisco</font>**](./supervision/switch-cisco.md)  
-  Pour superviser des switches réseau de marque Cisco.
+    .button:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Couleur au survol (semi-transparent) */
+        color: white; /* Garder la couleur blanche au survol */
+        text-decoration: none; /* Pas de soulignement au survol */
+        transform: translateY(-2px); /* Léger effet de soulèvement */
+    }
 
-- [**<font color="red">Switch HP</font>**](./supervision/switch-hp.md)  
-  Pour superviser des switches réseau de marque HP.
+    .icon {
+        margin-right: 10px; /* Espace entre l'icône et le texte */
+        font-size: 20px; /* Taille de l'icône légèrement plus grande */
+    }
+</style>
+
+<a href="https://infochill.com/linux/nagioscore-debian/supervision/linux-debian.html" class="button">
+    <span class="icon">➔</span> Système Linux
+</a>
+
+<a href="https://infochill.com/linux/nagioscore-debian/supervision/windows.html" class="button">
+    <span class="icon">➔</span> Système Windows
+</a>
+
+<a href="https://infochill.com/linux/nagioscore-debian/supervision/switch-cisco.html" class="button">
+    <span class="icon">➔</span> Switch Cisco
+</a>
+
+<a href="https://infochill.com/linux/nagioscore-debian/supervision/switch-hp.html" class="button">
+    <span class="icon">➔</span> Switch HP
+</a>
+
 
 ---
 ---
@@ -104,154 +148,3 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
         Retour à l'Accueil
     </a>
 </p>
-
-# Superviser un système Linux (Debian) avec le plugin NRPE
-
-<!-- Bouton -->
-<div style="text-align: center; margin: 20px;">
-    <button style="width: 80px; height: 40px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;" onclick="toggleContent()">Voir plus</button>
-</div>
-
-<!-- Contenu caché -->
-<div id="content" style="display: none; margin-top: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px;">
-# Superviser un système Linux (Debian) avec le plugin NRPE
-
-## Objectif
-L'objectif de ce guide est de comprendre comment superviser efficacement vos machines et collecter des informations sur leur état. Pour établir un lien entre le serveur Nagios et un hôte cible, nous devons installer et configurer le plugin NRPE sur les deux machines.
-
----
-
-## Installation et Configuration de NRPE
-
-### 🖥️ Depuis un Système Linux (Debian)
-Pour superviser un système Linux (Debian) avec le plugin NRPE, suivez les étapes ci-dessous. Cela vous permettra de configurer efficacement la machine afin qu'elle soit surveillée par votre serveur Nagios.
-
----
-
-### Étapes à Suivre
-
-**Mettre à jour le système :**  
-Assurez-vous que votre système est à jour pour éviter les problèmes de compatibilité.
-
-'''bash
-apt update && apt upgrade
-'''
-
----
-
-**Installer les paquets nécessaires :**  
-Installez le serveur NRPE et les plugins Nagios.
-
-'''bash
-apt install nagios-nrpe-server nagios-plugins
-'''
-
----
-
-**Modifier le fichier de configuration NRPE :**  
-Ouvrez le fichier de configuration NRPE pour autoriser les connexions depuis votre serveur Nagios.
-
-'''bash
-vim /etc/nagios/nrpe.cfg
-'''
-
-- **Configurer les adresses IP autorisées :**  
-  Ajoutez l'adresse IP de votre serveur Nagios à la ligne suivante (par exemple, pour l'IP `192.168.13.2`):
-
-'''bash
-allowed_hosts=127.0.0.1,::1,192.168.13.2
-'''
-
----
-
-**Redémarrer le service NRPE :**  
-Appliquez vos modifications en redémarrant le service NRPE.
-
-'''bash
-systemctl restart nagios-nrpe-server.service
-'''
-
----
-
-### 🖥️ Retournez sur Nagios pour définir des Hôtes
-Après avoir configuré votre machine Debian pour NRPE, vous devez maintenant définir cet hôte sur votre serveur Nagios. Cela permettra à Nagios de commencer à surveiller la machine.
-
-**📝 Méthodes de Configuration**  
-Il existe deux approches pour gérer les fichiers de configuration des hôtes dans Nagios :
-1. **Un seul fichier .cfg :** Regroupez toutes les machines dans un seul fichier. Cette méthode peut rendre la gestion plus complexe.
-2. **Fichiers séparés :** Créez un fichier .cfg pour chaque machine. C'est la méthode recommandée car elle facilite la gestion et la maintenance.
-
-Dans ce guide, nous allons opter pour la méthode des **fichiers séparés**.
-
----
-
-### Création du Fichier de Configuration pour l'Hôte (SrvDeb)
-
-**Créer le fichier de configuration :**  
-Accédez au répertoire approprié et créez le fichier pour votre machine (SrvDeb).
-
-'''bash
-touch /usr/local/nagios/etc/servers/SrvDeb.cfg
-'''
-
----
-
-**Éditer le fichier :**  
-Ouvrez le fichier créé pour ajouter les informations nécessaires.
-
-'''bash
-vim /usr/local/nagios/etc/servers/SrvDeb.cfg
-'''
-
-- **Ajouter les définitions de l'hôte :**  
-  Insérez le code suivant dans le fichier :
-
-'''bash
-define host {
-  use                     linux-server          ; Modèle prédéfini pour les serveurs Linux
-  host_name               SrvDeb                ; Nom de l'hôte
-  alias                   Serveur de Test       ; Alias pour afficher dans Nagios
-  address                 192.168.13.2          ; Adresse IP de la machine
-  max_check_attempts      5                     ; Nombre de tentatives avant une alerte
-  check_period            24x7                  ; Vérification continue
-  notification_interval    30                   ; Intervalle de notification
-  notification_period     24x7                  ; Période de notification
-}
-'''
-
----
-
-**Redémarrez vos services :**
-
-'''bash
-systemctl restart apache2
-systemctl restart nagios
-'''
-
----
-
-Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine qui y est référencée. Pour mon cas, j'ai remonté une machine Debian ayant pour nom `AP4-GLPI` :
-
-![Image de la configuration Nagios](assets/images/host_debian_nagios.png)
-
----
-
-## Récapitulatif des Étapes de Configuration de Nagios et NRPE
-
-### Sur le Serveur Nagios (étape précédente) :
-- Installation du plugin NRPE
-- Copie des plugins dans le bon répertoire `/usr/local/nagios/libexec/`
-- Activation et création du répertoire contenant les futurs emplacements pour définir les hôtes en modifiant le fichier ...
-
-</div>
-
-<script>
-    function toggleContent() {
-        var content = document.getElementById("content");
-        if (content.style.display === "none") {
-            content.style.display = "block"; // Affiche le contenu
-        } else {
-            content.style.display = "none"; // Cache le contenu
-        }
-    }
-</script>
