@@ -41,36 +41,63 @@ Pour toute question, consultez nos forums ou la [documentation officielle de Nag
 
 ---
 
-## 🔘 Boutons Retour à l'Accueil
+<div style="display: flex; flex-direction: column; gap: 10px; margin: 20px 0;">
 
-1. **Bouton Simple en Texte**
-   - [Retour à l'Accueil](../../index.md)
+<!-- Bouton 1 : Simple avec couleur de fond -->
+<a href="../../index.md" style="padding: 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; border: 1px solid #0056b3; text-align: center;">
+   Retour à l'Accueil
+</a>
 
-2. **Bouton avec Markdown (Style Simple)**
-   - **[Retour à l'Accueil](../../index.md)**
+<!-- Bouton 2 : Simple avec bordure colorée -->
+<a href="../../index.md" style="padding: 10px; background-color: transparent; color: #007bff; text-decoration: none; border: 2px solid #007bff; border-radius: 5px; text-align: center;">
+   Retour à l'Accueil
+</a>
 
-3. **Bouton avec Emoji**
-   - 🏠 **[Retour à l'Accueil](../../index.md)**
+<!-- Bouton 3 : Bouton avec ombre -->
+<a href="../../index.md" style="padding: 10px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">
+   Retour à l'Accueil
+</a>
 
-4. **Bouton Souligné**
-   - <u>[Retour à l'Accueil](../../index.md)</u>
+<!-- Bouton 4 : Bouton arrondi -->
+<a href="../../index.md" style="padding: 10px; background-color: #17a2b8; color: white; text-decoration: none; border-radius: 50px; border: none; text-align: center;">
+   Retour à l'Accueil
+</a>
 
-5. **Bouton en Gras**
-   - **[Retour à l'Accueil](../../index.md)**
+<!-- Bouton 5 : Bouton avec un dégradé -->
+<a href="../../index.md" style="padding: 10px; background: linear-gradient(to right, #ff7e5f, #feb47b); color: white; text-decoration: none; border-radius: 5px; text-align: center;">
+   Retour à l'Accueil
+</a>
 
-6. **Bouton avec Couleur (HTML)**
-   - <a href="../../index.md" style="color: blue; text-decoration: underline;">Retour à l'Accueil</a>
+<!-- Bouton 6 : Bouton transparent avec effet au survol -->
+<a href="../../index.md" style="padding: 10px; background-color: transparent; color: #6f42c1; text-decoration: none; border: 2px solid #6f42c1; border-radius: 5px; text-align: center; transition: background-color 0.3s;">
+   Retour à l'Accueil
+</a>
+    
+<style>
+   /* Ajout d'un effet au survol pour le bouton 6 */
+   a:hover {
+      background-color: #6f42c1;
+      color: white;
+   }
+</style>
 
-7. **Bouton Style Simple avec Liste**
-   - - [Retour à l'Accueil](../../index.md)
+<!-- Bouton 7 : Bouton simple et élégant -->
+<a href="../../index.md" style="padding: 10px; background-color: #343a40; color: white; text-decoration: none; border-radius: 5px; text-align: center;">
+   Retour à l'Accueil
+</a>
 
-8. **Bouton avec Image (si supporté)**
-   - ![Accueil](https://via.placeholder.com/15/007bff/000000?text=+) [Retour à l'Accueil](../../index.md)
+<!-- Bouton 8 : Bouton minimaliste -->
+<a href="../../index.md" style="padding: 10px; background-color: transparent; color: #ffc107; text-decoration: none; border: 1px solid #ffc107; border-radius: 5px; text-align: center;">
+   Retour à l'Accueil
+</a>
 
-9. **Bouton en Bloc**
-   - <div style="text-align: center;"><a href="../../index.md" style="background-color: #007bff; color: white; padding: 5px 10px; text-decoration: none;">Retour à l'Accueil</a></div>
+<!-- Bouton 9 : Bouton avec icône -->
+<a href="../../index.md" style="padding: 10px; background-color: #6f42c1; color: white; text-decoration: none; border-radius: 5px; display: flex; align-items: center; gap: 5px;">
+   <span>🏠</span> Retour à l'Accueil
+</a>
 
-10. **Bouton Simple en Liste Numérotée**
-   - 1. [Retour à l'Accueil](../../index.md)
-
----
+<!-- Bouton 10 : Bouton avec couleur personnalisée -->
+<a href="../../index.md" style="padding: 10px; background-color: #ffc107; color: black; text-decoration: none; border-radius: 5px; text-align: center;">
+   Retour à l'Accueil
+</a>
+</div>
