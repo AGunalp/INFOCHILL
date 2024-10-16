@@ -32,16 +32,16 @@ Un guide pour installer et configurer Windows Server 2022 sur votre système Deb
 
 **InfoChill** propose des tutoriels accessibles pour tous, que vous soyez novice ou expert. Suivez nos guides pour réussir vos projets en administration système.
 
-**[En savoir plus sur InfoChill]()**
+**[En savoir plus sur InfoChill (En développement)]()**
 
 ---
 
 ## Contact
 
 Pour toute question ou suggestion, n'hésitez pas à nous contacter :
-- **[Twitter (Guide en développement)]()**
-- **[Linkedin (Guide en développement)]()**
-- **[GitHub (Guide en développement)]()**
+- **[Twitter (En développement)]()**
+- **[Linkedin (En développement)]()**
+- **[GitHub (En développement)]()**
 
 ---
 

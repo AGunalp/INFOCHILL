@@ -207,7 +207,7 @@ Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, c
 
 
 <p style="text-align: right; margin: 20px 0;">
-    <a href="https://infochill.com" style="display: inline-block; padding: 8px 12px; background-color: #003366; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold;">
-        Retour à l'Accueil
+    <a href="javascript:history.back()" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">
+        Retour en arrière
     </a>
 </p>
