@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="../glpi-debian/index.md" style="color: #ff9900; text-decoration: underline;">GLPI Debian</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">GLPI Debian</a>
 
 
 # 📚 GLPI sur Debian

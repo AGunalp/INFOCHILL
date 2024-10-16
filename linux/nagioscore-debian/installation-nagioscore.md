@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/blue-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="installation-nagioscore.md" style="color: #ff9900; text-decoration: underline;">Installation Nagios Core Debian</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installation Nagios Core Debian</a>
 
 
 # 📚 Installation de Nagios Core sur Debian
@@ -203,7 +203,7 @@ Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, c
 ---
 ---
 
-### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="installation-nagioscore.md" style="color: #ff9900; text-decoration: underline;">Installation Nagios Core Debian</a>
+### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installation Nagios Core Debian</a>
 
 
 <p style="text-align: right; margin: 20px 0;">

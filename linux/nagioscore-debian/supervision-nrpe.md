@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/blue-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="supervision-nrpe.md" style="color: #ff9900; text-decoration: underline;">Superviser avec NRPE</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser avec NRPE</a>
 
 
 # 📚 Superviser des machines avec le plugin NRPE
@@ -143,7 +143,7 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="supervision-nrpe.md" style="color: #ff9900; text-decoration: underline;">Superviser avec NRPE</a>
+### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser avec NRPE</a>
 
 
 <p style="text-align: right; margin: 20px 0;">

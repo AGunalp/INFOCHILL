@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="switch-hp.md" style="color: #ff9900; text-decoration: underline;">Superviser Switch HP</a>
+###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser Switch HP</a>
 
 
 ## En cours
@@ -12,7 +12,6 @@
 
 ---
 ---
-### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="switch-hp.md" style="color: #ff9900; text-decoration: underline;">Superviser Switch HP</a>
 
 
 <p style="text-align: right; margin: 20px 0;">

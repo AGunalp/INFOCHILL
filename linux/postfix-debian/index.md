@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="./index.md" style="color: #ff9900; text-decoration: underline;">Postfix</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Postfix</a>
 
 
 ## En cours
@@ -12,7 +12,6 @@
 
 ---
 ---
-### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="./index.md" style="color: #ff9900; text-decoration: underline;">Postfix</a>
 
 
 <p style="text-align: right; margin: 20px 0;">

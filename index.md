@@ -16,14 +16,14 @@ Bienvenue sur **InfoChill**, votre référence pour la documentation informatiqu
 -  **[NagiosCore sur Debian](linux/nagioscore-debian/index.md)**  
   Un guide pour installer et configurer Nagios Core sur votre système Debian.
 
--  **[<font color="red">Postfix sur Debian</font>](linux/postfix-debian/index.md)**  
+-  **[Postfix sur Debian (Guide en développement)](linux/postfix-debian/index.md)**  
   Un guide pour installer et configurer Postfix sur votre système Debian.
 
--  **[<font color="red">Proxmox sur Debian</font>](linux/proxmox-debian/index.md)**  
+-  **[Proxmox sur Debian (Guide en développement)](linux/proxmox-debian/index.md)**  
   Un guide pour installer et configurer Proxmox sur votre système Debian.
 
 ### Systèmes Windows :
--  **[<font color="red">Windows Server 2022</font>](windows/winserv2022/index.md)**  
+-  **[Windows Server 2022 (Guide en développement)](windows/winserv2022/index.md)**  
 Un guide pour installer et configurer Windows Server 2022 sur votre système Debian.
 
 ---
@@ -39,9 +39,9 @@ Un guide pour installer et configurer Windows Server 2022 sur votre système Deb
 ## Contact
 
 Pour toute question ou suggestion, n'hésitez pas à nous contacter :
-- **[<font color="red">Twitter</font>]()**
-- **[<font color="red">LinkedIn</font>]()**
-- **[<font color="red">GitHub</font>]()**
+- **[Twitter (Guide en développement)]()**
+- **[Linkedin (Guide en développement)]()**
+- **[GitHub (Guide en développement)]()**
 
 ---
 
