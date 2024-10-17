@@ -1,0 +1,25 @@
+body {
+    background-color: #1c1c1c; /* Fond sombre */
+    color: #f5f5f5; /* Texte clair */
+    font-family: Arial, sans-serif;
+}
+
+pre, code {
+    background-color: #3c3c3c !important; /* Fond pour le code */
+    color: #ffcccc !important; /* Couleur du texte du code */
+    padding: 10px;
+    border-radius: 4px; /* Coins arrondis */
+}
+
+code {
+    padding: 1px 4px; /* Un peu de padding pour le code en ligne */
+    border-radius: 8px; /* Coins arrondis */
+}
+
+h1, h2, h3 {
+    color: #ff6666; /* Couleur des titres */
+}
+
+a {
+    color: #ffcc00; /* Couleur des liens */
+}

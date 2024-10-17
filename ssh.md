@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/red-theme.css">
+
+# Guide Pratique : /ssh
 ## Désactiver SSH d'urgence (rapidement)
 
 Commande temporaire pour désactiver toute connexion (entrant et sortant) jusqu’au redémarrage (recommandé si vous voulez désactiver au plus vite)

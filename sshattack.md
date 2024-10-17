@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/red-theme.css">
+
 # Guide Pratique : /sshattack
 
 ## 0. Création interface pour SSH 
