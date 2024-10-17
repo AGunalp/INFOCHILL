@@ -111,6 +111,8 @@ Pour exécuter le train sur le terminal d'un autre utilisateur :
 ```
 sl > /dev/pts/0
 ```
+![Train](/assets/images/sl.png)
+
 
 ### b. Cowsay
 Installez `cowsay` pour afficher un message avec une vache parlante :  
@@ -121,6 +123,7 @@ Pour afficher "Meuuuh" :
 ```
 echo "Meuuuh" | cowsay > /dev/pts/0
 ```
+![Matrix](/assets/images/cowsay.png)
 
 ### c. Effet Matrix
 ```
@@ -130,8 +133,9 @@ Pour exécuter l'effet :
 ```
 cmatrix > /dev/pts/0
 ```
+![Matrix](/assets/images/cmatrix.png)
 
-### d. Message Toiletté
+### d. Message Toilette
 Installez `toilet` pour formater le texte :  
 ```
 apt install toilet
@@ -140,6 +144,7 @@ Pour envoyer un message "GAYPRIDE" :
 ```
 echo "GAYPRIDE" | toilet --gay > /dev/pts/0
 ```
+![Toilette](/assets/images/toilet.png)
 
 ### e. Simulation d'Aquarium
 Installez `asciiquarium` pour afficher un aquarium animé :  
@@ -150,6 +155,7 @@ Pour exécuter l'aquarium :
 ```
 asciiquarium > /dev/pts/0
 ```
+![Asciiquarium](/assets/images/asciiquarium.png)
 
 ---
 
