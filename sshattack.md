@@ -1,5 +1,15 @@
 # Guide Pratique : /sshattack
 
+## 0. Création interface pour SSH 
+Ajoutez une nouvelle interface dans : 
+```
+vim /etc/netplan/50....
+```
+Puis, pour forcer l'utilisation de cette interface lors de votre connexion en SSH :
+```
+ssh -b AdresseIP
+```
+
 ## 1. Connexion à un Compte SSH
 Pour vous connecter à un compte SSH, utilisez la commande suivante :  
 ```
@@ -177,4 +187,4 @@ exit
 ```
 ---
 
-**Remarque** : Utilisez ces commandes avec précaution et uniquement sur des systèmes où vous avez l'autorisation d'effectuer ces actions. Ces opérations peuvent affecter d'autres utilisateurs sur le système.
+N'oubliez pas de supprimer votre interface créée tout au début
