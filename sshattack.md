@@ -155,18 +155,6 @@ Pour vérifier si le fichier d'historique existe :
 less /home/user/.bash_history
 ```
 
-#### ii. Installer le Paquet `at`
-Pour programmer l'exécution de commandes :  
-```
-sudo apt update
-sudo apt install at
-```
-
-#### iii. Planifier la Commande de Vidage
-Pour programmer le vidage de `auth.log` après une minute :  
-```
-echo "sudo truncate -s 0 /var/log/auth.log" | at now + 1 minute
-```
 
 #### iv. Effacer l'Historique de la Session
 Pour supprimer le fichier d'historique :  
