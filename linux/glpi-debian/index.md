@@ -10,7 +10,7 @@
 
 ## Guides d'Installation et de Configuration
 
-### Étape 1 : [Installation de GLPI sur Debian](installation-glpi.md)
+- **Étape 1 :** [Installation de GLPI sur Debian](installation-glpi.md)  
 Suivez ce guide détaillé pour installer GLPI sur votre serveur Debian.
 
 ---
@@ -28,10 +28,9 @@ Suivez ce guide détaillé pour installer GLPI sur votre serveur Debian.
 
 ## 🛠️ Ressources et Assistance
 
-Pour toute question ou assistance, n'hésitez pas à consulter nos ressources supplémentaires :
+Pour toute question ou assistance, n'hésitez pas à consulter les ressources supplémentaires :
 
 - **[Documentation officielle de GLPI](https://glpi-project.org/documentation/)** : Accédez à des guides et des ressources approfondies.
-- **Forums de Support** : Rejoignez notre communauté pour partager vos questions et solutions.
 
 ---
 

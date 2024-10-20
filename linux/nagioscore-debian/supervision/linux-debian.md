@@ -2,11 +2,9 @@
 
 ###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser Système Linux</a>
 
+# 📚 Superviser un Système Linux (Debian) avec le Plugin NRPE
 
-# 📚 Superviser un sysème Linux (debian) avec le plugin NRPE
-
-Bienvenue dans ce guide dédié à l'installation et à la configuration du plugin **NRPE** sur un système Debian. Vous allez apprendre comment mettre en place NRPE pour assurer la supervision de votre machine par le serveur Nagios.
-
+Bienvenue dans ce guide dédié à l'installation et à la configuration du plugin **NRPE** sur un système Debian. Vous apprendrez comment mettre en place NRPE pour assurer la supervision de votre machine par le serveur Nagios.
 
 ---
 
@@ -66,7 +64,7 @@ vim /etc/nagios/nrpe.cfg
   Ajoutez l'adresse IP de votre serveur Nagios à la ligne suivante (par exemple, pour l'IP `192.168.13.2`):
 
   ```bash
-  allowed_hosts=127.0.0.1,::1, 192.168.13.2
+  allowed_hosts=127.0.0.1,::1,192.168.13.2
   ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
@@ -117,8 +115,8 @@ vim /usr/local/nagios/etc/servers/SrvDeb.cfg
 - **Ajouter les définitions de l'hôte :**  
 Insérez le code suivant dans le fichier :
 
-   ```plaintext
-   define host {
+```plaintext
+define host {
       use                     linux-server          ; Modèle prédéfini pour les serveurs Linux
       host_name               SrvDeb                ; Nom de l'hôte
       alias                   Serveur de Test       ; Alias pour afficher dans Nagios
@@ -128,7 +126,7 @@ Insérez le code suivant dans le fichier :
       notification_interval    30                   ; Intervalle de notification
       notification_period     24x7                  ; Période de notification
    }
-   ```
+```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
@@ -148,160 +146,47 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 
 ## Étapes pour Définir des Services dans des Templates
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"> 
 
-# Ne pas executez ces commandes :
+# Ne pas exécutez ces commandes :
 **Accéder au Fichier de Configuration des Templates**
 
-Vous devez d'abord localiser le fichier de configuration des templates dans Nagios. Ce fichier est souvent situé dans ``/usr/local/nagios/etc/templates.cfg``. Ouvrez-le avec votre éditeur de texte préféré :
+Vous devez d'abord localiser le fichier de configuration des templates dans Nagios. Ce fichier est souvent situé dans ``/usr/local/nagios/etc/templates.cfg``. Ouvrez-le avec votre éditeur de texte préféré.
 
 ```bash
 vim /usr/local/nagios/etc/templates.cfg
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+**Définir les Services :**
 
-**Définir un Template de Service Générique**
-
-Ajoutez une définition de template pour un service générique, que vous pouvez ensuite réutiliser pour d'autres services. Voici un exemple de template :
+Ajoutez les services que vous souhaitez surveiller à votre hôte. Voici un exemple de définition pour vérifier l'utilisation de la mémoire et du disque :
 
 ```plaintext
 define service {
-    name                    generic-service       ; Nom du template
-    notification_interval    30                   ; Intervalle de notification
-    notification_period     24x7                 ; Notifications actives 24h/24 7j/7
-    max_check_attempts      3                    ; Nombre de tentatives avant l'alerte
-    check_interval          5                    ; Intervalle de vérification (en minutes)
-    retry_interval          1                    ; Intervalle entre deux tentatives de vérification
-    notification_options    w,u,c,r              ; Notifications pour les états Warning, Unknown, Critical, et Recovery
-}
+      use                     generic-service          ; Modèle de service générique
+      host_name               SrvDeb                   ; Nom de l'hôte
+      service_description     Memory Usage              ; Description du service
+      check_command           check_mem!20!10          ; Commande de vérification pour la mémoire
+   }
+
+define service {
+      use                     generic-service          ; Modèle de service générique
+      host_name               SrvDeb                   ; Nom de l'hôte
+      service_description     Disk Usage                ; Description du service
+      check_command           check_disk!20%!10%       ; Commande de vérification pour le disque
+   }
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+**Sauvegarder et Fermer le Fichier :**  
+Après avoir ajouté les services, assurez-vous de sauvegarder et de fermer le fichier.
 
-**Édition du Fichier de Configuration pour les Services de SrvDeb**
-
-Pour configurer les services associés à l'hôte SrvDeb, nous allons modifier le fichier de configuration que nous avons précédemment créé pour définir l'hôte. Cela nous permettra d'organiser efficacement la supervision des services tout en maintenant une structure claire.
+**Redémarrer Nagios :**  
+Pour appliquer les modifications, redémarrez Nagios.
 
 ```bash
-touch /usr/local/nagios/etc/services/SrvDeb-services.cfg
+systemctl restart nagios
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+## Conclusion
 
-**Éditez le Fichier de Configuration des Services**
-
-Ouvrez le fichier que vous venez de créer pour définir les services à superviser. Voici comment vous pourriez le faire :
-
-```bash
-vim /usr/local/nagios/etc/services/SrvDeb-services.cfg
-```
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-### Définir les Services à Superviser en Utilisant le Template : 
-
-Pour chaque service, utilisez le template que vous avez défini. Voici quelques exemples :
-
-**Service : Vérification de l'État de Fonctionnement (Allumé/Éteint) :**
-```plaintext
-define service {
-    use                     generic-service      ; Utilise un modèle de service générique
-    host_name               SrvDeb               ; Nom de l'hôte
-    service_description     System Status        ; Description du service
-    check_command           check_nrpe!check_procs!'-c 1:0'  ; Vérifie si le système est actif
-    max_check_attempts      3                    ; Tentatives avant l'alerte
-    check_interval          5                    ; Intervalle de vérification (en minutes)
-    retry_interval          1                    ; Intervalle entre deux tentatives de vérification
-    notification_interval   30                   ; Intervalle de notification (en minutes)
-    notification_period     24x7                 ; Notifications actives 24h/24 7j/7
-    notification_options    w,u,c,r              ; Notifications pour les états Warning, Unknown, Critical, et Recovery
-}
-```
-**Service : Vérification de la Charge du Système :**
-```plaintext
-define service {
-    use                     generic-service      ; Utilise un modèle de service générique
-    host_name               SrvDeb               ; Nom de l'hôte
-    service_description     CPU Load             ; Description du service
-    check_command           check_nrpe!check_load!'-w 5,4,3 -c 10,6,4'  ; Vérifie la charge CPU
-    max_check_attempts      3                    ; Tentatives avant l'alerte
-    check_interval          5                    ; Intervalle de vérification (en minutes)
-    retry_interval          1                    ; Intervalle entre deux tentatives de vérification
-    notification_interval   30                   ; Intervalle de notification (en minutes)
-    notification_period     24x7                 ; Notifications actives 24h/24 7j/7
-    notification_options    w,u,c,r              ; Notifications pour les états Warning, Unknown, Critical, et Recovery
-}
-```
-
-**Service : Vérification de l'Utilisation du Disque Dur :**  
-
-```plaintext
-define service {
-    use                     generic-service      ; Utilise un modèle de service générique
-    host_name               SrvDeb               ; Nom de l'hôte
-    service_description     Disk Usage           ; Description du service
-    check_command           check_nrpe!check_disk!'-w 20% -c 10%'  ; Vérifie l'espace disque
-    max_check_attempts      3                    ; Tentatives avant l'alerte
-    check_interval          5                    ; Intervalle de vérification (en minutes)
-    retry_interval          1                    ; Intervalle entre deux tentatives de vérification
-    notification_interval   30                   ; Intervalle de notification (en minutes)
-    notification_period     24x7                 ; Notifications actives 24h/24 7j/7
-    notification_options    w,u,c,r              ; Notifications pour les états Warning, Unknown, Critical, et Recovery
-}
-```
-
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-Recharger la Configuration de Nagios
-Après avoir ajouté les définitions de services, vous devez recharger la configuration de Nagios pour appliquer les modifications :
-
-```bash
-systemctl restart nagios.service
-```
-
-
-Une fois la configuration rechargée, vous pourrez voir et surveiller les nouveaux services sur l'hôte `SrvDeb` dans l'interface de Nagios.
-
----
-### Récapitulatif des Étapes de Configuration de Nagios et NRPE
-
-#### Sur le Serveur Nagios (étape précédente):
-
-- Installation du plugin NRPE
-- Copie des plugins dans le bon répertoire `/usr/local/nagios/libexec/`
-- Activation et création du répertoire contenant les futurs emplacements pour définir les hôtes en modifiant le fichier `nagios.cfg`
-
-#### Sur la Machine Cible (SrvDeb) :
-
-- Installation du plugin NRPE
-- Configuration du fichier de configuration NRPE pour autoriser l'adresse IP du serveur Nagios
-
-#### Retour sur le Serveur Nagios :
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-- Définition de l'hôte dans un fichier de configuration dans le répertoire `/usr/local/nagios/etc/servers/`
-
-# A VENIR : 
-<div style="border: 2px solid red; color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; width: fit-content; margin: 10px 0;">
-    ⚠️ <strong>Avis :</strong> La rédaction des commandes pour superviser les services arrive très bientôt. Merci de votre patience !
-</div>
-
----
-
-Les commandes pour superviser les services individuels sur vos hôtes seront ajoutées ici.
-
-
-
----
----
-### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser Système Linux</a>
-
-
-<p style="text-align: right; margin: 20px 0;">
-    <a href="javascript:history.back()" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">
-        Retour en arrière
-    </a>
-</p>
+Félicitations ! Vous avez maintenant configuré NRPE sur votre système Debian et défini les services à superviser dans Nagios. En cas de problème, assurez-vous de consulter les journaux de Nagios pour obtenir des informations détaillées sur les erreurs éventuelles. Bonne supervision !
