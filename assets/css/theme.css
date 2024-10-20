@@ -1,0 +1,74 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Fond clair */
+    color: #343a40; /* Texte foncé */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles du menu */
+.navbar {
+    background-color: #0056b3; /* Fond du menu (bleu foncé) */
+    padding: 15px; /* Espacement autour du menu */
+}
+
+.navbar a {
+    color: white; /* Texte du menu (blanc) */
+    text-decoration: none; /* Pas de soulignement */
+    padding: 10px 15px; /* Espacement des liens */
+    display: inline-block; /* Permet le padding */
+    transition: background-color 0.3s, color 0.3s; /* Animation pour le survol */
+}
+
+.navbar a:hover {
+    background-color: #ff9800; /* Fond du menu au survol (orange) */
+    color: white; /* Texte au survol (blanc) */
+}
+
+/* Titres et sous-titres */
+h1, h2, h3 {
+    color: #0056b3; /* Couleur des titres (bleu foncé) */
+}
+
+/* Boutons */
+.btn {
+    background-color: #28a745; /* Vert pour les boutons */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Espacement */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur main au survol */
+    transition: background-color 0.3s; /* Animation pour le survol */
+}
+
+.btn:hover {
+    background-color: #218838; /* Vert plus foncé au survol */
+}
+
+/* Liens */
+a {
+    color: #007bff; /* Liens en bleu */
+    transition: color 0.3s; /* Animation pour le survol */
+}
+
+a:hover {
+    color: #0056b3; /* Couleur des liens au survol (bleu foncé) */
+}
+
+/* Sections */
+.section {
+    padding: 20px; /* Espacement des sections */
+    margin: 20px 0; /* Marges entre les sections */
+    background-color: white; /* Fond blanc pour les sections */
+    border-radius: 4px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Pied de page */
+footer {
+    background-color: #343a40; /* Fond du pied de page (gris foncé) */
+    color: white; /* Texte blanc */
+    text-align: center; /* Texte centré */
+    padding: 15px; /* Espacement */
+}
