@@ -1,20 +1,20 @@
 /* Styles de base */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Fond clair */
-    color: #343a40; /* Texte foncé */
+    background-color: #000000; /* Fond noir */
+    color: #f8f9fa; /* Texte clair */
     margin: 0;
     padding: 0;
 }
 
 /* Styles du menu */
 .navbar {
-    background-color: #0056b3; /* Fond du menu (bleu foncé) */
+    background-color: #1a1a1a; /* Fond du menu (gris très foncé) */
     padding: 15px; /* Espacement autour du menu */
 }
 
 .navbar a {
-    color: white; /* Texte du menu (blanc) */
+    color: #ff9900; /* Texte du menu (orange) */
     text-decoration: none; /* Pas de soulignement */
     padding: 10px 15px; /* Espacement des liens */
     display: inline-block; /* Permet le padding */
@@ -23,12 +23,12 @@ body {
 
 .navbar a:hover {
     background-color: #ff9800; /* Fond du menu au survol (orange) */
-    color: white; /* Texte au survol (blanc) */
+    color: #ffffff; /* Texte au survol (blanc) */
 }
 
 /* Titres et sous-titres */
 h1, h2, h3 {
-    color: #0056b3; /* Couleur des titres (bleu foncé) */
+    color: #ff9900; /* Couleur des titres (orange) */
 }
 
 /* Boutons */
@@ -48,21 +48,21 @@ h1, h2, h3 {
 
 /* Liens */
 a {
-    color: #007bff; /* Liens en bleu */
+    color: #ff9900; /* Liens en orange */
     transition: color 0.3s; /* Animation pour le survol */
 }
 
 a:hover {
-    color: #0056b3; /* Couleur des liens au survol (bleu foncé) */
+    color: #ffffff; /* Couleur des liens au survol (blanc) */
 }
 
 /* Sections */
 .section {
     padding: 20px; /* Espacement des sections */
     margin: 20px 0; /* Marges entre les sections */
-    background-color: white; /* Fond blanc pour les sections */
+    background-color: #1a1a1a; /* Fond gris très foncé pour les sections */
     border-radius: 4px; /* Coins arrondis */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Ombre légère blanche */
 }
 
 /* Pied de page */
