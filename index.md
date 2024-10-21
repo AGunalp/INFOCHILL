@@ -5,7 +5,6 @@
 
 Bienvenue sur **InfoChill**, votre référence pour la documentation informatique. Retrouvez des guides détaillés pour installer et configurer vos systèmes d'exploitation et logiciels.
 
----
 
 ## Explorez nos documentations
 
@@ -23,7 +22,7 @@ Bienvenue sur **InfoChill**, votre référence pour la documentation informatiqu
 -  **[Windows Server 2022 (En développement)](windows/winserv2022/index.md)**  
 Un guide pour installer et configurer Windows Server 2022 sur votre système Debian.
 
----
+
 
 ## À propos
 
@@ -31,7 +30,6 @@ Un guide pour installer et configurer Windows Server 2022 sur votre système Deb
 
 **[En savoir plus sur InfoChill (En développement)]()**
 
----
 
 ## Contact
 
@@ -40,6 +38,5 @@ Pour toute question ou suggestion, n'hésitez pas à nous contacter :
 - **[Linkedin (En développement)]()**
 - **[GitHub (En développement)]()**
 
----
 
 &copy; 2024 InfoChill - Tous droits réservés
