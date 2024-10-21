@@ -9,7 +9,7 @@ Bienvenue sur **InfoChill**, votre référence pour la documentation informatiqu
 ## Explorez nos documentations
 
 ### Systèmes Linux :
--  **<span class="lien">[GLPI (Debian)](linux/glpi-debian/index.md)</span>**  
+-  <span class="lien">[GLPI (Debian)](linux/glpi-debian/index.md)</span>  
   Un guide pour installer et configurer GLPI sur votre système Debian.
   
 -  **<span class="lien">[NagiosCore (Debian)](linux/nagioscore-debian/index.md)</span>**  
