@@ -1,6 +1,10 @@
+### **[↩️ Retour](../../index.md)**
+
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">GLPI Debian</a>
+
+
 
 ## 🛠️ GUIDES D'INSTALLATION ET DE CONFIGURATION
 
@@ -29,9 +33,3 @@ Pour toute question ou assistance, n'hésitez pas à consulter les ressources su
 - **[Documentation officielle de GLPI](https://glpi-project.org/documentation/)** : Accédez à des guides et des ressources approfondies.
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-<p style="text-align: right; margin: 20px 0;">
-    <a href="https://infochill.com/index.md" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">
-        Retour à la destination définie
-    </a>
-</p>
