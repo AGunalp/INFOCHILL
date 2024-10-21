@@ -8,7 +8,7 @@ Bienvenue sur **InfoChill**, votre référence pour la documentation informatiqu
 
 ## **EXPLOREZ NOS DOCUMENTATIONS**
 
-### Systèmes Linux :
+### LINUX :
 -  **[GLPI (Debian)](linux/glpi-debian/index.md)**  
   Un guide pour installer et configurer GLPI sur votre système Debian.
   
@@ -18,7 +18,7 @@ Bienvenue sur **InfoChill**, votre référence pour la documentation informatiqu
 -  **[Postfix (Debian) (En développement)](linux/postfix-debian/index.md)**  
   Un guide pour installer et configurer Postfix sur votre système Debian.
 
-### Systèmes Windows :
+### WINDOWS :
 -  **[Windows Server 2022 (En développement)](windows/winserv2022/index.md)**  
 Un guide pour installer et configurer Windows Server 2022 sur votre système Debian.
 
