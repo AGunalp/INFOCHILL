@@ -201,9 +201,6 @@ Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, c
 ![alt text](/assets/images/interface_nagios.png)
 
 ---
----
-
-### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installation Nagios Core Debian</a>
 
 
 ### **[↩️ Retour](../../index.md)**
