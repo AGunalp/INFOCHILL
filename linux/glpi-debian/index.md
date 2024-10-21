@@ -4,7 +4,7 @@
 
 ## 🛠️ GUIDES D'INSTALLATION ET DE CONFIGURATION
 
-A savoir que dans ce guide nous utilisons 2 machines virtuelles, une reservé pour MariaDB et une autre pour GLPI, enfin, notre ordinateur actuelle pour accéder à l'interface de GLPI.
+À savoir : Ce guide nécessite deux machines virtuelles : une pour MariaDB et une pour GLPI, et votre PC pour accéder à l'interface GLPI.
 - **Étape 1 : [Installation de MariaDB](install-configuration-mariadb-for-glpi.md)**  
 Suivez ce guide pour l'installation de MariaDB (nécessaire pour GLPI)
 
@@ -31,7 +31,7 @@ Pour toute question ou assistance, n'hésitez pas à consulter les ressources su
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 <p style="text-align: right; margin: 20px 0;">
-    <a href="javascript:history.back()" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">
-        Retour en arrière
+    <a href="/index.md" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">
+        Retour à la destination définie
     </a>
 </p>
