@@ -285,3 +285,7 @@ sudo netplan apply
 ```
 sudo rm /var/log/syslog
 ```
+
+---
+
+### **[↩️ Retour](index.md)**

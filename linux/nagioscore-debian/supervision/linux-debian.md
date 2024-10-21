@@ -293,15 +293,6 @@ Une fois la configuration rechargée, vous pourrez voir et surveiller les nouvea
 
 Les commandes pour superviser les services individuels sur vos hôtes seront ajoutées ici.
 
-
-
 ---
----
-### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser Système Linux</a>
 
-
-<p style="text-align: right; margin: 20px 0;">
-    <a href="javascript:history.back()" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">
-        Retour en arrière
-    </a>
-</p>
+### **[↩️ Retour](../../../index.md)**

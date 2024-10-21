@@ -206,8 +206,4 @@ Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, c
 ### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installation Nagios Core Debian</a>
 
 
-<p style="text-align: right; margin: 20px 0;">
-    <a href="javascript:history.back()" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">
-        Retour en arrière
-    </a>
-</p>
+### **[↩️ Retour](../../index.md)**

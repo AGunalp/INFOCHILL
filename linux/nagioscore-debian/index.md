@@ -38,10 +38,4 @@ Pour toute question ou assistance, n'hésitez pas à consulter les ressources su
 
 ---
 
-### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Nagios Core sur Debian</a>
-
-<p style="text-align: right; margin: 20px 0;">
-    <a href="javascript:history.back()" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">
-        Retour en arrière
-    </a>
-</p>
+### **[↩️ Retour](../../index.md)**

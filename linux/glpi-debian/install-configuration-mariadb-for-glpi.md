@@ -169,8 +169,4 @@ Voici quelques commandes supplémentaires qui pourraient vous être utiles :
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-<p style="text-align: right; margin: 20px 0;">
-    <a href="javascript:history.back()" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">
-        Retour en arrière
-    </a>
-</p>
+### **[↩️ Retour](../../index.md)**
