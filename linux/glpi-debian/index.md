@@ -2,12 +2,12 @@
 
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">GLPI sur Debian</a>
 
-# 📚 Documentation de GLPI sur Debian
+# **DOCUMENTATION DE GLPI SUR DEBIAN**
 
 **Bienvenue dans la documentation de GLPI sur Debian !** Cette section est dédiée à l'installation et à la configuration de **GLPI** sur un système Debian. Consultez nos guides pratiques pour assurer une mise en œuvre efficace.
 
 
-## GUIDES D'INSTALLATION ET DE CONFIGURATION
+## 🛠️ GUIDES D'INSTALLATION ET DE CONFIGURATION
 
 A savoir que dans ce guide nous utilisons 2 machines virtuelles, une reservé pour MariaDB et une autre pour GLPI, enfin, notre ordinateur actuelle pour accéder à l'interface de GLPI.
 - **Étape 1 : [Installation de MariaDB]()**  
@@ -27,7 +27,7 @@ Suivez ce guide détaillé pour installer GLPI sur votre serveur Debian.
 - **Système de plugins** : Étendez les fonctionnalités de GLPI selon vos besoins.
 
 
-## 🛠️ RESSOURCES ET ASSISTANCES
+## 🌍 RESSOURCES ET ASSISTANCES
 
 Pour toute question ou assistance, n'hésitez pas à consulter les ressources supplémentaires :
 
