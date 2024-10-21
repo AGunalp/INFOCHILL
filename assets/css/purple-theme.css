@@ -9,18 +9,13 @@ pre, code {
 }
 
 h2 {
-    color: #ffcc00; /* Jaune doré pour les titres de sections */
+    color: #FFEC8B; /* Jaune doré pour les titres de sections */
 }
 
 h3 {
     color: #D3D3D3; /* Vert clair pour les sous-titres */
 }
 
-.lien {
-    color: #910000; /* Orange pour 'Systèmes Linux' et 'Systèmes Windows' */
-}
-
-
 a {
-    color: #1E90FF; /* Couleur des liens */
+    color: #910000; /* Couleur des liens */
 }

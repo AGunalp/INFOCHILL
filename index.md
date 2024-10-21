@@ -9,17 +9,17 @@ Bienvenue sur **InfoChill**, votre référence pour la documentation informatiqu
 ## Explorez nos documentations
 
 ### Systèmes Linux :
--  <span class="lien">[GLPI (Debian)](linux/glpi-debian/index.md)</span>  
+-  **[GLPI (Debian)](linux/glpi-debian/index.md)**  
   Un guide pour installer et configurer GLPI sur votre système Debian.
   
--  **<span class="lien">[NagiosCore (Debian)](linux/nagioscore-debian/index.md)</span>**  
+-  **[NagiosCore (Debian)](linux/nagioscore-debian/index.md)**  
   Un guide pour installer et configurer Nagios Core sur votre système Debian.
 
--  **<span class="lien">[Postfix (Debian) (En développement)](linux/postfix-debian/index.md)</span>**  
+-  **[Postfix (Debian) (En développement)](linux/postfix-debian/index.md)**  
   Un guide pour installer et configurer Postfix sur votre système Debian.
 
 ### Systèmes Windows :
--  **<span class="lien">[Windows Server 2022 (En développement)](windows/winserv2022/index.md)</span>**  
+-  **[Windows Server 2022 (En développement)](windows/winserv2022/index.md)**  
 Un guide pour installer et configurer Windows Server 2022 sur votre système Debian.
 
 
