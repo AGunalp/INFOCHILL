@@ -169,4 +169,4 @@ Voici quelques commandes supplémentaires qui pourraient vous être utiles :
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-### **[↩️ Retour](../../index.md)**
+### **[↩️ Retour](../glpi-debian/index.md)**

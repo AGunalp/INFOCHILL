@@ -142,4 +142,4 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-### **[↩️ Retour](../../index.md)**
+### **[↩️ Retour](../../linux/nagioscore-debian/index.md)**

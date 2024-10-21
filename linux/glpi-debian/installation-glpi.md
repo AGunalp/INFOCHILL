@@ -144,4 +144,4 @@ Une fois l'installation terminée, vous arrivez à la page de connexion. Le comp
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-### **[↩️ Retour](../../index.md)**
+### **[↩️ Retour](../glpi-debian/index.md)**
