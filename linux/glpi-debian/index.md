@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">GLPI sur Debian</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">GLPI Debian</a>
 
 ## 🛠️ GUIDES D'INSTALLATION ET DE CONFIGURATION
 
@@ -28,8 +28,7 @@ Pour toute question ou assistance, n'hésitez pas à consulter les ressources su
 
 - **[Documentation officielle de GLPI](https://glpi-project.org/documentation/)** : Accédez à des guides et des ressources approfondies.
 
-
-### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="../glpi-debian/index.md" style="color: #ff9900; text-decoration: underline;">GLPI sur Debian</a>
+---
 
 <p style="text-align: right; margin: 20px 0;">
     <a href="javascript:history.back()" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">
