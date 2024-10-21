@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/blue-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md) > <a href="" style="color: #ff9900; text-decoration: underline;">Installation GLPI Debian</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md) > <a href="" style="color: #ff9900; text-decoration: underline;">Installation GLPI</a>
 
 
 # 📚 Installation de GLPI et liaison avec MariaDB
