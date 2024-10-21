@@ -6,7 +6,7 @@
 Bienvenue sur **InfoChill**, votre référence pour la documentation informatique. Retrouvez des guides détaillés pour installer et configurer vos systèmes d'exploitation et logiciels.
 
 
-## **EXPLOREZ NOS DOCUMENTATIONS**
+## 📍 **EXPLOREZ NOS DOCUMENTATIONS**
 
 ### LINUX :
 -  **[GLPI (Debian)](linux/glpi-debian/index.md)**  
@@ -24,14 +24,14 @@ Un guide pour installer et configurer Windows Server 2022 sur votre système Deb
 
 
 
-## **À PROPOS**
+## ❓ **À PROPOS**
 
 **InfoChill** propose des tutoriels accessibles pour tous, que vous soyez novice ou expert. Suivez nos guides pour réussir vos projets en administration système.
 
 **[En savoir plus sur InfoChill (En développement)]()**
 
 
-## **CONTACT**
+## 📤 **CONTACT**
 
 Pour toute question ou suggestion, n'hésitez pas à nous contacter :
 - **[Twitter (En développement)]()**
