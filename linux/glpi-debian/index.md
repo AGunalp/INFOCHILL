@@ -7,7 +7,7 @@
 **Bienvenue dans la documentation de GLPI sur Debian !** Cette section est dédiée à l'installation et à la configuration de **GLPI** sur un système Debian. Consultez nos guides pratiques pour assurer une mise en œuvre efficace.
 
 
-## Guides d'Installation et de Configuration
+## GUIDES D'INSTALLATION ET DE CONFIGURATION
 
 A savoir que dans ce guide nous utilisons 2 machines virtuelles, une reservé pour MariaDB et une autre pour GLPI, enfin, notre ordinateur actuelle pour accéder à l'interface de GLPI.
 - **Étape 1 : [Installation de MariaDB]()**  
@@ -17,7 +17,7 @@ Suivez ce guide pour l'installation de MariaDB (nécessaire pour GLPI)
 Suivez ce guide détaillé pour installer GLPI sur votre serveur Debian.
 
 
-## 🔍 À propos de GLPI
+## 🔍 À PROPOS DE GLPI
 
 **GLPI** (Gestionnaire Libre de Parc Informatique) est une solution complète pour la gestion des services IT. GLPI vous permet de gérer efficacement vos actifs, incidents, interventions, et bien plus encore.
 
@@ -27,7 +27,7 @@ Suivez ce guide détaillé pour installer GLPI sur votre serveur Debian.
 - **Système de plugins** : Étendez les fonctionnalités de GLPI selon vos besoins.
 
 
-## 🛠️ Ressources et Assistance
+## 🛠️ RESSOURCES ET ASSISTANCES
 
 Pour toute question ou assistance, n'hésitez pas à consulter les ressources supplémentaires :
 
