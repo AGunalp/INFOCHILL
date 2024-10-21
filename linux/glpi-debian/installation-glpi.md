@@ -106,32 +106,18 @@ apt install php-mysqli php-curl php-gd php-intl php-xml
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-**Redémarrer les services**
-
+**Redémarrer les services**  
 Redémarrez Apache après avoir installé les extensions PHP :
-
 ```
 systemctl restart apache2
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-
-**Configurer la base de données MariaDB**
-
-Lorsque vous arrivez à l'étape de la configuration de la base de données dans l'interface GLPI, vous devez indiquer l'adresse IP de votre serveur MariaDB, ainsi que les informations d'utilisateur et de mot de passe associés.
-
-<strong>
-    <a href="../glpi-debian/glpi/install-configuration-mariadb-for-glpi.md" style="color: red; text-decoration: none;">
-        Voir comment installer et configurer une base de données MariaDB
-    </a>
-</strong>
-
+---
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-**Reprendre l'installation de GLPI**
+**Lier votre serveur GLPI avec votre base de données MariaDB**
 
 Une fois la base de données et l'utilisateur créés, renseignez les informations dans l'interface de GLPI :
 
