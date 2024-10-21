@@ -5,7 +5,7 @@
 ## 🛠️ GUIDES D'INSTALLATION ET DE CONFIGURATION
 
 A savoir que dans ce guide nous utilisons 2 machines virtuelles, une reservé pour MariaDB et une autre pour GLPI, enfin, notre ordinateur actuelle pour accéder à l'interface de GLPI.
-- **Étape 1 : [Installation de MariaDB]()**  
+- **Étape 1 : [Installation de MariaDB](install-configuration-mariadb-for-glpi.md)**  
 Suivez ce guide pour l'installation de MariaDB (nécessaire pour GLPI)
 
 - **Étape 2 : [Installation de GLPI et liaison avec MariaDB](installation-glpi.md)**  
