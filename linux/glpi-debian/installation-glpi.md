@@ -112,8 +112,6 @@ Redémarrez Apache après avoir installé les extensions PHP :
 systemctl restart apache2
 ```
 
----
-
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
