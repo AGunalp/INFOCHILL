@@ -1,6 +1,23 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/blue-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Proxmox</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installation GLPI Debian</a>
+
+
+# 📚 Installation de MariaDB
+
+Vous êtes actuellement dans le guide d'installation de **MariaDB** sur Debian. Suivez les étapes ci-dessous pour installer MariaDB (pour GLPI).
+
+---
+
+<div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
+  ⚠️ <strong>Important :</strong>
+  <ul>
+    <li>Ce guide part du principe que vous êtes connecté en tant que <code>root</code> (via <code>su -</code>).</li>
+    <li>Si ce n'est pas le cas, ajoutez <code>sudo</code> devant chaque commande.</li>
+  </ul>
+</div>
+
+---
 
 ## Installation de MariaDB
 
@@ -97,7 +114,7 @@ CREATE DATABASE glpi;
 Créez l'utilisateur 'glpiuser' et définissez son mot de passe.
 
 ```
-CREATE USER 'glpiuser'@'localhost' IDENTIFIED BY 'votremotdepasse';
+CREATE USER 'glpiuser'@'%' IDENTIFIED BY 'votremotdepasse';
 ```
 
 ---
@@ -140,11 +157,15 @@ Voici quelques commandes supplémentaires qui pourraient vous être utiles :
   DROP DATABASE nom_dune_base;
   ```
 
-- **Sélectionner une base de données (pour voir son contenu) :**
+- **Sélectionner une base de données :**
   ```
   USE nom_dune_base;
   ```
 
+- **Afficher les tables d'une BDD : (à executer que si on a selectionné une BDD)**
+  ```
+  SHOW TABLES;
+  ```
 - **Vérifier la configuration d'un utilisateur :**
   ```
   SHOW GRANTS FOR 'nom_utilisateur'@'localhost';

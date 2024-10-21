@@ -3,9 +3,9 @@
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installation GLPI Debian</a>
 
 
-# 📚 Installation et Configuration de GLPI sur Debian
+# 📚 Installation de GLPI et liaison avec MariaDB
 
-Vous êtes actuellement dans le guide d'installation de **GLPI** sur Debian. Suivez les étapes ci-dessous pour installer et configurer le serveur GLPI avec MariaDB.
+Vous êtes actuellement dans le guide d'installation de **GLPI** sur Debian. Suivez les étapes ci-dessous pour installer GLPI et le lier à MariaDB.
 
 ---
 
@@ -87,8 +87,8 @@ chown -R www-data:www-data /var/www/html/glpi/
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Connectez-vous à l'interface depuis votre navigateur**
-
+**Connectez-vous à l'interface depuis votre navigateur**  
+(Appuyez sur Installer)  
 ![alt text](/assets/images/glpi-connexion-navigateur.png)
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
