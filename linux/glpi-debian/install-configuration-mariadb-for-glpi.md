@@ -118,6 +118,12 @@ Rechargez les privilèges pour appliquer les changements.
 FLUSH PRIVILEGES;
 ```
 
+**Déconnexion de la base de données**
+Vous pouvez maintenant vous déconnecter de la base de données.
+```bash
+exit
+```
+
 ---
 
 ### Autres Commandes Essentielles à Connaitre
