@@ -24,3 +24,6 @@ a {
     color: #66d9ef; /* Couleur des liens */
 }
 
+h1, h2, h3 {
+    border-bottom: none;
+}
