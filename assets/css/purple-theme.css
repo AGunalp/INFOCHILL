@@ -8,6 +8,10 @@ pre, code {
     color: #dcdcdc; /* Couleur claire pour le code */
 }
 
+h1, h2 {
+    color: #a5a5a5; /* Couleur des liens */
+}
+
 a {
     color: #1E90FF; /* Couleur des liens */
 }
