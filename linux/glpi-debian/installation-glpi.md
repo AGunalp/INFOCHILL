@@ -7,7 +7,7 @@
 
 Vous êtes actuellement dans le guide d'installation de **GLPI** sur Debian. Suivez les étapes ci-dessous pour installer GLPI et le lier à MariaDB.
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
   ⚠️ <strong>Important :</strong>
@@ -17,7 +17,7 @@ Vous êtes actuellement dans le guide d'installation de **GLPI** sur Debian. Sui
   </ul>
 </div>
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 ### Étapes à Suivre
 
@@ -144,10 +144,7 @@ Une fois l'installation terminée, vous arrivez à la page de connexion. Le comp
 
 ![alt text](/assets/images/glpi-interface-connexion.png)
 
----
----
-### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installation GLPI Debian</a>
-
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 <p style="text-align: right; margin: 20px 0;">
     <a href="javascript:history.back()" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">

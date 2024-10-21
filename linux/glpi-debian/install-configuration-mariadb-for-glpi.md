@@ -7,7 +7,7 @@
 
 Vous êtes actuellement dans le guide d'installation de **MariaDB** sur Debian. Suivez les étapes ci-dessous pour installer MariaDB (pour GLPI).
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
   ⚠️ <strong>Important :</strong>
@@ -17,13 +17,7 @@ Vous êtes actuellement dans le guide d'installation de **MariaDB** sur Debian. 
   </ul>
 </div>
 
----
-
-## Installation de MariaDB
-
-Vous trouverez ci-dessous les étapes nécessaires pour installer MariaDB sur votre système, afin de préparer l'installation de GLPI.
-
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 ### Étapes à Suivre
 
@@ -34,7 +28,7 @@ Assurez-vous que votre système est à jour pour éviter les problèmes de compa
 apt update && apt upgrade
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Installer MariaDB**  
 Installez le serveur MariaDB ainsi que le client.
@@ -43,7 +37,7 @@ Installez le serveur MariaDB ainsi que le client.
 apt install mariadb-server mariadb-client
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Vérifier l'installation**  
 Vérifiez que MariaDB est bien installé.
@@ -52,7 +46,7 @@ Vérifiez que MariaDB est bien installé.
 mariadb --version
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Démarrer et activer le service**  
 Démarrez le service MariaDB et activez-le pour qu'il se lance au démarrage.
@@ -62,7 +56,7 @@ systemctl enable mariadb
 systemctl start mariadb
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Vérifier le statut du service**  
 Assurez-vous que le service MariaDB fonctionne correctement.
@@ -70,7 +64,8 @@ Assurez-vous que le service MariaDB fonctionne correctement.
 ```bash
 systemctl status mariadb
 ```
----
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Configurer l'accès distant (facultatif)**  
 Si vous souhaitez permettre des connexions à distance à votre serveur MariaDB, vous devez modifier le fichier de configuration de MariaDB.
@@ -90,7 +85,8 @@ Si vous souhaitez permettre des connexions à distance à votre serveur MariaDB,
    ```plaintext
    systemctl restart mariadb
    ```
----
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Se connecter à MariaDB**  
 Connectez-vous à la base de données avec l'utilisateur root.
@@ -99,7 +95,7 @@ Connectez-vous à la base de données avec l'utilisateur root.
 mysql -u root -p
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Créer une base de données pour GLPI**  
 Créez une base de données nommée `glpi`.
@@ -108,7 +104,7 @@ Créez une base de données nommée `glpi`.
 CREATE DATABASE glpi;
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Créer un utilisateur et lui accorder des permissions**  
 Créez l'utilisateur 'glpiuser' et définissez son mot de passe.
@@ -117,7 +113,7 @@ Créez l'utilisateur 'glpiuser' et définissez son mot de passe.
 CREATE USER 'glpiuser'@'%' IDENTIFIED BY 'votremotdepasse';
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Accorder les droits nécessaires**  
 Accordez à l'utilisateur tous les privilèges nécessaires sur la base de données `glpi`.
@@ -126,7 +122,7 @@ Accordez à l'utilisateur tous les privilèges nécessaires sur la base de donn�
 GRANT ALL PRIVILEGES ON glpi.* TO 'glpiuser'@'localhost';
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Appliquer les modifications**  
 Rechargez les privilèges pour appliquer les changements.
@@ -141,7 +137,7 @@ Vous pouvez maintenant vous déconnecter de la base de données.
 exit
 ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 ### Autres Commandes Essentielles à Connaitre
 
@@ -171,7 +167,7 @@ Voici quelques commandes supplémentaires qui pourraient vous être utiles :
   SHOW GRANTS FOR 'nom_utilisateur'@'localhost';
   ```
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 <p style="text-align: right; margin: 20px 0;">
     <a href="javascript:history.back()" style="display: inline-block; padding: 8px 12px; background-color: #ff9900; color: white; text-decoration: none; border: 2px solid white; border-radius: 4px; font-weight: bold; margin-right: 10px;">
