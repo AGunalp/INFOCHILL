@@ -30,7 +30,7 @@ Depuis votre serveur Nagios, installez d’abord ces paquets :
 apt install nagios-nrpe-server nagios-plugins
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Copier les plugins nécessaires**
 
@@ -40,7 +40,6 @@ Copiez tous les fichiers de `/usr/lib/nagios/plugins/*` vers le répertoire `/us
 cp /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Modifier le fichier de configuration Nagios**
 
@@ -55,7 +54,7 @@ vim /usr/local/nagios/etc/nagios.cfg
   ```
   cfg_dir=/usr/local/nagios/etc/servers
   ```
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Créer le répertoire des serveurs (si nécessaire)**
 
@@ -65,7 +64,7 @@ Si le répertoire `/usr/local/nagios/etc/servers` n'existe pas encore, créez-le
 mkdir -p /usr/local/nagios/etc/servers
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 **Changer les droits d'accès**
 
@@ -75,7 +74,7 @@ Après avoir créé le répertoire, il est important de transmettre le répertoi
 chown -R nagios:nagios /usr/local/nagios/etc/servers
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 ## Choisissez le système à superviser :
 
