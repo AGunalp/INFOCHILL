@@ -20,7 +20,7 @@
 **Mettre à jour le système :**  
 Assurez-vous que votre système est à jour pour éviter les problèmes de compatibilité.
 
-```bash
+```
 apt update && apt upgrade
 ```
 
