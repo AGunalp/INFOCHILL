@@ -10,7 +10,7 @@
 - **Étape 1 : [Installation de MariaDB](installation-mariadb)**  
 Suivez ce guide pour l'installation de MariaDB (nécessaire pour GLPI)
 
-- **Étape 2 : [Installation de GLPI et liaison avec MariaDB](installation-glpi.md)**  
+- **Étape 2 : [Installation de GLPI (et liaison avec MariaDB)](installation-glpi.md)**  
 Suivez ce guide détaillé pour installer GLPI sur votre serveur Debian.
 
 

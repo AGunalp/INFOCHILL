@@ -1,13 +1,13 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/principal-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Nagios Core sur Debian</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Nagios Core Debian</a>
 
 ## 🛠️ Guides d'Installation et de Configuration
 
-- **Étape 1 :** [Installation de Nagios Core sur Debian](installation-nagioscore.md)  
+- **Étape 1 : [Installation de Nagios Core sur Debian](installation-nagioscore.md)**  
 Apprenez à installer Nagios Core sur un serveur Debian en suivant notre guide détaillé.
 
--  **Étape 2 :** [Surveillance des Machines avec le Plugin NRPE](supervision-nrpe)  
+-  **Étape 2 : [Surveillance des Machines avec le Plugin NRPE](supervision-nrpe)**  
 Configurez et installez le plugin NRPE pour surveiller à distance vos machines.
 
 ## 🔍 À propos de Nagios

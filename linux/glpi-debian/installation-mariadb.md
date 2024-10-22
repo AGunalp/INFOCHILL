@@ -5,10 +5,6 @@
 
 # 📚 Installation de MariaDB
 
-Vous êtes actuellement dans le guide d'installation de **MariaDB** sur Debian. Suivez les étapes ci-dessous pour installer MariaDB (pour GLPI).
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
   ⚠️ <strong>Important :</strong>
   <ul>

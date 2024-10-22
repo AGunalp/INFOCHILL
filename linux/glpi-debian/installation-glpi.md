@@ -5,10 +5,6 @@
 
 # 📚 Installation de GLPI et liaison avec MariaDB
 
-Vous êtes actuellement dans le guide d'installation de **GLPI** sur Debian. Suivez les étapes ci-dessous pour installer GLPI et le lier à MariaDB.
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
   ⚠️ <strong>Important :</strong>
   <ul>

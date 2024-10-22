@@ -5,10 +5,6 @@
 
 # 📚 Superviser des machines avec le plugin NRPE
 
-Bienvenue dans la section dédiée à l'installation et à la configuration du plugin **NRPE**. Vous êtes actuellement dans le guide d'installation du plugin NRPE pour Nagios.
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
 <!-- Alerte importante concernant les droits d'utilisateur -->
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
   ⚠️ <strong>Important :</strong>
