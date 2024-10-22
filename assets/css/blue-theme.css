@@ -8,7 +8,7 @@ pre, code {
     background-color: #000000 !important; /* 2e2e2e Fond pour le code */
     color: #ffffff !important; /* Couleur du texte du code */
     border-radius: 5px !important; /* Coins arrondis */
-    border: none; /* Retirer toute bordure potentiellement blanche */
+    border: none !important; /* Retirer toute bordure potentiellement blanche */
 }
 
 h1, h2, h3 {
