@@ -2,6 +2,8 @@
 
 <link rel="stylesheet" type="text/css" href="/assets/css/principal-theme.css">
 
+
+
 ###### 📂 Vous êtes ici :  <a href="." style="color: #D52B1E; text-decoration: underline;">Accueil</a>
 
 ## 📍 EXPLOREZ NOS DOCUMENTATIONS
@@ -40,6 +42,7 @@ Pour toute question ou suggestion, n'hésitez pas à nous contacter :
 </a>
 
 ---
+
 
 
 &copy; 2024 InfoChill - Tous droits réservés
