@@ -22,8 +22,12 @@ pre, code {
     background-color: #000000 !important; /* Fond pour le code */
     color: #ffffff !important; /* Couleur du texte du code */
     border-radius: 0px !important; /* Coins arrondis */
-
 }
+
+pre { 
+    border: 1px solid #ffffff; /* Optionnel : Bordure blanche */
+}
+
 
 /* Styles pour les boutons */
 .button {
