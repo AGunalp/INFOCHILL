@@ -102,7 +102,7 @@ Après avoir configuré votre machine Debian pour NRPE, vous devez maintenant d�
 Accédez au répertoire approprié et créez le fichier pour votre machine (SrvDeb).
 
 ```
-touch /usr/local/nagios/etc/servers/SrvDeb.cfg
+touch /usr/local/nagios/etc/servers/UneMachineDebian.cfg
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
@@ -111,7 +111,7 @@ touch /usr/local/nagios/etc/servers/SrvDeb.cfg
 Ouvrez le fichier créé pour ajouter les informations nécessaires.
 
 ```
-vim /usr/local/nagios/etc/servers/SrvDeb.cfg
+vim /usr/local/nagios/etc/servers/UneMachineDebian.cfg
 ```
 
 - **Ajouter les définitions de l'hôte :**  
@@ -119,30 +119,26 @@ Insérez le code suivant dans le fichier :
 
    ```plaintext
    define host {
-      use                     linux-server          ; Modèle prédéfini pour les serveurs Linux
-      host_name               SrvDeb                ; Nom de l'hôte
-      alias                   Serveur de Test       ; Alias pour afficher dans Nagios
-      address                 192.168.13.2          ; Adresse IP de la machine
-      max_check_attempts      5                     ; Nombre de tentatives avant une alerte
-      check_period            24x7                  ; Vérification continue
-      notification_interval    30                   ; Intervalle de notification
-      notification_period     24x7                  ; Période de notification
+      use                     linux-server          ; Modèle déjà prédéfini pour les serveurs Linux
+      host_name               UneMachineDebian      ; Nom de l'hôte (machine à superviser)
+      alias                   Serveur de Mail       ; Alias (juste l'affichage dans Nagios)
+      address                 192.168.1.201         ; Adresse IP de la machine
    }
    ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-#### Redémarrez votre machine :
+#### Redémarrez le service nagios (sinon reboot) :
 
 ```
-reboot
+systemctl restart nagios
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine qui y est référencée, pour mon cas j'ai remonté une machine debian ayant pour nom `AP4-GLPI` :
 
-![alt text](/assets/images/host_debian_nagios.png)
+![alt text](../../../assets/images/host_debian_nagios.png)
 
 ---
 

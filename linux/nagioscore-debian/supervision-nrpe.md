@@ -37,7 +37,7 @@ apt install nagios-nrpe-server nagios-plugins
 Copiez tous les fichiers de `/usr/lib/nagios/plugins/*` vers le répertoire `/usr/local/nagios/libexec/`. C'est ici que Nagios attend les plugins nécessaires pour effectuer les vérifications sur les machines distantes.
 
 ```
-cp /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
+mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
