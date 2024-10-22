@@ -7,10 +7,9 @@ body {
 pre, code {
     background-color: #000000 !important; /* 2e2e2e Fond pour le code */
     color: #ffffff !important; /* Couleur du texte du code */
+    padding: 20px; /* Ajoute du padding pour couvrir les coins */
     border-radius: 5px !important; /* Coins arrondis */
 }
-
-
 
 h1, h2, h3 {
     color: #f8f8f2; /* Couleur des titres */
