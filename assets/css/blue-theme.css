@@ -10,10 +10,7 @@ pre, code {
     border-radius: 5px !important; /* Coins arrondis */
 }
 
-code {
-    padding: 1px 4px; /* Un peu de padding pour le code en ligne */
-    border-radius: 10px; /* Coins arrondis */
-}
+
 
 h1, h2, h3 {
     color: #f8f8f2; /* Couleur des titres */
