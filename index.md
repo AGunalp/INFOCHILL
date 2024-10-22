@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/principal-theme.css">
 
 ###### 📂 Vous êtes ici :  <a href="." style="color: #D52B1E; text-decoration: underline;">Accueil</a>
 
