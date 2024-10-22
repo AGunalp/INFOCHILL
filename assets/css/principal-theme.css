@@ -1,16 +1,23 @@
 body {
     background-color: #121212; /* Fond sombre */
     color: #e0e0e0; /* Texte clair */
+    font-family: Arial, sans-serif; /* Police de caractère */
 }
 
-h2 {
-    color: #ffffff; /* Les titres de sections FFCB61 */
+h1, h2 {
+    color: #ffffff; /* Couleur des titres */
 }
 
 h3 {
-    color: #D3D3D3; /* Les sous-titres */
+    color: #D3D3D3; /* Couleur des sous-titres */
 }
 
 a {
     color: #40B3E8; /* Liens hypertextes */
+}
+
+pre, code {
+    background-color: #000000 !important; /* Fond pour le code */
+    color: #ffffff !important; /* Couleur du texte du code */
+    border-radius: 0px !important; /* Coins arrondis */
 }
