@@ -79,41 +79,6 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 
 ## Choisissez le système à superviser :
 
-<style>
-
-    .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%; /* Prendre toute la largeur du conteneur */
-        height: 48px; /* Hauteur du bouton */
-        background-color: transparent; /* Pas de couleur de fond */
-        color: white; /* Couleur du texte */
-        text-decoration: none; /* Pas de soulignement */
-        border: 2px solid #ffffff; /* Contour blanc */
-        border-radius: 7px; /* Coins arrondis */
-        margin: 5px 0; /* Marges verticales */
-        transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition de couleur et transform */
-        font-size: 17px; /* Taille de police plus grande */
-        font-weight: 500; /* Poids de police moyen */
-        text-transform: uppercase; /* Texte en majuscules pour un look moderne */
-        letter-spacing: 1px; /* Espacement des lettres */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 1px 5px rgba(255, 255, 255, 0.5); /* Ombre externe et interne */
-        background-clip: padding-box; /* Pour le dégradé de bordure */
-    }
-
-    .button:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Couleur au survol (semi-transparent) */
-        color: white; /* Garder la couleur blanche au survol */
-        text-decoration: none; /* Pas de soulignement au survol */
-        transform: scale(1.01); /* Légère augmentation de taille au survol */
-    }
-
-    .icon {
-        margin-right: 10px; /* Espace entre l'icône et le texte */
-        font-size: 15px; /* Taille de l'icône légèrement plus grande */
-    }
-</style>
 
 <a href="https://infochill.com/linux/nagioscore-debian/supervision/machine-debian.html" class="button">
     <span class="icon">➤</span> Superviser un Système Linux (Debian)
