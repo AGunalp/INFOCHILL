@@ -1,12 +1,12 @@
 body {
     background-color: #0f0f0f; /* Fond sombre */
-    color: #e0e0e0; /* Texte clair */
+    color: #000000; /* Texte clair */
     font-family: Arial, sans-serif;
 }
 
 pre, code {
     background-color: #000000 !important; /* 2e2e2e Fond pour le code */
-    color: #000000 !important; /* Couleur du texte du code */
+    color: #ffffff !important; /* Couleur du texte du code */
     /*border-radius: 5px !important; /* Coins arrondis */
 }
 
