@@ -2,21 +2,13 @@
 
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Nagios Core sur Debian</a>
 
-# 📚 Documentation de Nagios Core sur Debian
-
-**Bienvenue dans la documentation officielle de Nagios!** Cette section est dédiée à l'installation et à la configuration de **Nagios Core** sur un système Debian. Découvrez nos guides pratiques pour garantir une mise en œuvre efficace.
-
----
-
-## Guides d'Installation et de Configuration
+## 🛠️ Guides d'Installation et de Configuration
 
 - **Étape 1 :** [Installation de Nagios Core sur Debian](installation-nagioscore.md)  
 Apprenez à installer Nagios Core sur un serveur Debian en suivant notre guide détaillé.
 
 -  **Étape 2 :** [Surveillance des Machines avec le Plugin NRPE](supervision-nrpe)  
 Configurez et installez le plugin NRPE pour surveiller à distance vos machines.
-
----
 
 ## 🔍 À propos de Nagios
 
@@ -26,8 +18,6 @@ Configurez et installez le plugin NRPE pour surveiller à distance vos machines.
 - **Surveillance en temps réel** : Suivez l'état de vos systèmes instantanément.
 - **Alertes personnalisables** : Configurez les notifications selon vos besoins.
 - **Extensibilité avec des plugins** : Profitez d'une large bibliothèque de plugins pour répondre à vos exigences spécifiques.
-
----
 
 ## 🛠️ Ressources et Assistance
 
