@@ -41,7 +41,7 @@ Pour toute question ou suggestion, n'hésitez pas à nous contacter :
     <span class="icon">✉️</span> Nous contacter
 </a>
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
 
