@@ -79,6 +79,7 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 
 ## Choisissez le système à superviser :
 
+<link rel="stylesheet" type="text/css" href="../../assets/css/button.css">
 
 <a href="https://infochill.com/linux/nagioscore-debian/supervision/machine-debian.html" class="button">
     <span class="icon">➤</span> Superviser un Système Linux (Debian)
