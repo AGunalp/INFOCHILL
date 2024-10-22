@@ -5,10 +5,10 @@ body {
 }
 
 pre, code {
-    background-color: #2e2e2e !important; /* Fond pour le code */
+    background-color: #000000 !important; /* 2e2e2e Fond pour le code */
     color: #ffffff !important; /* Couleur du texte du code */
     padding: 10px;
-    border-radius: 10px; /* Coins arrondis */
+    border-radius: 10px !important; /* Coins arrondis */
 }
 
 code {
