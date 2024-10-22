@@ -32,9 +32,10 @@ Un guide pour installer et configurer Windows Server 2022 sur votre système Deb
 ## 📤 CONTACT
 
 Pour toute question ou suggestion, n'hésitez pas à nous contacter :
-- **[Twitter (En développement)]()**
-- **[Linkedin (En développement)]()**
-- **[GitHub (En développement)]()**
+
+- **Email : [contact@infochill.com](mailto:contact@infochill.com)**
+
+---
 
 
 &copy; 2024 InfoChill - Tous droits réservés
