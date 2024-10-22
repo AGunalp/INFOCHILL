@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/principal-theme.css">
 
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Nagios Core sur Debian</a>
 
@@ -19,7 +19,7 @@ Configurez et installez le plugin NRPE pour surveiller à distance vos machines.
 - **Alertes personnalisables** : Configurez les notifications selon vos besoins.
 - **Extensibilité avec des plugins** : Profitez d'une large bibliothèque de plugins pour répondre à vos exigences spécifiques.
 
-## 🛠️ Ressources et Assistance
+## 🌍 Ressources et Assistance
 
 Pour toute question ou assistance, n'hésitez pas à consulter les ressources supplémentaires :
 

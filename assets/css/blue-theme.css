@@ -8,7 +8,7 @@ pre, code {
     background-color: #2e2e2e !important; /* Fond pour le code */
     color: #ffffff !important; /* Couleur du texte du code */
     padding: 10px;
-    border-radius: 1px; /* Coins arrondis */
+    border-radius: 10px; /* Coins arrondis */
 }
 
 code {
