@@ -20,7 +20,7 @@
 **Mettre à jour le système**  
 Assurez-vous que votre système est à jour pour éviter les problèmes de compatibilité.
 
-```bash
+```
 apt update && apt upgrade
 ```
 
@@ -29,7 +29,7 @@ apt update && apt upgrade
 **Installer MariaDB**  
 Installez le serveur MariaDB ainsi que le client.
 
-```bash
+```
 apt install mariadb-server mariadb-client
 ```
 
@@ -38,7 +38,7 @@ apt install mariadb-server mariadb-client
 **Vérifier l'installation**  
 Vérifiez que MariaDB est bien installé.
 
-```bash
+```
 mariadb --version
 ```
 
@@ -47,7 +47,7 @@ mariadb --version
 **Démarrer et activer le service**  
 Démarrez le service MariaDB et activez-le pour qu'il se lance au démarrage.
 
-```bash
+```
 systemctl enable mariadb
 systemctl start mariadb
 ```
@@ -57,7 +57,7 @@ systemctl start mariadb
 **Vérifier le statut du service**  
 Assurez-vous que le service MariaDB fonctionne correctement.
 
-```bash
+```
 systemctl status mariadb
 ```
 
@@ -68,17 +68,17 @@ Si vous souhaitez permettre des connexions à distance à votre serveur MariaDB,
 
 1. Ouvrez le fichier de configuration `my.cnf` :
 
-   ```bash
+   ```
    vim /etc/mysql/mariadb.conf.d/50-server.cnf
    ```
 
 2. Recherchez la ligne contenant `bind-address`. Par défaut, elle est souvent définie sur `127.0.0.1` (localhost). Changez-la pour permettre des connexions externes :
 
-   ```plaintext
+   ```
    bind-address = 0.0.0.0
    ```
 3. On oublie pas de restart : 
-   ```plaintext
+   ```
    systemctl restart mariadb
    ```
 
@@ -87,7 +87,7 @@ Si vous souhaitez permettre des connexions à distance à votre serveur MariaDB,
 **Se connecter à MariaDB**  
 Connectez-vous à la base de données avec l'utilisateur root.
 
-```bash
+```
 mysql -u root -p
 ```
 
@@ -123,13 +123,13 @@ GRANT ALL PRIVILEGES ON glpi.* TO 'glpiuser'@'localhost';
 **Appliquer les modifications**  
 Rechargez les privilèges pour appliquer les changements.
 
-```bash
+```
 FLUSH PRIVILEGES;
 ```
 
 **Déconnexion de la base de données**
 Vous pouvez maintenant vous déconnecter de la base de données.
-```bash
+```
 exit
 ```
 

@@ -40,7 +40,7 @@ Pour superviser un système Linux (Debian) avec le plugin NRPE, suivez les étap
 **Mettre à jour le système :**  
 Assurez-vous que votre système estf à jour pour éviter les problèmes de compatibilité.
 
-```bash
+```
 apt update && apt upgrade
 ```
 
@@ -49,7 +49,7 @@ apt update && apt upgrade
 **Installer les paquets nécessaires :**  
 Installez le serveur NRPE et les plugins Nagios.
 
-```bash
+```
 apt install nagios-nrpe-server nagios-plugins
 ```
 
@@ -58,14 +58,14 @@ apt install nagios-nrpe-server nagios-plugins
 **Modifier le fichier de configuration NRPE :**  
 Ouvrez le fichier de configuration NRPE pour autoriser les connexions depuis votre serveur Nagios.
 
-```bash
+```
 vim /etc/nagios/nrpe.cfg
 ```
 
 - **Configurer les adresses IP autorisées :**  
   Ajoutez l'adresse IP de votre serveur Nagios à la ligne suivante (par exemple, pour l'IP `192.168.13.2`):
 
-  ```bash
+  ```
   allowed_hosts=127.0.0.1,::1, 192.168.13.2
   ```
 
@@ -74,7 +74,7 @@ vim /etc/nagios/nrpe.cfg
 **Redémarrer le service NRPE :**  
 Appliquez vos modifications en redémarrant le service NRPE.
 
-```bash
+```
 systemctl restart nagios-nrpe-server.service
 ```
 
@@ -101,7 +101,7 @@ Après avoir configuré votre machine Debian pour NRPE, vous devez maintenant d�
 **Créer le fichier de configuration :**  
 Accédez au répertoire approprié et créez le fichier pour votre machine (SrvDeb).
 
-```bash
+```
 touch /usr/local/nagios/etc/servers/SrvDeb.cfg
 ```
 
@@ -110,7 +110,7 @@ touch /usr/local/nagios/etc/servers/SrvDeb.cfg
 **Éditer le fichier :**  
 Ouvrez le fichier créé pour ajouter les informations nécessaires.
 
-```bash
+```
 vim /usr/local/nagios/etc/servers/SrvDeb.cfg
 ```
 
@@ -134,7 +134,7 @@ Insérez le code suivant dans le fichier :
 
 #### Redémarrez votre machine :
 
-```bash
+```
 reboot
 ```
 
@@ -155,7 +155,7 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 
 Vous devez d'abord localiser le fichier de configuration des templates dans Nagios. Ce fichier est souvent situé dans ``/usr/local/nagios/etc/templates.cfg``. Ouvrez-le avec votre éditeur de texte préféré :
 
-```bash
+```
 vim /usr/local/nagios/etc/templates.cfg
 ```
 
@@ -183,7 +183,7 @@ define service {
 
 Pour configurer les services associés à l'hôte SrvDeb, nous allons modifier le fichier de configuration que nous avons précédemment créé pour définir l'hôte. Cela nous permettra d'organiser efficacement la supervision des services tout en maintenant une structure claire.
 
-```bash
+```
 touch /usr/local/nagios/etc/services/SrvDeb-services.cfg
 ```
 
@@ -193,7 +193,7 @@ touch /usr/local/nagios/etc/services/SrvDeb-services.cfg
 
 Ouvrez le fichier que vous venez de créer pour définir les services à superviser. Voici comment vous pourriez le faire :
 
-```bash
+```
 vim /usr/local/nagios/etc/services/SrvDeb-services.cfg
 ```
 
@@ -257,7 +257,7 @@ define service {
 Recharger la Configuration de Nagios
 Après avoir ajouté les définitions de services, vous devez recharger la configuration de Nagios pour appliquer les modifications :
 
-```bash
+```
 systemctl restart nagios.service
 ```
 
