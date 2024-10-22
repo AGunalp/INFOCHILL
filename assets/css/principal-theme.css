@@ -24,7 +24,9 @@ pre, code {
     border-radius: 0px !important; /* Coins arrondis */
 }
 
-
+pre { 
+    border: 1px solid #ffffff !important; /* Optionnel : Bordure blanche */
+}
 
 
 /* Styles pour les boutons */
