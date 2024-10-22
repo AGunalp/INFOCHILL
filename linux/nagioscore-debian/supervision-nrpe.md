@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/assets/css/principal-theme.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser avec NRPE</a>
 
@@ -78,8 +78,6 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 ## Choisissez le système à superviser :
-
-<link rel="stylesheet" type="text/css" href="../../assets/css/button.css">
 
 <a href="https://infochill.com/linux/nagioscore-debian/supervision/machine-debian.html" class="button">
     <span class="icon">➤</span> Superviser un Système Linux (Debian)

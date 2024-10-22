@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/assets/css/principal-theme.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Nagios Core Debian</a>
 
