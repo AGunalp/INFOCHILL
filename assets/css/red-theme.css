@@ -9,6 +9,7 @@ pre, code {
     color: #ffcccc !important; /* Couleur du texte du code */
     padding: 10px;
     border-radius: 4px; /* Coins arrondis */
+    border: 1px solid #ffffff; /* Bordure blanche */
 }
 
 code {
