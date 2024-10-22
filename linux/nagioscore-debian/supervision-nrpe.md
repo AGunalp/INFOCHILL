@@ -7,7 +7,7 @@
 
 Bienvenue dans la section dédiée à l'installation et à la configuration du plugin **NRPE**. Vous êtes actuellement dans le guide d'installation du plugin NRPE pour Nagios.
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 <!-- Alerte importante concernant les droits d'utilisateur -->
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
@@ -18,7 +18,7 @@ Bienvenue dans la section dédiée à l'installation et à la configuration du p
   </ul>
 </div>
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 ## Objectif
 
@@ -84,10 +84,6 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
 ## Choisissez le système à superviser :
 
 <style>
-    body {
-        font-family: 'Arial', sans-serif; /* Police de base */
-        background-color: #1a1a1a; /* Couleur de fond pour un contraste */
-    }
 
     .button {
         display: flex;

@@ -7,7 +7,7 @@
 
 Vous êtes actuellement dans le guide d'installation de **Nagios Core** sur Debian. Suivez les étapes ci-dessous pour compléter l'installation.
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
@@ -18,7 +18,7 @@ Vous êtes actuellement dans le guide d'installation de **Nagios Core** sur Debi
   </ul>
 </div>
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
 **Mettre à jour le système**
