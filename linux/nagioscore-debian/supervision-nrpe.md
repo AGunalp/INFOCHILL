@@ -30,7 +30,7 @@ Après avoir terminé l'installation et vérifié que votre serveur Nagios est e
 
 Depuis votre serveur Nagios, installez d’abord ces paquets :
 
-```bash
+```
 apt install nagios-nrpe-server nagios-plugins
 ```
 
@@ -40,7 +40,7 @@ apt install nagios-nrpe-server nagios-plugins
 
 Copiez tous les fichiers de `/usr/lib/nagios/plugins/*` vers le répertoire `/usr/local/nagios/libexec/`. C'est ici que Nagios attend les plugins nécessaires pour effectuer les vérifications sur les machines distantes.
 
-```bash
+```
 cp /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
 ```
 
@@ -50,13 +50,13 @@ cp /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
 
 Vous allez maintenant modifier le fichier `nagios.cfg` pour activer un paramètre nécessaire à la surveillance des machines distantes. Cela permettra à Nagios d'utiliser les plugins NRPE et d'assurer une communication efficace avec les clients NRPE.
 
-```bash
+```
 vim /usr/local/nagios/etc/nagios.cfg
 ```
 
 - Décommentez (rendez actif) la ligne suivante :
 
-  ```bash
+  ```
   cfg_dir=/usr/local/nagios/etc/servers
   ```
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
@@ -65,7 +65,7 @@ vim /usr/local/nagios/etc/nagios.cfg
 
 Si le répertoire `/usr/local/nagios/etc/servers` n'existe pas encore, créez-le manuellement. Cela permettra à Nagios de stocker les fichiers de configuration des hôtes et services.
 
-```bash
+```
 mkdir -p /usr/local/nagios/etc/servers
 ```
 
@@ -75,7 +75,7 @@ mkdir -p /usr/local/nagios/etc/servers
 
 Après avoir créé le répertoire, il est important de transmettre le répertoire à l'utilisateur et au groupe nagios : 
 
-```bash
+```
 chown -R nagios:nagios /usr/local/nagios/etc/servers
 ```
 
