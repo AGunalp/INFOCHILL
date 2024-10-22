@@ -115,11 +115,11 @@ chown -R nagios:nagios /usr/local/nagios/etc/servers
     }
 </style>
 
-<a href="https://infochill.com/linux/nagioscore-debian/supervision/linux-debian.html" class="button">
+<a href="https://infochill.com/linux/nagioscore-debian/supervision/machine-debian.html" class="button">
     <span class="icon">➤</span> Superviser un Système Linux (Debian)
 </a>
 
-<a href="https://infochill.com/linux/nagioscore-debian/supervision/windows.html" class="button">
+<a href="https://infochill.com/linux/nagioscore-debian/supervision/machine-windows.html" class="button">
     <span class="icon">➤</span> Superviser un Système Windows
 </a>
 
