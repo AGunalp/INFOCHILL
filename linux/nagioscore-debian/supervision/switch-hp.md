@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/assets/css/purple-theme.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/principal-theme.css">
 
 ###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser Switch HP</a>
 

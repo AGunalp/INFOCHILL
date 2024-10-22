@@ -1,6 +1,6 @@
 <link rel="icon" href="/assets/images/favicon.ico" type="image/png">
 
-<link rel="stylesheet" type="text/css" href="/assets/css/principal-theme.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/principal-theme.css">
 
 
 
@@ -34,8 +34,6 @@ Un guide pour installer et configurer Windows Server 2022 sur votre système Deb
 ## 📤 CONTACT
 
 Pour toute question ou suggestion, n'hésitez pas à nous contacter :
-
-<link rel="stylesheet" type="text/css" href="./assets/css/button.css">
 
 <a href="mailto:contact@infochill.com" class="button">
     <span class="icon">✉️</span> Nous contacter
