@@ -261,6 +261,128 @@ Parfait, maintenant on attend et :
 
 ![alt text](../../../assets/images/check_memory.png)
 
+Pour ajouter la commande ping, on regarde si on a déjà un plugin 
+```
+ls -l /usr/local/nagios/libexec/
+```
+On peut voir qu'on a bien un plugin (script) pour faire un ping  
+On regarde alors si on a une commande défini qui permet d'executer ce plugin :
+```
+vim /usr/local/nagios/etc/objects/commands.cfg
+```
+On peut voir qu'il n'y a pas de commande défini pour executer ce script, alors on va définir nous même la commande :  (si la commande alive y est)
+Rajoutez dans le fichier commands.cfg :
+```
+define command {
+    command_name    check_local_ping
+    command_line    $USER1$/check_ping -H $HOSTADDRESS$ -w 100ms,20% -c 500ms,60%
+}
+```
+Maintenant qu'on a créé la commande, on peut définir le template (de service) qui va utiliser cette commande :
+```
+define service {
+    name                    template_check_ping     ; Nom du template
+    use                     generic-service         ; Utiliser un modèle générique de service
+    check_command           check_local_ping        ; Commande à exécuter
+    register                0                       ; Indique que ce n'est pas un service réel (template)
+}
+```
+On peut maintenant ajouter ce template à nos machines hosts.cfg
+```
+vim /usr/local/nagios/etc/servers/MaMachineDebian.cfg
+```
+```
+define service {
+    use                     template_check_ping          ; Utilise le template pour le service de ping
+    host_name               UneMachineDebian             ; Nom de l'hôte à vérifier
+    service_description     Check Local Ping             ; Description du service
+}
+```
+![alt text](../../../assets/images/check_load.png)
+
+Maintenant pour la charge du systeme, comme dhab, d'abord vérifier si y a le script(plugin) en lien avec la fonctionnalité recherchée :
+
+```
+```
+
+Puis regardez si la commande est défini:
+```
+vim /usr/local/nagios/etc/objects/commands.cfg
+```
+
+Pour notre cas, il y est :
+```
+define command {
+    command_name    check_local_load
+    command_line    $USER1$/check_load -w $ARG1$ -c $ARG2$
+}
+```
+Go faire template de service en mettant la commande pour ensuite utiliser le template dans le fichier host qu'on veut:
+```
+vim /usr/local/nagios/etc/objects/templaces.cfg
+```
+Ajoutez :
+```
+define service {
+    name                    template_check_load             ; Nom du template
+    use                     generic-service                 ; Utiliser un modèle générique de service
+    check_command           check_local_load!5,4,3!10,6,4  ; Commande à exécuter avec des arguments
+    register                0                               ; Indique que ce n'est pas un service réel (template)
+}
+```
+Maintenant, go l'utiliser dans notre fichier host :
+```
+define service {
+    use                     template_check_load         ; Utilise le template pour le service de charge
+    host_name               UneMachineDebian            ; Nom de l'hôte à vérifier
+    service_description     Check Load           ; Description du service
+}
+```
+redmarre le service puis :
+
+![alt text](../../../assets/images/check_load.png)
+
+Maintenant, pour vérifier l'état des interfaces réseau (up/down), on regard si le script ifoperstatus
+```
+ls -l /usr/local/nagios/libexec
+```
+il y est, on vérifie alors si la commande est défini pour exe le script : 
+```
+vim /usr/local/nagios/etc/objects/commands.cfg
+```
+Puis comme elle n'y est pas, alors on ajoute :
+```
+define command {
+    command_name    check_local_ifoperstatus
+    command_line    $USER1$/check_ifoperstatus -H $HOSTADDRESS$ -C $ARG1$ -n $ARG2$ -o $ARG3$
+}
+```
+On go créer le template :
+```
+vim /usr/local/nagios/etc/objects/templates.cfg
+```
+Puis on rajoute :
+```
+define service {
+    name                    template_check_ifoperstatus     ; Nom du template
+    use                     generic-service                 ; Utiliser un modèle générique de service
+    check_command           check_local_ifoperstatus!public!ens18!1!0  ; Commande à exécuter avec des arguments
+    register                0                               ; Indique que ce n'est pas un service réel (template)
+}
+```
+Maintenant, go l'ajouter a notre machine :
+```
+vim /usr/local/nagios/etc/servers/UneMachineDebian.cfg
+```
+```
+define service {
+    use                     template_check_ifoperstatus   ; Utilise le template pour le service de charge
+    host_name               UneMachineDebian              ; Nom de l'hôte à vérifier
+    service_description     Check Status                    ; Description du service
+}
+```
+Et ajouté :
+
 
 # A VENIR : 
 <div style="border: 2px solid red; color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; width: fit-content; margin: 10px 0;">
