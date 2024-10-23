@@ -141,144 +141,126 @@ Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine
 ![alt text](../../../assets/images/host_debian_nagios.png)
 
 ---
-
-## Étapes pour Définir des Services dans des Templates
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;"><hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-# Ne pas executez ces commandes :
-**Accéder au Fichier de Configuration des Templates**
-
-Vous devez d'abord localiser le fichier de configuration des templates dans Nagios. Ce fichier est souvent situé dans ``/usr/local/nagios/etc/templates.cfg``. Ouvrez-le avec votre éditeur de texte préféré :
-
-```
-vim /usr/local/nagios/etc/templates.cfg
-```
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-**Définir un Template de Service Générique**
-
-Ajoutez une définition de template pour un service générique, que vous pouvez ensuite réutiliser pour d'autres services. Voici un exemple de template :
-
-```plaintext
-define service {
-    name                    generic-service       ; Nom du template
-    notification_interval    30                   ; Intervalle de notification
-    notification_period     24x7                 ; Notifications actives 24h/24 7j/7
-    max_check_attempts      3                    ; Nombre de tentatives avant l'alerte
-    check_interval          5                    ; Intervalle de vérification (en minutes)
-    retry_interval          1                    ; Intervalle entre deux tentatives de vérification
-    notification_options    w,u,c,r              ; Notifications pour les états Warning, Unknown, Critical, et Recovery
-}
-```
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-**Édition du Fichier de Configuration pour les Services de SrvDeb**
-
-Pour configurer les services associés à l'hôte SrvDeb, nous allons modifier le fichier de configuration que nous avons précédemment créé pour définir l'hôte. Cela nous permettra d'organiser efficacement la supervision des services tout en maintenant une structure claire.
-
-```
-touch /usr/local/nagios/etc/services/SrvDeb-services.cfg
-```
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-**Éditez le Fichier de Configuration des Services**
-
-Ouvrez le fichier que vous venez de créer pour définir les services à superviser. Voici comment vous pourriez le faire :
-
-```
-vim /usr/local/nagios/etc/services/SrvDeb-services.cfg
-```
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-### Définir les Services à Superviser en Utilisant le Template : 
-
-Pour chaque service, utilisez le template que vous avez défini. Voici quelques exemples :
-
-**Service : Vérification de l'État de Fonctionnement (Allumé/Éteint) :**
-```plaintext
-define service {
-    use                     generic-service      ; Utilise un modèle de service générique
-    host_name               SrvDeb               ; Nom de l'hôte
-    service_description     System Status        ; Description du service
-    check_command           check_nrpe!check_procs!'-c 1:0'  ; Vérifie si le système est actif
-    max_check_attempts      3                    ; Tentatives avant l'alerte
-    check_interval          5                    ; Intervalle de vérification (en minutes)
-    retry_interval          1                    ; Intervalle entre deux tentatives de vérification
-    notification_interval   30                   ; Intervalle de notification (en minutes)
-    notification_period     24x7                 ; Notifications actives 24h/24 7j/7
-    notification_options    w,u,c,r              ; Notifications pour les états Warning, Unknown, Critical, et Recovery
-}
-```
-**Service : Vérification de la Charge du Système :**
-```plaintext
-define service {
-    use                     generic-service      ; Utilise un modèle de service générique
-    host_name               SrvDeb               ; Nom de l'hôte
-    service_description     CPU Load             ; Description du service
-    check_command           check_nrpe!check_load!'-w 5,4,3 -c 10,6,4'  ; Vérifie la charge CPU
-    max_check_attempts      3                    ; Tentatives avant l'alerte
-    check_interval          5                    ; Intervalle de vérification (en minutes)
-    retry_interval          1                    ; Intervalle entre deux tentatives de vérification
-    notification_interval   30                   ; Intervalle de notification (en minutes)
-    notification_period     24x7                 ; Notifications actives 24h/24 7j/7
-    notification_options    w,u,c,r              ; Notifications pour les états Warning, Unknown, Critical, et Recovery
-}
-```
-
-**Service : Vérification de l'Utilisation du Disque Dur :**  
-
-```plaintext
-define service {
-    use                     generic-service      ; Utilise un modèle de service générique
-    host_name               SrvDeb               ; Nom de l'hôte
-    service_description     Disk Usage           ; Description du service
-    check_command           check_nrpe!check_disk!'-w 20% -c 10%'  ; Vérifie l'espace disque
-    max_check_attempts      3                    ; Tentatives avant l'alerte
-    check_interval          5                    ; Intervalle de vérification (en minutes)
-    retry_interval          1                    ; Intervalle entre deux tentatives de vérification
-    notification_interval   30                   ; Intervalle de notification (en minutes)
-    notification_period     24x7                 ; Notifications actives 24h/24 7j/7
-    notification_options    w,u,c,r              ; Notifications pour les états Warning, Unknown, Critical, et Recovery
-}
-```
-
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-Recharger la Configuration de Nagios
-Après avoir ajouté les définitions de services, vous devez recharger la configuration de Nagios pour appliquer les modifications :
-
-```
-systemctl restart nagios.service
-```
-
-
-Une fois la configuration rechargée, vous pourrez voir et surveiller les nouveaux services sur l'hôte `SrvDeb` dans l'interface de Nagios.
-
 ---
-### Récapitulatif des Étapes de Configuration de Nagios et NRPE
+---
 
-#### Sur le Serveur Nagios (étape précédente):
 
-- Installation du plugin NRPE
-- Copie des plugins dans le bon répertoire `/usr/local/nagios/libexec/`
-- Activation et création du répertoire contenant les futurs emplacements pour définir les hôtes en modifiant le fichier `nagios.cfg`
+# Définir des Services
 
-#### Sur la Machine Cible (SrvDeb) :
+## Ajouter un service directement (sans template, non recommandé) :
+Du coup pour vérifier l'espace disque :
+vérifier si la commande est dispo dans :
 
-- Installation du plugin NRPE
-- Configuration du fichier de configuration NRPE pour autoriser l'adresse IP du serveur Nagios
+```
+vim /usr/local/nagios/etc/objects/commands.cfg
+```
 
-#### Retour sur le Serveur Nagios :
+Editez dans le fichier `.cfg` de la machine à qui vous voulez rajouter ce service :
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+```
+/usr/local/nagios/etc/servers/UneMachineDebian.cfg
+```
 
-- Définition de l'hôte dans un fichier de configuration dans le répertoire `/usr/local/nagios/etc/servers/`
+puis rajouter cette section : 
+
+```
+define service {
+    host_name               UneMachineDebian            ; Nom de de l'hôte auquel ce service est associé
+    service-description     Check local Disk            ; Description du service
+    check_command           check_local_disk!20!10!/    ; La commande qui sera exécuter
+    use                     generic-service             ; Utilise les valeurs de ce modèle si non défini
+}
+```
+La méthode ci-dessus est déconseillée, car il faut à chaque fois définir la commande lorsque l'on crée un service... 
+Cela peut devenir long et fatigant. Il est préférable de définir tous les services et dans ces services ajouter toutes les commandes dans le fichier de templates, puis d'utiliser ces templates lors de la création des services. Cela simplifie le processus et évite les répétitions inutiles.
+
+## Ajouter service avec template (avec template, recommandé): 
+
+Avant de créer un template de service (template destiné à fournir un service, en gros il va executer une commande pour remonter des informations), il est essentiel de déterminer quelle commande ce template va utiliser pour accomplir sa tâche. Vérifiez la commande appropriée que vous allez intégrer dans votre fichier de configuration :
+
+```
+vim /usr/local/nagios/etc/objects/commands.cfg
+```
+
+
+Une fois avoir relevé la commande, on peut aller créer le template de service en précisant la commande (qu'on a relevé dans **commands.cfg**).
+```
+vim /usr/local/nagios/etc/objects/templates.cfg
+```
+On ajoute tout en bas quelques templates de service, par exemple :
+```
+define service {
+    name                    template_check_disk        ; Template pour la vérification du disque
+    use                     generic-service            ; Utilisation du modèle générique
+    check_command           check_local_disk!20!10!/   ; Commande pour vérifier le disque
+    register                0                          ; Indique que c'est un template et non un service réel
+}
+```
+Puis, maintenant on peut juste ecrire le nom de ces templates dans nos fichiers destinés à nos machines:
+```
+vim /usr/local/nagios/etc/servers/MaMachineDebian.cfg
+```
+Et on peut rajouter ces templates à ce fichier :
+```
+define service {
+    use                     template_check_disk        ; Utilisation du template pour le disque
+    host_name               UneMachineDebian           ; Nom de l'hôte
+    service_description     Check Disk                  ; Description du service
+}
+```
+Maintenant on va essayer de vérifier la mémoire, mais mauvaise nouvelle... Le plugin n'existe pas... mais bonne nouvelle, je l'ai créer pour vous !
+
+Placez vous dans le répertoire où vous voulez qu'on installe le plugin, pour nous du coup :
+```
+cd /usr/local/nagios/libexec/
+```
+Installez le script depuis ma page github :
+```
+wget https://github.com/AGunalp/nagios-plugins/releases/download/nagioscore/check-memory.sh
+```
+Transferez le propriétaire ainsi que le groupe à nagios:
+```
+chown nagios:nagios /usr/local/nagios/libexec/check_memory
+```
+Donnez les droits d'executions :
+```
+chmod 755 /usr/local/nagios/libexec/check_memory
+```
+Maintenant qu'on a le plugin, il faut qu'on définisse la commande pour l'utilisation de ce plugin :
+```
+vim /usr/local/nagios/etc/objects/commands.cfg
+```
+et ajoutez tout en bas :
+```
+define command {
+    command_name    check_memory
+    command_line    $USER1$/check_memory.sh -w $ARG1$ -c $ARG2$
+}
+```
+Maintenant qu'on l'a défini, on peut créer le template de service avec la commande qu'on a défini:
+```
+define service {
+    name                    template_check_memory
+    use                     generic-service
+    check_command           check_local_memory!80!90
+    register                0
+}
+```
+Une fois le template créé, on peut l'utiliser dans tout nos fichiers d'hosts sans problème, nous on va le mettre dans MaMachineDebian.cfg
+```
+vim /usr/local/nagios/etc/servers/MaMachineDebian.cfg
+```
+```
+define service {
+    use                     template_check_memory
+    host_name               UneMachineDebian
+    service_description     Check Memory
+}
+```
+Parfait, maintenant on attend et :
+
+![alt text](../../../assets/images/check_memory.png)
+
 
 # A VENIR : 
 <div style="border: 2px solid red; color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; width: fit-content; margin: 10px 0;">

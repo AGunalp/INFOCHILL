@@ -40,6 +40,11 @@ Copiez tous les fichiers de `/usr/lib/nagios/plugins/*` vers le répertoire `/us
 mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
 ```
 
+Le propriétaire et groupe de ces plugins sont par défaut root, alors :
+```
+chown -R nagios:nagios /usr/local/nagios/libexec
+```
+
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Modifier le fichier de configuration Nagios**
