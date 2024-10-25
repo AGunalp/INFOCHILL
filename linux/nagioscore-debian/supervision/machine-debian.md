@@ -24,7 +24,7 @@ Vous allez apprendre à utiliser les templates pour réutiliser facilement des c
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-# 🖥️ DEPUIS UNE MACHINE (DEBIAN) A SUPERVISER :
+# 🖥️ DEPUIS UNE MACHINE DEBIAN (A SUPERVISER) :
 
 **Mettez à jour votre système :**  
 Assurez-vous que votre système est à jour pour éviter les problèmes de compatibilité.
@@ -47,6 +47,8 @@ apt install nagios-plugins
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
+===========================================================================
+
 **Déplacez ces plugins dans libexec :**
 ```
 mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
@@ -67,7 +69,7 @@ ls -l /usr/local/nagios/libexec/
     - Mais l'endroit le plus courant où Nagios attend ces plugins est <code>/usr/local/nagios/libexec/</code>
 </div>
 
-
+===========================================================================
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Modifiez le fichier de configuration NRPE :**  
@@ -154,7 +156,7 @@ Rajoutez ce code dans votre fichier **.cfg** (en ajusatant) afin de définir l'h
 
 ```
 systemctl restart nagios
-systemctl restart nagios-nrpe-server-service
+systemctl restart nagios-nrpe-server.service
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
@@ -248,7 +250,7 @@ define service {
 **Définissez un service avec le template :**  
 Maintenant qu'on a ajouté le template, on peut maintenant définir un service dans notre fichier UneMachineDebian.cfg juste en précisant le nom du template.
 ```
-vim /usr/local/nagios/etc/servers/MaMachineDebian.cfg
+vim /usr/local/nagios/etc/servers/UneMachineDebian.cfg
 ```
 On défini ce service en précisant quel template ce service utilisera :
 ```
@@ -272,6 +274,7 @@ Les templates vous permettent de lier facilement des seuils spécifiques, comme 
 
  Si vous créez un template pour surveiller l'utilisation du disque, vous pouvez ensuite appliquer ce template à plusieurs services. Cela signifie que vous n'avez pas besoin de redéfinir les seuils pour chaque service, car ils seront automatiquement appliqués grâce au template.</div>
 
+RESTART NAGIOS
 
 # A VENIR : 
 <div style="border: 2px solid red; color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; width: fit-content; margin: 10px 0;">

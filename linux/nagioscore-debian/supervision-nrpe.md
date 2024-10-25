@@ -32,7 +32,7 @@ Pour cela, vous devez installer et configurer l'agent NRPE. Cet agent fait le li
 apt install nagios-nrpe-server nagios-plugins
 ```
 - L'installation de **l'agent NRPE** est indispensable, car c'est cet agent, (présent notament sur les machines qu'on veut superviser), qui permet l'échange des informations entre le serveur Nagios et les machines supervisées.
-- L'installation de **plugins** est notamment nécessaire car ce sont des scripts exécutés localement (comme on l'installe ces plugins sur notre serveur nagios, alors on pourra executer ces scripts sur celui-ci).
+- L'installation des **plugins** est nécessaire, car ils contiennent les scripts exécutés localement qui fournissent les informations de supervision demandées.
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
@@ -41,24 +41,21 @@ apt install nagios-nrpe-server nagios-plugins
 ```
 mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
 ```
+- Le paquet **nagios-plugins** installe tous les plugins dans le répertoire `/usr/lib/nagios/plugins/`
+- Mais l'endroit le plus courant où Nagios attend ces plugins est `/usr/local/nagios/libexec/`  
+
 **Transférez les droits à nagios :**
 ```
-chown nagios:nagios /usr/local/nagios/libexec/*
+chown -R nagios:nagios /usr/local/nagios/libexec
 ```
-<div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;">
-    <strong>💡 À SAVOIR :</strong><br>
-    - Le paquet <strong>nagios-plugins</strong> installe tous les plugins dans le répertoire 
- <code>/usr/lib/nagios/plugins/</code><br>
-    - Mais l'endroit le plus courant où Nagios attend ces plugins est <code>/usr/local/nagios/libexec/</code>
-</div>
+On met **Nagios** comme propriétaire et groupe de ce répertoire, ainsi que de tous les fichiers qu’il contient, pour garantir que le service Nagios ait les permissions nécessaires pour exécuter les plugins correctement.
+
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Modifiez le fichier de configuration Nagios :**  
-Nous avons maintenant besoin d'indiquer à Nagios quel répertoire utiliser pour déterminer les éléments à superviser. Il est donc essentiel de préciser à Nagios le chemin du répertoire où il doit consulter nos fichiers de configuration.
 
-
-**Editez ce fichier :**
+Nous devons maintenant indiquer à Nagios le chemin exact du répertoire où sont stockés les fichiers de configuration des éléments à superviser.
 ```
 vim /usr/local/nagios/etc/nagios.cfg
 ```
@@ -68,15 +65,13 @@ vim /usr/local/nagios/etc/nagios.cfg
   ```
   cfg_dir=/usr/local/nagios/etc/servers
   ```
-Nagios saura ainsi qu'il doit consulter ce répertoire pour récupérer les informations nécessaires à la supervision des machines.
-
-En résumé, c'est dans ce répertoire (la ligne qu'on a rendu actif) que vous devez définir les machines à superviser, en créant des fichiers avec l'extension **.cfg**.
+Une fois activée, cette ligne précise à Nagios d’utiliser ce répertoire pour consulter les fichiers **.cfg** qui définissent les machines à superviser.
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Créez le répertoire des serveurs (si nécessaire) :**
+**Créez le répertoire (si nécessaire) :**
 
-Si le répertoire `/usr/local/nagios/etc/servers` n'existe pas encore, créez-le manuellement.
+Si le répertoire activé n'existe pas encore, créez-le manuellement avec la commande suivante :
 
 ```
 mkdir -p /usr/local/nagios/etc/servers
@@ -87,7 +82,7 @@ mkdir -p /usr/local/nagios/etc/servers
 
 **Changez les droits d'accès :**
 
-Après avoir créé le répertoire, nous allons le transmettre à l'utilisateur et au groupe nagios : 
+Attribuez le répertoire nouvellement créé à l’utilisateur et au groupe Nagios pour qu’il puisse y accéder sans restriction :
 
 ```
 chown nagios:nagios /usr/local/nagios/etc/servers
