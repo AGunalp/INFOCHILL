@@ -80,12 +80,14 @@ Cela permettra à Nagios de commencer à la référencer dans l'interface de sur
 
 <strong>💡 À SAVOIR :</strong>
 
-<strong>Voici Notre Méthode de Configuration des Hôtes dans Nagios :</strong>   
+<strong>Voici Notre Méthode de Configuration des Hôtes dans Nagios :</strong>
 
-- Un seul fichier de configuration **.cfg** pour chaque machine que qu'on souhaite superviser avec Nagios.
-- Par exemple, pour **10 machines** à superviser, à la fin on doit avoir **10 fichiers .cfg** distincts.
-- Cette méthode, appelée **fichiers séparés**, est celle que nous allons utiliser dans ce guide.
-- On va commencer par superviser qu'une seule machine (donc on utilise qu'un seul fichier **.cfg**).
+<ul>
+  <li>Un seul fichier de configuration <strong>.cfg</strong> pour chaque machine que l'on souhaite superviser avec Nagios.</li>
+  <li>Par exemple, pour <strong>10 machines</strong> à superviser, on doit avoir <strong>10 fichiers .cfg</strong> distincts.</li>
+  <li>Cette méthode, appelée <strong>fichiers séparés</strong>, est celle que nous allons utiliser dans ce guide.</li>
+  <li>Nous allons commencer par superviser une seule machine (donc on utilise qu'un seul fichier <strong>.cfg</strong>).</li>
+</ul>
 </div>
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
