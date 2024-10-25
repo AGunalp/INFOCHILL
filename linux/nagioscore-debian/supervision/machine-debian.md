@@ -3,12 +3,7 @@
 ###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser Système Linux</a>
 
 
-# 📚 Superviser un sysème Linux (debian) avec le plugin NRPE
-
-Bienvenue dans ce guide dédié à l'installation et à la configuration du plugin **NRPE** sur un système Debian. Vous allez apprendre comment mettre en place NRPE pour assurer la supervision de votre machine par le serveur Nagios.
-
-
----
+# 📚 Superviser un sysème Linux (Debian) avec l'agent NRPE
 
 <!-- Alerte importante concernant les droits d'utilisateur -->
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
@@ -19,26 +14,20 @@ Bienvenue dans ce guide dédié à l'installation et à la configuration du plug
   </ul>
 </div>
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 ## Objectif
 
-L'objectif de ce guide est de comprendre comment superviser efficacement vos machines et collecter des informations sur leur état. Pour établir un lien entre le serveur Nagios et un hôte cible, nous devons installer et configurer le plugin NRPE sur les deux machines.
+Maintenant que vous avez défini l'hôte dans Nagios, l’objectif de cette section est de vous montrer comment configurer et superviser les services de cet hôte.  
+Vous allez apprendre à utiliser les templates pour réutiliser facilement des commandes et définir des seuils d’alerte, comme vérifier l’espace disque d'un système. 
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-## Installation et Configuration de NRPE
 
-### 🖥️ Depuis un Système Linux (Debian)
+# 🖥️ DEPUIS UNE MACHINE (DEBIAN) A SUPERVISER :
 
-Pour superviser un système Linux (Debian) avec le plugin NRPE, suivez les étapes ci-dessous. Cela vous permettra de configurer efficacement la machine afin qu'elle soit surveillée par votre serveur Nagios.
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-### Étapes à Suivre
-
-**Mettre à jour le système :**  
-Assurez-vous que votre système estf à jour pour éviter les problèmes de compatibilité.
+**Mettez à jour votre système :**  
+Assurez-vous que votre système est à jour pour éviter les problèmes de compatibilité.
 
 ```
 apt update && apt upgrade
@@ -46,148 +35,201 @@ apt update && apt upgrade
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Installer les paquets nécessaires :**  
-Installez le serveur NRPE et les plugins Nagios.
+**Installez les paquets nécessaires :**  
+
 
 ```
-apt install nagios-nrpe-server nagios-plugins
+apt install nagios-nrpe-server
+apt install nagios-plugins
 ```
+- L'installation de **l'agent NRPE** est indispensable, car c'est cet agent, (présent notament sur notre serveur NAGIOS), qui permet l'échange des informations entre le serveur Nagios et les machines supervisées.
+- L'installation de **plugins** est notamment nécessaire car ce sont des scripts exécutés localement sur chaque machine supervisée. L'agent NRPE transmet ensuite les résultats de ces scripts au serveur Nagios.
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Modifier le fichier de configuration NRPE :**  
-Ouvrez le fichier de configuration NRPE pour autoriser les connexions depuis votre serveur Nagios.
+**Déplacez ces plugins dans libexec :**
+```
+mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
+```
+**Transférez les droits à nagios :**
+```
+chown nagios:nagios /usr/local/nagios/libexec/*
+```
+**Regardez si les plugins sont biens dans `libexec`:**
+```
+ls -l /usr/local/nagios/libexec/
+```
 
+<div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;">
+    <strong>💡 À SAVOIR :</strong><br>
+    - Le paquet <strong>nagios-plugins</strong> installe tous les plugins dans le répertoire 
+ <code>/usr/lib/nagios/plugins/</code><br>
+    - Mais l'endroit le plus courant où Nagios attend ces plugins est <code>/usr/local/nagios/libexec/</code>
+</div>
+
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+**Modifiez le fichier de configuration NRPE :**  
+Une fois avoir installé l'agent, on va lui précisé l'adresse IP du serveur avec lequel il va communiquer, donc editez le fichier `nrpe.cfg` :  
 ```
 vim /etc/nagios/nrpe.cfg
 ```
 
 - **Configurer les adresses IP autorisées :**  
-  Ajoutez l'adresse IP de votre serveur Nagios à la ligne suivante (par exemple, pour l'IP `192.168.13.2`):
+  A la fin de cette ligne, rajoutez l'adresse IP du serveur Nagios (pour mon cas 192.168.1.200) : 
+  ```
+  allowed_hosts=127.0.0.1,::1, 192.168.1.200
+  ```
 
-  ```
-  allowed_hosts=127.0.0.1,::1, 192.168.13.2
-  ```
+  Cela permettra à l'agent NRPE de cette machine, à communiquer avec l'agent NRPE ayant comme IP `192.168.1.200` (donc pouvoir communiquer avec notre serveur)
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Redémarrer le service NRPE :**  
-Appliquez vos modifications en redémarrant le service NRPE.
-
+**Redémarrez le service NRPE :**  
 ```
 systemctl restart nagios-nrpe-server.service
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-### 🖥️ Retournez sur Nagios pour définir des Hôtes
+# 🖥️ RETOURNEZ SUR VOTRE SERVEUR NAGIOS
 
-Après avoir configuré votre machine Debian pour NRPE, vous devez maintenant définir cet hôte sur votre serveur Nagios. Cela permettra à Nagios de commencer à surveiller la machine.
+Après avoir configuré l'agent NRPE sur la machine que vous souhaitez superviser (pour établir une communication avec le serveur Nagios), vous pouvez maintenant définir cette machine en tant qu'hôte sur votre serveur Nagios.
+
+Cela permettra à Nagios de commencer à la référencer dans l'interface de surveillance.
 
 <div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;">
-    <strong>📝 Méthodes de Configuration</strong>
-    <p>Il existe deux approches pour gérer les fichiers de configuration des hôtes dans Nagios :</p>
-    <ol>
-        <li><strong>Un seul fichier .cfg :</strong> Regroupez toutes les machines dans un seul fichier. Cette méthode peut rendre la gestion plus complexe.</li>
-        <li><strong>Fichiers séparés :</strong> Créez un fichier .cfg pour chaque machine. C'est la méthode recommandée car elle facilite la gestion et la maintenance.</li>
-    </ol>
-    <p>Dans ce guide, nous allons opter pour la méthode des <strong>fichiers séparés</strong>.</p>
+
+<strong>💡 À SAVOIR :</strong>
+
+<strong>Voici Notre Méthode de Configuration des Hôtes dans Nagios :</strong>   
+
+- Un seul fichier de configuration **.cfg** pour chaque machine que qu'on souhaite superviser avec Nagios.
+- Par exemple, pour **10 machines** à superviser, à la fin on doit avoir **10 fichiers .cfg** distincts.
+- Cette méthode, appelée **fichiers séparés**, est celle que nous allons utiliser dans ce guide.
+- On va commencer par superviser qu'une seule machine (donc on utilise qu'un seul fichier **.cfg**).
 </div>
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-#### Création du Fichier de Configuration pour l'Hôte (SrvDeb)
+**Créez un fichier en .cfg destiné à la machine à superviser**  
 
-**Créer le fichier de configuration :**  
-Accédez au répertoire approprié et créez le fichier pour votre machine (SrvDeb).
+Nous allons créer un fichier de configuration pour la machine Debian que nous voulons surveiller, nommée `UneMachineDebian.cfg`
 
 ```
 touch /usr/local/nagios/etc/servers/UneMachineDebian.cfg
 ```
+C'est dans ce répertoire, `/usr/local/nagios/etc/servers/`, que nous allons regrouper tous nos fichiers **.cfg** pour chaque machine à superviser. (Nous avons activé sur la page précédente ce répertoire dans le fichier de configuration `/usr/local/nagios/etc/nagios.cfg`).
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Éditer le fichier :**  
-Ouvrez le fichier créé pour ajouter les informations nécessaires.
+**Éditez le fichier :**  
 
 ```
 vim /usr/local/nagios/etc/servers/UneMachineDebian.cfg
 ```
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-- **Ajouter les définitions de l'hôte :**  
-Insérez le code suivant dans le fichier :
+- **Définissez l'hôte (l'hôte = machine à superviser)**  
 
-   ```plaintext
-   define host {
-      use                     linux-server          ; Modèle déjà prédéfini pour les serveurs Linux
-      host_name               UneMachineDebian      ; Nom de l'hôte (machine à superviser)
-      alias                   Serveur de Mail       ; Alias (juste l'affichage dans Nagios)
-      address                 192.168.1.201         ; Adresse IP de la machine
-   }
-   ```
+Rajoutez ce code dans votre fichier **.cfg** (en ajusatant) afin de définir l'hôte : 
+
+    define host {
+        use                     linux-server          ; Template pré-défini
+        host_name               UneMachineDebian      ; Nom de l'hôte
+        alias                   Serveur de Mail       ; Alias (juste l'affichage dans Nagios)
+        address                 192.168.1.201         ; Adresse IP de l'hôte
+    }
+
+  - **use :** Les valeurs de ce template seront utilisées si certaines valeurs ne sont pas précisée, vous pouvez trouver ce template (ainsi que les valeurs associées) dans `/usr/local/nagios/etc/objects/templates.cfg`
+  - **host_name :** Le nom de la machine à qui est destiné ce fichier (le nom de la machine qu'on souhaite superviser)
+  - **alias :** Le nom affiché sur l'interface nagios (pour qu'on reconnaisse directement la machine).
+  - **address :** L'adresse IP de la machine à qui est destiné ce fichier.
+
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-#### Redémarrez le service nagios (sinon reboot) :
+#### Redémarrez les services nagios (ou reboot) :
 
 ```
 systemctl restart nagios
+systemctl restart nagios-nrpe-server-service
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-Cliquez sur l'onglet `host` à gauche, vous pouvez maintenant voir votre machine qui y est référencée, pour mon cas j'ai remonté une machine debian ayant pour nom `AP4-GLPI` :
+Cliquez sur l'onglet `Host` à gauche, vous devriez maintenant voir apparaître la machine que vous avez configurée. Dans mon exemple, la machine Debian est référencée sous le nom `UneMachineDebian` :
 
 ![alt text](../../../assets/images/host_debian_nagios.png)
 
----
----
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+## Ajout d'un service :
+
+Chaque machine que vous souhaitez superviser a un fichier .cfg sur le serveur Nagios. Dans ce même fichier, vous allez définir les services à surveiller.
+
+Pour cela, il est essentiel que chaque commande soit définie dans le fichier /usr/local/nagios/etc/objects/commands.cfg. Cela garantit que toutes les commandes nécessaires pour la surveillance des services sont disponibles.
+  
+Pour que tout cela fonctionne, il est important que chaque commande soit définie dans le fichier /usr/local/nagios/etc/objects/commands.cfg.
+
+<div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;">
+
+<strong>💡 À SAVOIR :</strong>
+
+Le fichier `commands.cfg` contient de nombreuses commandes pour exécuter divers plugins. Cependant, certains plugins peuvent ne pas avoir de commandes prédéfinies. Dans ce cas, vous devrez créer votre propre commande en veillant à spécifier le nombre correct d'arguments requis par le plugin. Pour cela, consultez le script du plugin pour vérifier les arguments attendus.
+
+PS : Ce fichier existe uniquement sur le serveur Nagios car il a été installé avec Nagios. 
 
 
-# Définir des Services
+</div>
 
-## Ajouter un service directement (sans template, non recommandé) :
-Du coup pour vérifier l'espace disque :
-vérifier si la commande est dispo dans :
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+Bon, dans notre cas, nous allons définir un service qui vérifie l'espace disque d'une machine.
+
+**Allez voir si le plugin (pour vérifier un disque) existe:**
 
 ```
-vim /usr/local/nagios/etc/objects/commands.cfg
+ls -l /usr/local/nagios/libexec/
 ```
 
-Editez dans le fichier `.cfg` de la machine à qui vous voulez rajouter ce service :
+Il est important de noter que le script sera exécuté sur la machine que vous souhaitez superviser, c’est-à-dire notre machine Debian. Ainsi, vous devez vous assurer que ce fichier existe sur votre machine Debian.
+
+Puisque nous avons téléchargé et déplacé ces plugins à la fois sur le serveur Nagios et sur notre machine Debian, vous devriez normalement les retrouver sur les deux. En général, si un plugin est présent sur le serveur Nagios, il sera également sur la machine Debian.
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+**Vérifiez si la commande pour executer ce script est déjà défini :**
 
 ```
-/usr/local/nagios/etc/servers/UneMachineDebian.cfg
+less /usr/local/nagios/etc/objects/commands.cfg
 ```
 
-puis rajouter cette section : 
-
+Dans notre cas, la commande pour executer correctement ce script existe :
 ```
-define service {
-    host_name               UneMachineDebian            ; Nom de de l'hôte auquel ce service est associé
-    service-description     Check local Disk            ; Description du service
-    check_command           check_local_disk!20!10!/    ; La commande qui sera exécuter
-    use                     generic-service             ; Utilise les valeurs de ce modèle si non défini
+define command {
+
+    command_name    check_local_disk
+    command_line    $USER1$/check_disk -w $ARG1$ -c $ARG2$ -p $ARG3$
 }
 ```
-La méthode ci-dessus est déconseillée, car il faut à chaque fois définir la commande lorsque l'on crée un service... 
-Cela peut devenir long et fatigant. Il est préférable de définir tous les services et dans ces services ajouter toutes les commandes dans le fichier de templates, puis d'utiliser ces templates lors de la création des services. Cela simplifie le processus et évite les répétitions inutiles.
+- check_local_disk : Est le nom de la commande qui sera utilisée dans le template pour identifier le service de vérification de l'espace disque.
 
-## Ajouter service avec template (avec template, recommandé): 
-
-Avant de créer un template de service (template destiné à fournir un service, en gros il va executer une commande pour remonter des informations), il est essentiel de déterminer quelle commande ce template va utiliser pour accomplir sa tâche. Vérifiez la commande appropriée que vous allez intégrer dans votre fichier de configuration :
-
-```
-vim /usr/local/nagios/etc/objects/commands.cfg
-```
+- command_line : Est la commande qui exécute le script et précise les arguments nécessaires, tels que les seuils d'avertissement et critique ainsi que le point de montage à vérifier.
 
 
-Une fois avoir relevé la commande, on peut aller créer le template de service en précisant la commande (qu'on a relevé dans **commands.cfg**).
+Maintenant que nous avons vérifié l'existence de la commande, nous pouvons définir un template pour superviser l'espace disque.
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+
+**Définissez un template :**  
+Après avoir identifié la commande, nous allons créer un template en spécifiant la commande à utiliser ainsi que les arguments nécessaires à son fonctionnement.
 ```
 vim /usr/local/nagios/etc/objects/templates.cfg
 ```
-On ajoute tout en bas quelques templates de service, par exemple :
+**Ajoutez un templace à ce fichier**
 ```
 define service {
     name                    template_check_disk        ; Template pour la vérification du disque
@@ -196,11 +238,19 @@ define service {
     register                0                          ; Indique que c'est un template et non un service réel
 }
 ```
-Puis, maintenant on peut juste ecrire le nom de ces templates dans nos fichiers destinés à nos machines:
+- template_check_disk : Le nom du template qu'on utilisera au moment où défini les services dans le fichier **.cfg**.
+- use : Les valeurs de ce modèle seront utilisés si on en défini pas.
+- check_command : La commande de commands.cfg, en spécifiant cette fois si les arguments d'entrée.
+- register : Indique seulement que c'est un template et non un service 
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+**Définissez un service avec le template:**  
+Maintenant qu'on a ajouté le template, on peut maintenant définir un service dans notre fichier UneMachineDebian.cfg juste en précisant le nom du template.
 ```
 vim /usr/local/nagios/etc/servers/MaMachineDebian.cfg
 ```
-Et on peut rajouter ces templates à ce fichier :
+On défini ce service en précisant quel template ce service utilisera :
 ```
 define service {
     use                     template_check_disk        ; Utilisation du template pour le disque
@@ -208,190 +258,25 @@ define service {
     service_description     Check Disk                  ; Description du service
 }
 ```
-Maintenant on va essayer de vérifier la mémoire, mais mauvaise nouvelle... Le plugin n'existe pas... mais bonne nouvelle, je l'ai créer pour vous !
+- use : Représente le template qu'on utilise
+- host_name : Le nom de la machine
+- service_description : Le nom du service
 
-Placez vous dans le répertoire où vous voulez qu'on installe le plugin, pour nous du coup :
-```
-cd /usr/local/nagios/libexec/
-```
-Installez le script depuis ma page github :
-```
-wget https://github.com/AGunalp/nagios-plugins/releases/download/nagioscore/check-memory.sh
-```
-Transferez le propriétaire ainsi que le groupe à nagios:
-```
-chown nagios:nagios /usr/local/nagios/libexec/check_memory
-```
-Donnez les droits d'executions :
-```
-chmod 755 /usr/local/nagios/libexec/check_memory
-```
-Maintenant qu'on a le plugin, il faut qu'on définisse la commande pour l'utilisation de ce plugin :
-```
-vim /usr/local/nagios/etc/objects/commands.cfg
-```
-et ajoutez tout en bas :
-```
-define command {
-    command_name    check_memory
-    command_line    $USER1$/check_memory.sh -w $ARG1$ -c $ARG2$
-}
-```
-Maintenant qu'on l'a défini, on peut créer le template de service avec la commande qu'on a défini:
-```
-define service {
-    name                    template_check_memory
-    use                     generic-service
-    check_command           check_local_memory!80!90
-    register                0
-}
-```
-Une fois le template créé, on peut l'utiliser dans tout nos fichiers d'hosts sans problème, nous on va le mettre dans MaMachineDebian.cfg
-```
-vim /usr/local/nagios/etc/servers/MaMachineDebian.cfg
-```
-```
-define service {
-    use                     template_check_memory
-    host_name               UneMachineDebian
-    service_description     Check Memory
-}
-```
-Parfait, maintenant on attend et :
+<div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;"> 
 
-![alt text](../../../assets/images/check_memory.png)
+<strong>💡 À SAVOIR :</strong>
 
-Pour ajouter la commande ping, on regarde si on a déjà un plugin 
-```
-ls -l /usr/local/nagios/libexec/
-```
-On peut voir qu'on a bien un plugin (script) pour faire un ping  
-On regarde alors si on a une commande défini qui permet d'executer ce plugin :
-```
-vim /usr/local/nagios/etc/objects/commands.cfg
-```
-On peut voir qu'il n'y a pas de commande défini pour executer ce script, alors on va définir nous même la commande :  (si la commande alive y est)
-Rajoutez dans le fichier commands.cfg :
-```
-define command {
-    command_name    check_local_ping
-    command_line    $USER1$/check_ping -H $HOSTADDRESS$ -w 100ms,20% -c 500ms,60%
-}
-```
-Maintenant qu'on a créé la commande, on peut définir le template (de service) qui va utiliser cette commande :
-```
-define service {
-    name                    template_check_ping     ; Nom du template
-    use                     generic-service         ; Utiliser un modèle générique de service
-    check_command           check_local_ping        ; Commande à exécuter
-    register                0                       ; Indique que ce n'est pas un service réel (template)
-}
-```
-On peut maintenant ajouter ce template à nos machines hosts.cfg
-```
-vim /usr/local/nagios/etc/servers/MaMachineDebian.cfg
-```
-```
-define service {
-    use                     template_check_ping          ; Utilise le template pour le service de ping
-    host_name               UneMachineDebian             ; Nom de l'hôte à vérifier
-    service_description     Check Local Ping             ; Description du service
-}
-```
-![alt text](../../../assets/images/check_load.png)
+Les templates vous permettent de lier facilement des seuils spécifiques, comme 80 % pour un avertissement et 90 % pour un état critique, à des commandes déjà définies dans <code>commands.cfg.</code> 
 
-Maintenant pour la charge du systeme, comme dhab, d'abord vérifier si y a le script(plugin) en lien avec la fonctionnalité recherchée :
+<strong> Par exemple : </strong> 
 
-```
-```
-
-Puis regardez si la commande est défini:
-```
-vim /usr/local/nagios/etc/objects/commands.cfg
-```
-
-Pour notre cas, il y est :
-```
-define command {
-    command_name    check_local_load
-    command_line    $USER1$/check_load -w $ARG1$ -c $ARG2$
-}
-```
-Go faire template de service en mettant la commande pour ensuite utiliser le template dans le fichier host qu'on veut:
-```
-vim /usr/local/nagios/etc/objects/templaces.cfg
-```
-Ajoutez :
-```
-define service {
-    name                    template_check_load             ; Nom du template
-    use                     generic-service                 ; Utiliser un modèle générique de service
-    check_command           check_local_load!5,4,3!10,6,4  ; Commande à exécuter avec des arguments
-    register                0                               ; Indique que ce n'est pas un service réel (template)
-}
-```
-Maintenant, go l'utiliser dans notre fichier host :
-```
-define service {
-    use                     template_check_load         ; Utilise le template pour le service de charge
-    host_name               UneMachineDebian            ; Nom de l'hôte à vérifier
-    service_description     Check Load           ; Description du service
-}
-```
-redmarre le service puis :
-
-![alt text](../../../assets/images/check_load.png)
-
-Maintenant, pour vérifier l'état des interfaces réseau (up/down), on regard si le script ifoperstatus
-```
-ls -l /usr/local/nagios/libexec
-```
-il y est, on vérifie alors si la commande est défini pour exe le script : 
-```
-vim /usr/local/nagios/etc/objects/commands.cfg
-```
-Puis comme elle n'y est pas, alors on ajoute :
-```
-define command {
-    command_name    check_local_ifoperstatus
-    command_line    $USER1$/check_ifoperstatus -H $HOSTADDRESS$ -C $ARG1$ -n $ARG2$ -o $ARG3$
-}
-```
-On go créer le template :
-```
-vim /usr/local/nagios/etc/objects/templates.cfg
-```
-Puis on rajoute :
-```
-define service {
-    name                    template_check_ifoperstatus     ; Nom du template
-    use                     generic-service                 ; Utiliser un modèle générique de service
-    check_command           check_local_ifoperstatus!public!ens18!1!0  ; Commande à exécuter avec des arguments
-    register                0                               ; Indique que ce n'est pas un service réel (template)
-}
-```
-Maintenant, go l'ajouter a notre machine :
-```
-vim /usr/local/nagios/etc/servers/UneMachineDebian.cfg
-```
-```
-define service {
-    use                     template_check_ifoperstatus   ; Utilise le template pour le service de charge
-    host_name               UneMachineDebian              ; Nom de l'hôte à vérifier
-    service_description     Check Status                    ; Description du service
-}
-```
-Et ajouté :
+ Si vous créez un template pour surveiller l'utilisation du disque, vous pouvez ensuite appliquer ce template à plusieurs services. Cela signifie que vous n'avez pas besoin de redéfinir les seuils pour chaque service, car ils seront automatiquement appliqués grâce au template.</div>
 
 
 # A VENIR : 
 <div style="border: 2px solid red; color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; width: fit-content; margin: 10px 0;">
     ⚠️ <strong>Avis :</strong> La rédaction des commandes pour superviser les services arrive très bientôt. Merci de votre patience !
 </div>
-
----
-
-Les commandes pour superviser les services individuels sur vos hôtes seront ajoutées ici.
 
 ---
 

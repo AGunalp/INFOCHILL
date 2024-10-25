@@ -8,7 +8,7 @@
 Apprenez à installer Nagios Core sur un serveur Debian en suivant notre guide détaillé.
 
 -  **Étape 2 : [Surveillance des Machines avec le Plugin NRPE](supervision-nrpe)**  
-Configurez et installez le plugin NRPE pour surveiller à distance vos machines.
+Configurez et installez l'agent NRPE pour surveiller à distance vos machines.
 
 ## 🔍 À propos de Nagios
 
