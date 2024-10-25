@@ -235,15 +235,13 @@ define service {
 - host_name : Le nom de la machine
 - service_description : Le nom du service
 
-<div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;"> 
+<div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;">
+  <strong>💡 À SAVOIR :</strong>
+  <p>Les templates vous permettent de lier facilement des seuils spécifiques, comme <strong>80 %</strong> pour un avertissement et <strong>90 %</strong> pour un état critique, à des commandes déjà définies dans <code>commands.cfg</code>.</p>
 
-<strong>💡 À SAVOIR :</strong>
-
-Les templates vous permettent de lier facilement des seuils spécifiques, comme 80 % pour un avertissement et 90 % pour un état critique, à des commandes déjà définies dans <code>commands.cfg.</code> 
-
-<strong> Par exemple : </strong> 
-
- Si vous créez un template pour surveiller l'utilisation du disque, vous pouvez ensuite appliquer ce template à plusieurs services. Cela signifie que vous n'avez pas besoin de redéfinir les seuils pour chaque service, car ils seront automatiquement appliqués grâce au template.</div>
+  <strong>Par exemple :</strong>
+  <p>Si vous créez un template pour surveiller l'utilisation du disque, vous pouvez ensuite appliquer ce template à plusieurs services. Cela signifie que vous n'avez pas besoin de redéfinir les seuils pour chaque service, car ils seront automatiquement appliqués grâce au template.</p>
+</div>
 
 RESTART NAGIOS
 
