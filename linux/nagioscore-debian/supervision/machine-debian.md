@@ -243,7 +243,12 @@ define service {
   <p>Si vous créez un template pour surveiller l'utilisation du disque, vous pouvez ensuite appliquer ce template à plusieurs services. Cela signifie que vous n'avez pas besoin de redéfinir les seuils pour chaque service, car ils seront automatiquement appliqués grâce au template.</p>
 </div>
 
-RESTART NAGIOS
+
+#### Redémarrez le services nagios (ou reboot) :
+
+```
+systemctl restart nagios
+```
 
 # A VENIR : 
 <div style="border: 2px solid red; color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; width: fit-content; margin: 10px 0;">
