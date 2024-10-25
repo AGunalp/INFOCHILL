@@ -18,15 +18,15 @@
 
 ## Objectif
 
-Après avoir terminé l'installation et vérifié que votre serveur Nagios est en "Daemon running" via votre navigateur, l'objectif est désormais de comprendre comment superviser efficacement vos machines et collecter des informations sur leur état.
+Après avoir installé et vérifié que votre serveur Nagios est en cours d'exécution ("Daemon running") via votre navigateur, l'objectif est de superviser efficacement vos machines et de collecter des informations sur leur état.
 
-À savoir : Le lien entre notre serveur Nagios et les hôtes (les machines qu'on veut superviser), il faut installer et configurer l'agent NRPE. C'est via cet agent que le serveur Nagios communique les commandes à nos systèmes, et celle-ci pourront communiquer le résultat avec notre serveur.
+Pour cela, vous devez installer et configurer l'agent NRPE. Cet agent fait le lien entre votre serveur Nagios et les hôtes que vous voulez superviser. Il permet au serveur Nagios d'envoyer des commandes aux systèmes supervisés, qui à leur tour communiquent les résultats au serveur.
 
----
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-# 🖥️ Depuis votre serveur Nagios
+# 🖥️ DEPUIS VOTRE SERVEUR NAGIOS
 
-Installez d’abord les paquets nécessaires :
+**Installez d’abord les paquets nécessaires :**  
 
 ```
 apt install nagios-nrpe-server nagios-plugins
@@ -36,7 +36,7 @@ apt install nagios-nrpe-server nagios-plugins
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Déplacez les plugins dans le bon répertoire**  
+**Déplacez les plugins dans le bon répertoire :**  
 
 ```
 mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
@@ -54,7 +54,7 @@ chown nagios:nagios /usr/local/nagios/libexec/*
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Modifiez le fichier de configuration Nagios**  
+**Modifiez le fichier de configuration Nagios :**  
 Nous avons maintenant besoin d'indiquer à Nagios quel répertoire utiliser pour déterminer les éléments à superviser. Il est donc essentiel de préciser à Nagios le chemin du répertoire où il doit consulter nos fichiers de configuration.
 
 
@@ -74,7 +74,7 @@ En résumé, c'est dans ce répertoire (la ligne qu'on a rendu actif) que vous d
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Créez le répertoire des serveurs (si nécessaire)**
+**Créez le répertoire des serveurs (si nécessaire) :**
 
 Si le répertoire `/usr/local/nagios/etc/servers` n'existe pas encore, créez-le manuellement.
 
@@ -85,7 +85,7 @@ mkdir -p /usr/local/nagios/etc/servers
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Changez les droits d'accès**
+**Changez les droits d'accès :**
 
 Après avoir créé le répertoire, nous allons le transmettre à l'utilisateur et au groupe nagios : 
 

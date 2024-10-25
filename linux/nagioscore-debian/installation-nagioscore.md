@@ -17,7 +17,7 @@
 
 # 🖥️ DEPUIS VOTRE SERVEUR NAGIOS
 
-**Mettre à jour le système**
+**Mettez à jour votre système :**
 
 Pour commencer, assurez-vous que votre système est à jour. Exécutez la commande suivante : 
 
@@ -27,7 +27,7 @@ apt update && apt upgrade
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-**Installez les paquets nécessaires**
+**Installez les paquets nécessaires :**
 
 Lancez l'installation des paquets nécessaires pour Nagios : 
 
@@ -41,7 +41,7 @@ apt install openssl libssl-dev
 
 
 
-**Accédez à un répertoire temporaire**
+**Accédez dans le répertoire temporaire :**
 
 Placez vous dans le répertoire `tmp` :
 
@@ -52,7 +52,7 @@ cd /tmp
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-**Téléchargez Nagios Core**
+**Téléchargez Nagios Core :**
 
 Téléchargez le paquet Nagios Core depuis Internet : 
 
@@ -65,7 +65,7 @@ wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.6.tar.gz
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-**Extrayez le dossier téléchargé**
+**Extrayez le dossier téléchargé :**
 
 Une fois le téléchargement terminé, extrayez le fichier compressé : 
 
@@ -134,7 +134,7 @@ a2enmod cgi
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-**Créez un compte administrateur**
+**Créez un compte administrateur :**
 
 Une fois l'installation terminée, vous devez créer un compte administrateur pour accéder à l'interface web de Nagios. Utilisez la commande suivante pour configurer les identifiants :
 
@@ -146,7 +146,7 @@ Ici, le `-c` indique de créer un nouveau fichier pour stocker les identifiants 
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Redémarrez les services**
+**Redémarrez les services :**
 
 Ensuite, redémarrez les services Apache et Nagios pour appliquer les modifications :
 
@@ -158,7 +158,7 @@ systemctl restart nagios
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-**Accédez à l'interface Nagios**
+**Accédez à l'interface Nagios :**
 
 Ouvrez un navigateur web et accédez à votre interface Nagios à l'adresse suivante (en remplaçant par l'IP de votre serveur) :
 

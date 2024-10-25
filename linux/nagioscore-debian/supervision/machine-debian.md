@@ -55,7 +55,7 @@ mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
 ```
 chown nagios:nagios /usr/local/nagios/libexec/*
 ```
-**Regardez si les plugins sont biens dans `libexec`:**
+**Regardez si les plugins sont biens dans `libexec` :**
 ```
 ls -l /usr/local/nagios/libexec/
 ```
@@ -93,7 +93,7 @@ systemctl restart nagios-nrpe-server.service
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-# 🖥️ RETOURNEZ SUR VOTRE SERVEUR NAGIOS
+# 🖥️ RETOURNEZ SUR VOTRE SERVEUR NAGIOS :
 
 Après avoir configuré l'agent NRPE sur la machine que vous souhaitez superviser (pour établir une communication avec le serveur Nagios), vous pouvez maintenant définir cette machine en tant qu'hôte sur votre serveur Nagios.
 
@@ -113,7 +113,7 @@ Cela permettra à Nagios de commencer à la référencer dans l'interface de sur
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Créez un fichier en .cfg destiné à la machine à superviser**  
+**Créez un fichier en .cfg destiné à la machine à superviser :**  
 
 Nous allons créer un fichier de configuration pour la machine Debian que nous voulons surveiller, nommée `UneMachineDebian.cfg`
 
@@ -131,7 +131,7 @@ vim /usr/local/nagios/etc/servers/UneMachineDebian.cfg
 ```
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-- **Définissez l'hôte (l'hôte = machine à superviser)**  
+- **Définissez l'hôte (l'hôte = machine à superviser) :**  
 
 Rajoutez ce code dans votre fichier **.cfg** (en ajusatant) afin de définir l'hôte : 
 
@@ -188,7 +188,7 @@ PS : Ce fichier existe uniquement sur le serveur Nagios car il a été installé
 
 Bon, dans notre cas, nous allons définir un service qui vérifie l'espace disque d'une machine.
 
-**Allez voir si le plugin (pour vérifier un disque) existe:**
+**Allez voir si le plugin (pour vérifier un disque) existe :**
 
 ```
 ls -l /usr/local/nagios/libexec/
@@ -229,7 +229,7 @@ Après avoir identifié la commande, nous allons créer un template en spécifia
 ```
 vim /usr/local/nagios/etc/objects/templates.cfg
 ```
-**Ajoutez un templace à ce fichier**
+**Ajoutez un templace à ce fichier :**
 ```
 define service {
     name                    template_check_disk        ; Template pour la vérification du disque
@@ -245,7 +245,7 @@ define service {
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Définissez un service avec le template:**  
+**Définissez un service avec le template :**  
 Maintenant qu'on a ajouté le template, on peut maintenant définir un service dans notre fichier UneMachineDebian.cfg juste en précisant le nom du template.
 ```
 vim /usr/local/nagios/etc/servers/MaMachineDebian.cfg
