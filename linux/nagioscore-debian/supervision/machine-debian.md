@@ -153,16 +153,10 @@ Pour cela, il est essentiel que chaque commande soit définie dans le fichier /u
 Pour que tout cela fonctionne, il est important que chaque commande soit définie dans le fichier /usr/local/nagios/etc/objects/commands.cfg.
 
 <div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;">
-
-<strong>💡 À SAVOIR :</strong>
-
-Le fichier `commands.cfg` contient de nombreuses commandes pour exécuter divers plugins. Cependant, certains plugins peuvent ne pas avoir de commandes prédéfinies. Dans ce cas, vous devrez créer votre propre commande en veillant à spécifier le nombre correct d'arguments requis par le plugin. Pour cela, consultez le script du plugin pour vérifier les arguments attendus.
-
-PS : Ce fichier existe uniquement sur le serveur Nagios car il a été installé avec Nagios. 
-
-
+  <strong>💡 À SAVOIR :</strong>
+  <p>Le fichier <code>commands.cfg</code> contient de nombreuses commandes pour exécuter divers plugins. Cependant, certains plugins peuvent ne pas avoir de commandes prédéfinies. Dans ce cas, vous devrez créer votre propre commande en veillant à spécifier le nombre correct d'arguments requis par le plugin. Pour cela, consultez le script du plugin pour vérifier les arguments attendus.</p>
+  <p><strong>PS :</strong> Ce fichier existe uniquement sur le serveur Nagios car il a été installé avec Nagios.</p>
 </div>
-
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 Bon, dans notre cas, nous allons définir un service qui vérifie l'espace disque d'une machine.
