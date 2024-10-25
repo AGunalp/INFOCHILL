@@ -47,31 +47,6 @@ apt install nagios-plugins
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-===========================================================================
-
-**Déplacez ces plugins dans libexec :**
-```
-mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
-```
-**Transférez les droits à nagios :**
-```
-chown nagios:nagios /usr/local/nagios/libexec/*
-```
-**Regardez si les plugins sont biens dans `libexec` :**
-```
-ls -l /usr/local/nagios/libexec/
-```
-
-<div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;">
-    <strong>💡 À SAVOIR :</strong><br>
-    - Le paquet <strong>nagios-plugins</strong> installe tous les plugins dans le répertoire 
- <code>/usr/lib/nagios/plugins/</code><br>
-    - Mais l'endroit le plus courant où Nagios attend ces plugins est <code>/usr/local/nagios/libexec/</code>
-</div>
-
-===========================================================================
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
 **Modifiez le fichier de configuration NRPE :**  
 Une fois avoir installé l'agent, on va lui précisé l'adresse IP du serveur avec lequel il va communiquer, donc editez le fichier `nrpe.cfg` :  
 ```

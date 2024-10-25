@@ -44,6 +44,8 @@ mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
 - Le paquet **nagios-plugins** installe tous les plugins dans le répertoire `/usr/lib/nagios/plugins/`
 - Mais l'endroit le plus courant où Nagios attend ces plugins est `/usr/local/nagios/libexec/`  
 
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 **Transférez les droits à nagios :**
 ```
 chown -R nagios:nagios /usr/local/nagios/libexec
