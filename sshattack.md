@@ -1,85 +1,120 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/red-theme.css">
 
-# Ubuntu - Guide Pratique : /sshattack
+# CONNEXION SSH (LES PREPARATIFS)
 
-Ce guide vous présente diverses commandes pour gérer les sessions SSH et quelques astuces pratiques.
+## Être intraçable (Méthode en cascade) :
 
----
-
-## Création d'une Interface pour se Connecter en SSH
-
-Ajoutez une nouvelle interface dans :
-
-```
-vim /etc/netplan/50-cloud-init.yaml
-```
-
-Pour forcer l'utilisation de cette interface lors de votre connexion en SSH :
-
-```
-ssh -b AdresseIP
-```
-
----
-
-## Connexion en SSH à une Session
-
-Pour vous connecter à un compte SSH, utilisez la commande suivante :
-
-```
-ssh -Y user@hostname
-```
-- **`user`** : nom d'utilisateur du compte distant.
-- **`hostname`** : adresse IP.
-- **`-Y`** : pour avoir plus de permissions.
+- Se connecter à PC 1
+  ```
+  ssh sio@172.17...
+  ```
+- Depuis le PC 1 -> Se connecter à PC 2
+  ```
+  ssh sio@172.17...
+  ```
+- Depuis le PC 2 -> Se reconnecter à PC 1
+  ```
+  ssh sio@172.17...
+  ```
+- Nettoyer les logs de PC 1
+  ```
+  sudo truncate -s 0 /var/log/auth.log
+  ```
 
 ---
 
-## Accès aux Sessions Utilisateurs
+## Créer un accès à l'ordinateur indéfiniment :
 
-### Passer en Mode Super Utilisateur (Root)
+Sur le PC où vous vous êtes connecté, autorisez les connexions à sa session root :
 
-Pour obtenir des droits d'administration :
+- Editez ce fichier : 
+    ```
+    sudo vim /etc/ssh/sshd_config
+    ```
+- Créez la ligne **'PermitRootLogin yes'** :
 
-```
-sudo -i
-```
+    ![alt text](assets/images/permitrootlogin.png)
+- Redemarrez le service SSH : 
+    ```
+    sudo systemctl restart ssh
+    ```
 
-### Passer à la Session d’un Autre Utilisateur
+## SI IMPOSSIBLE DE VOUS CONNECTER : 
 
-Pour accéder à la session d'un utilisateur spécifique :
+- Créez un Conflit d'adresse IP :
+    ```
+    su -
+    ```
+    ```
+    ip addr add [adresse_IP_du_mec]/24 dev [nom interface inutilisé]
+    ```
 
-```
-su - username
-```
-- **`username`** : nom d'utilisateur de la personne à laquelle vous souhaitez accéder.
+Cela permet d'utiliser la même adresse IP de la personne, et créera donc un conflit d'adresse IP, la personne ne pourra pas communiquer avec le réseau (si elle possède seulement une interface pour communiquer avec le réseau)
+
+
+
+# SI CONNEXION REUSSI
+
+## Connectez vous à la session (active) de la personne :
+
+- Passer en Mode Super Utilisateur (Root) :
+    ```
+    sudo -i
+    ```
+    
+
+- Pour accéder à la session d'un utilisateur spécifique :
+
+    ```
+    su - [nom_utilisateur]
+    ```
+
+- **`nom_username`** : remplacez par le nom de l'utilisateur.
 
 ---
 
-## Ouvrir un Terminal à Distance
+## ⚠️ Ouvrir un Terminal à Distance (Condition ci-dessous à respecter)
 
-Si vous avez réussi à vous connecter directement sur la session de l'utilisateur actuellement connecté, vous pouvez ouvrir un terminal à distance avec la commande suivante :
+⚠️ Condition : ⚠️  
+Ces commandes fonctionnent seulement si vous avez réussi à vous connecter directement sur la session active du mec à partir de "ssh".
+
+Ouvre un terminal :
 
 ```
 gnome-terminal
 ```
-si ca marche, ce script permet d'ouvrir en boucle plusieurs terminaux en affichant un texte :
+Tape la commande 'gnome-terminal' 10 fois avec le message "Coucou"
 
 ```
-for i in {1..10}; do gnome-terminal -- bash -c "sleep 0.2; echo 'TON_TEXTE'; exec bash"; sleep 0.2; done
+for i in {1..10}; do gnome-terminal -- bash -c "sleep 0.2; echo 'Coucou'; exec bash"; sleep 0.2; done
 ```
 
 ---
 
 ## Envoyer un Message à un Terminal Actif
 
-Pour envoyer un message à un terminal ouvert :
-
-```
-echo "TEXTE" > /dev/pts/0
-```
-- Remplacez **`TEXTE`** par votre message.
-- **`pts/0`** : représente le numéro du terminal (utilisez `who` pour vérifier le numéro).
+1. Tu te connecte sur une session n'importe d'un PC
+   ```
+   ssh sio@172.17...
+   ```
+2. Tu te met en root :
+   ```
+   sudo -i
+   ```
+   ou
+   ```
+   su -
+   ```
+3. Tu te bascule sur la session active du mec :
+   ```
+   su - [nom_du_mec]
+   ```
+4. Une fois connecté sur sa session,  
+Envoyer un message à un terminal ouvert :
+    ```
+    echo "TEXTE" > /dev/pts/0
+    ```
+- Remplacez **`Coucou`** par votre message.
 
 ## Envoyer une Notification
 
@@ -283,7 +318,7 @@ sudo netplan apply
 ## Supprimer Maintenant le Fichier de Log
 
 ```
-sudo rm /var/log/syslog
+truncate -s 0 /var/log/auth.log
 ```
 
 ---
