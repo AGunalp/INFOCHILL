@@ -11,14 +11,14 @@ Vous trouverez ci-dessous plusieurs commandes pratiques pour gérer et surveille
 Cette méthode permet de désactiver temporairement les connexions SSH, tout en laissant la possibilité de les réactiver.
 
 ```bash
-sudo iptables -A INPUT -j DROP
+sudo vim /etc/ssh/sshd_config
 ```
 
-Pour réactiver SSH, remplacez `INPUT` par `OUTPUT` dans la commande :
-
-```bash
-sudo iptables -A OUTPUT -j DROP
+Et ajoutez à la fin du fichier ce texte : 
 ```
+DenyUsers sio
+```
+(Maintenant personne peut se connecter au compte **sio**)
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
