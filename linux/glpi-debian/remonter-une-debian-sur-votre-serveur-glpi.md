@@ -53,3 +53,7 @@ Cette commande permet de lancer l'agent GLPI sur une machine, collectant des inf
 ```
 glpi-agent
 ```
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+### **[↩️ Retour](../glpi-debian/index.md)**

@@ -21,7 +21,7 @@ a {
 pre, code {
     background-color: #000000 !important; /* Fond pour le code */
     color: #ffffff !important; /* Couleur du texte du code */
-    border-radius: 0px !important; /* Coins arrondis */
+    border-radius: 0.5px !important; /* Coins arrondis */
 }
 
 pre { 
