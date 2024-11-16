@@ -4,6 +4,11 @@
 
 ## Guide d'installation de l'Agent GLPI sur Debian
 
+### 0. Activation de l'inventire : 
+Depuis votre interface GLPI, vérifiez si vous avez coché "Activer l'inventaire".
+
+![](/assets/images/glpi_inventaire_actif.png)
+
 ### 1. **Mettez à jour les dépôts et le système :**
 Avant d'installer l'agent GLPI, il est conseillé de mettre à jour les dépôts et les paquets de votre système Debian pour vous assurer d'avoir les dernières versions des logiciels installés.
 
@@ -26,6 +31,7 @@ Téléchargez le script d'installation de l'agent GLPI à l'aide de la commande 
 ```
 wget https://github.com/glpi-project/glpi-agent/releases/download/1.11/glpi-agent-1.11-linux-installer.pl
 ```
+- `wget` : Permet de télécharger des fichiers depuis internet.
 
 ### 4. **Installation de Perl :**
 Le script d'installation étant écrit en Perl (d'où l'extension **.pl**), assurez-vous que Perl est installé sur votre machine. Si ce n'est pas le cas, vous pouvez l'installer avec la commande suivante :
@@ -41,14 +47,14 @@ Lancez le script Perl pour installer l'agent GLPI. Ce script vous guidera tout a
 perl glpi-agent-1.11-linux-installer.pl
 ```
 
-### 6. **Configuration de l'URL du Serveur GLPI :**
-Lors de l'exécution du script, vous serez invité à fournir l'URL de votre serveur GLPI. Entrez l'URL suivante (en remplaçant `192.168.1.205` par l'adresse de votre serveur GLPI si nécessaire) :
+Lors de l'exécution du script, vous serez invité à fournir l'URL de votre serveur GLPI. Entrez l'URL suivante (en remplaçant `192.168.1.205` par l'adresse de votre serveur GLPI) :
 
 ```
 http://192.168.1.205/glpi
 ```
+⚠️ **En cas d'erreur :** Si vous vous êtes trompé d'URL lors de l'exécution, vous pouvez modifier cette information dans le fichier de configuration de l'agent. Pour cela, éditez le fichier de configuration correspondant, généralement situé à `/etc/glpi-agent/config.d/00-install.cfg`
 
-### 7. **Vérification de l'installation :**
+### 6. **Lancement de l'agent GLPI :**
 Cette commande permet de lancer l'agent GLPI sur une machine, collectant des informations système et les envoyant à un serveur GLPI pour l'inventaire et la gestion des équipements.
 ```
 glpi-agent
