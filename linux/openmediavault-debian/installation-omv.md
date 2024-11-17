@@ -1,17 +1,14 @@
 <link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">OpenMediaVault</a>
-
 ## 🛠️ GUIDES D'INSTALLATION ET DE CONFIGURATION
 
-### 1. Mettez à jour le système
+### 1. Mettez à jour le système :  
 Avant toute installation, il est important de mettre à jour les dépôts et les paquets de votre système Debian pour garantir que vous avez les dernières versions disponibles des paquets.
-
 ```
-apt update && apt upgrade
+apt update && apt upgrade -y
 ```
 
-### 2. Installez GNUPG
+### 1. Installez GNUPG  
 Le paquet **gnupg** est un outil de gestion des clés GPG, utilisées pour signer numériquement les paquets et garantir leur intégrité et leur authenticité.
 
 ```
@@ -95,6 +92,17 @@ omv-salt deploy run systemd-networkd
 
 Cela garantit que les paramètres réseau sont bien appliqués et que le système fonctionne correctement.
 
+### 8. Vos identifiants de connexion (par défaut) :
+- **Login** : admin  
+- **Password** : openmediavault  
 
-⚠️ Une fois l’installation terminée, relevez les identifiants par défaut pour la connexion par interface Web.
+Vous pouvez changer votre mot de passe en exécutant la commande suivante :  
 
+```
+passwd admin
+```
+
+### 9. Accéder à l'interface web d'OpenMediaVault :
+Allez sur votre navigateur et tapez l'IP de votre serveur OMV dans la barre d'adresse pour accéder à l'interface d'administration d'OpenMediaVault.  
+
+### **[↩️ Retour](../openmediavault-debian/index.md)**

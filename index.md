@@ -18,7 +18,7 @@
 -  **[Postfix (Debian) (En développement)](linux/postfix-debian/index.md)**  
   Un guide pour installer et configurer Postfix sur votre système Debian.
 
-- **[OpenMediaVault (Debian)](linux/glpi-openmediavault/index.md)**
+
 
 ### WINDOWS :
 -  **[Windows Server 2022 (En développement)](windows/windows-server-2022/index.md)**  
