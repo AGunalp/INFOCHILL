@@ -18,14 +18,14 @@ apt update && apt upgrade -y
 - `-y` : Accepte automatiquement toutes les confirmations demandées.
 
 ### 2. **Déplacez-vous dans le répertoire `/opt/` :** (Recommandé)
-Le répertoire `/opt/` est un emplacement standard dans un système Linux pour installer des applications tierces ou des logiciels qui ne font pas partie des paquets standards. Il permet de garder les applications manuelles isolées et bien organisées.
+Le répertoire `/opt/` est l'endroit idéal pour stocker ce script, car il est spécialement conçu pour accueillir des applications ou scripts tiers sans interférer avec les fichiers système.
 
 ```
 cd /opt
 ```
 
 
-### 3. **Téléchargement du Script d'Installation de l'Agent GLPI :**
+### 3. **Téléchargez du Script d'Installation de l'Agent GLPI :**
 Téléchargez le script d'installation de l'agent GLPI à l'aide de la commande `wget`. Ce script en Perl permet de configurer et d'installer l'agent GLPI sur votre machine Debian.
 
 ```
@@ -33,14 +33,14 @@ wget https://github.com/glpi-project/glpi-agent/releases/download/1.11/glpi-agen
 ```
 - `wget` : Permet de télécharger des fichiers depuis internet.
 
-### 4. **Installation de Perl :**
+### 4. **Installez de Perl :**
 Le script d'installation étant écrit en Perl (d'où l'extension **.pl**), assurez-vous que Perl est installé sur votre machine. Si ce n'est pas le cas, vous pouvez l'installer avec la commande suivante :
 
 ```
 apt install perl
 ```
 
-### 5. **Exécution du Script d'Installation (avec perl) :**
+### 5. **Exécutez du Script d'Installation (avec perl) :**
 Lancez le script Perl pour installer l'agent GLPI. Ce script vous guidera tout au long du processus d'installation, en configurant l'agent pour qu'il envoie les informations à votre serveur GLPI.
 
 ```
@@ -54,11 +54,15 @@ http://192.168.1.205/glpi
 ```
 ⚠️ **En cas d'erreur :** Si vous vous êtes trompé d'URL lors de l'exécution, vous pouvez modifier cette information dans le fichier de configuration de l'agent. Pour cela, éditez le fichier de configuration correspondant, généralement situé à `/etc/glpi-agent/config.d/00-install.cfg`
 
-### 6. **Lancement de l'agent GLPI :**
+### 6. **Lancez l'agent GLPI :**
 Cette commande permet de lancer l'agent GLPI sur une machine, collectant des informations système et les envoyant à un serveur GLPI pour l'inventaire et la gestion des équipements.
 ```
 glpi-agent
 ```
+
+### 7. **Vérifiez si la machine a été remontée :**
+
+![](/assets/images/glpi-machine.png)
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
