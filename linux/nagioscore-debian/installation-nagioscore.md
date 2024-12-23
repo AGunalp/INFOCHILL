@@ -21,7 +21,6 @@
 <!-- Section "Depuis votre serveur Nagios" avec un fond sombre, couleurs contrastées et texte clair -->
 <div style="background-color: #333; color: #fff; border-left: 5px solid #00bcd4; padding: 20px 25px; margin-bottom: 20px;">
   <strong style="font-size: 22px; color: #00bcd4;">🖥️ DEPUIS VOTRE SERVEUR NAGIOS :</strong>
-  <p style="font-size: 16px; color: #ddd;">Suivez les étapes ci-dessous pour configurer et installer Nagios directement sur votre serveur. Ces instructions vous guideront à travers le processus d'installation avec les commandes nécessaires.</p>
 </div>
 
 **Mettez à jour votre système :**  
@@ -42,12 +41,19 @@ Voici un exemple de texte avec une info-bulle qui apparaît lorsque vous survole
   </span>
 </span>
 
-<style>
-  span[style*="cursor: pointer"] {
-    position: relative;
-  }
+**Exemple d'info-bulle au survol :**
 
-  span[style*="cursor: pointer"]:hover .tooltip-text {
+Voici un texte avec une info-bulle au survol :
+
+<span style="position: relative; cursor: pointer; border-bottom: 1px dotted; color: #1e90ff;">
+  Survolez ce texte
+  <span style="visibility: hidden; width: 200px; background-color: #333; color: #fff; text-align: center; border-radius: 5px; padding: 8px; position: absolute; bottom: 125%; left: 50%; margin-left: -100px; opacity: 0; transition: opacity 0.3s ease-in-out; z-index: 1; white-space: nowrap;" class="tooltip">
+    Ceci est une info-bulle !
+  </span>
+</span>
+
+<style>
+  span[style*="cursor: pointer"]:hover .tooltip {
     visibility: visible;
     opacity: 1;
   }
