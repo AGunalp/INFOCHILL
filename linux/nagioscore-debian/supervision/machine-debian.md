@@ -125,8 +125,8 @@ Rajoutez ce code dans votre fichier **.cfg** (en ajusatant) afin de définir l'h
 
     define host {
         use                     linux-server          ; Template pré-défini
-        host_name               UneMachineDebian      ; Nom de l'hôte
-        alias                   Serveur de Mail       ; Alias (juste l'affichage dans Nagios)
+        host_name               UneMachineLinux      ; Nom de l'hôte
+        alias                   Machine Linux       ; Alias (juste l'affichage dans Nagios)
         address                 192.168.1.201         ; Adresse IP de l'hôte
     }
 
