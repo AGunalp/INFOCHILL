@@ -31,16 +31,28 @@ apt update && apt upgrade
 ```
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Exemple d'info-bulle au survol :**
+**Exemple d'info-bulle :**
 
-Voici un exemple de texte avec une info-bulle lorsque vous placez votre souris dessus :
+Voici un exemple de texte avec une info-bulle qui apparaît lorsque vous survolez le texte :
 
 <span style="position: relative; cursor: pointer; text-decoration: underline;">
   Survolez ce texte
-  <span style="visibility: hidden; width: 150px; background-color: black; color: #fff; text-align: center; border-radius: 5px; padding: 5px; position: absolute; z-index: 1; bottom: 100%; left: 50%; margin-left: -75px; opacity: 0; transition: opacity 0.3s;">
-    Ceci est une info-bulle avec plus de détails.
+  <span style="visibility: hidden; width: 200px; background-color: #333; color: #fff; text-align: center; border-radius: 5px; padding: 8px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -100px; opacity: 0; transition: opacity 0.3s ease-in-out;" class="tooltip-text">
+    Ceci est une info-bulle.
   </span>
 </span>
+
+<style>
+  span[style*="cursor: pointer"] {
+    position: relative;
+  }
+
+  span[style*="cursor: pointer"]:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
 
 **Installez les paquets nécessaires :**  
 Lancez l'installation des paquets nécessaires pour Nagios : 
