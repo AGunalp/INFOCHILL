@@ -1,9 +1,9 @@
 <link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installation Nagios Core</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installer Nagios Core</a>
 
 
-# 📚 Installer Nagios Core sur Linux
+# 📚 Installer Nagios Core
 
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
 
@@ -23,60 +23,25 @@
   <strong style="font-size: 22px; color: #00bcd4;">🖥️ DEPUIS VOTRE SERVEUR NAGIOS :</strong>
 </div>
 
-**Mettez à jour votre système :**  
-Pour commencer, assurez-vous que votre système est à jour. Exécutez la commande suivante :  
+**Mettre à jour le système**  
+Avant chaque installation, il est important d'avoir un système à jour :
 ```
 apt update && apt upgrade
 ```
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Exemple d'info-bulle :**
-
-Voici un exemple de texte avec une info-bulle qui apparaît lorsque vous survolez le texte :
-
-<span style="position: relative; cursor: pointer; text-decoration: underline;">
-  Survolez ce texte
-  <span style="visibility: hidden; width: 200px; background-color: #333; color: #fff; text-align: center; border-radius: 5px; padding: 8px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -100px; opacity: 0; transition: opacity 0.3s ease-in-out;" class="tooltip-text">
-    Ceci est une info-bulle.
-  </span>
-</span>
-
-**Exemple d'info-bulle au survol :**
-
-Voici un texte avec une info-bulle au survol :
-
-<span style="position: relative; cursor: pointer; border-bottom: 1px dotted; color: #1e90ff;">
-  Survolez ce texte
-  <span style="visibility: hidden; width: 200px; background-color: #333; color: #fff; text-align: center; border-radius: 5px; padding: 8px; position: absolute; bottom: 125%; left: 50%; margin-left: -100px; opacity: 0; transition: opacity 0.3s ease-in-out; z-index: 1; white-space: nowrap;" class="tooltip">
-    Ceci est une info-bulle !
-  </span>
-</span>
-
-<style>
-  span[style*="cursor: pointer"]:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-  }
-</style>
-
-
-**Installez les paquets nécessaires :**  
-Lancez l'installation des paquets nécessaires pour Nagios : 
-
+**Installer les paquets nécessaires**  
+Lancez l'installation des paquets nécessaires pour Nagios :
 ```
-apt install openssh-server
-apt install autoconf gcc libc6 make wget unzip apache2 apache2-utils php libgd-dev
-apt install openssl libssl-dev
+apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-dev openssl libssl-dev
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
 
-**Accédez dans le répertoire temporaire :**
-
+**Accéder à un répertoire temporaire**  
 Placez vous dans le répertoire `tmp` :
-
 ```
 cd /tmp
 ```
@@ -84,15 +49,15 @@ cd /tmp
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-**Téléchargez Nagios Core :**
-
+**Télécharger Nagios Core :**  
 Téléchargez le paquet Nagios Core depuis Internet : 
 
+
 ```
-wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.6.tar.gz
+wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
 ```
 
-**Info :** Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons ce document. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
+**Info :** Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons cette documentation. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
@@ -102,7 +67,7 @@ wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.6.tar.gz
 Une fois le téléchargement terminé, extrayez le fichier compressé : 
 
 ```
-tar -xzvf nagios-4.5.6.tar.gz
+tar -xzvf nagios-4.5.9.tar.gz
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
@@ -111,7 +76,7 @@ tar -xzvf nagios-4.5.6.tar.gz
 **Placez vous dans le répertoire que vous venez d'extraire :**
 
 ```
-cd nagios-4.5.6
+cd nagios-4.5.9
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
@@ -212,6 +177,46 @@ Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, c
 ![alt text](/assets/images/interface_nagios.png)
 
 ---
+
+Aller sur l'onglet hosts :  
+![alt text](/assets/images/nagioshosts.png)
+
+Aller sur l'onglet services : 
+![alt text](/assets/images/nagiosservice.png)
+
+Origine du problème : Nous avons installé et configuré Nagios, mais rien au sujet des plugins.
+
+**Installez d’abord les paquets nécessaires :**  
+
+```
+apt install nagios-plugins
+```
+- L'installation des **plugins** est nécessaire, car ils contiennent les scripts exécutés localement qui fournissent les informations de supervision demandées.
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+**Déplacez les plugins dans le bon répertoire :**  
+
+```
+mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
+```
+- Le paquet **nagios-plugins** installe tous les plugins dans le répertoire `/usr/lib/nagios/plugins/`
+- Mais l'endroit le plus courant où Nagios attend ces plugins est `/usr/local/nagios/libexec/`  
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+**Transférez les droits à nagios :**
+```
+##### chown -R nagios:nagios /usr/local/nagios/libexec
+```
+On met **Nagios** comme propriétaire et groupe de ce répertoire, ainsi que de tous les fichiers qu’il contient, pour garantir que le service Nagios ait les permissions nécessaires pour exécuter les plugins correctement.
+
+**Visualiser les onglets hosts/services :**
+
+
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 
 ### **[↩️ Retour](../../linux/nagioscore-debian/index.md)**
