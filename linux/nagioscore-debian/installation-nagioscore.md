@@ -4,7 +4,7 @@
 
 
 <div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 20px 25px; margin-bottom: 20px; text-align: center;">
-  <strong style="font-size: 24px; color: #ff9900;">📚 INSTALLATION DE NAGIOS CORE SUR DEBIAN :</strong>
+  <strong style="font-size: 24px; color: #ff9900;">📚 INSTALLATION DE NAGIOS CORE SUR DEBIAN</strong>
 </div>
 
 
@@ -23,9 +23,10 @@
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 <!-- Section "Depuis votre serveur Nagios" avec un fond sombre, couleurs contrastées et texte clair -->
-<div style="background-color: #333; color: #fff; border-left: 5px solid #00bcd4; padding: 20px 25px; margin-bottom: 20px;">
-  <strong style="font-size: 22px; color: #00bcd4;">🖥️ DEPUIS VOTRE SERVEUR NAGIOS :</strong>
+<div style="background-color: #333; color: #fff; border-left: 5px solid #00bcd4; padding: 10px 10px; margin-bottom: 20px;">
+  <strong style="font-size: 17px; color: #00bcd4;">🖥️ DEPUIS VOTRE SERVEUR NAGIOS :</strong>
 </div>
+
 
 **Mettre à jour le système**  
 Avant chaque installation, il est important d'avoir un système à jour :
