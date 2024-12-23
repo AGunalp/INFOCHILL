@@ -184,12 +184,16 @@ Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, c
 ---
 
 Aller sur l'onglet hosts :  
-![alt text](/assets/images/nagioshosts.png)
+![alt text](/assets/images/nagioshosts.png)  
 
 Aller sur l'onglet services : 
 ![alt text](/assets/images/nagiosservice.png)
 
 Origine du problème : Nous avons installé et configuré Nagios, mais rien au sujet des plugins.
+
+<div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 20px 25px; margin-bottom: 20px; text-align: center;">
+  <strong style="font-size: 24px; color: #ff9900;">📚 INSTALLATION DE PLUGINS EN LOCAL</strong>
+</div>
 
 **Installez d’abord les paquets nécessaires :**  
 
