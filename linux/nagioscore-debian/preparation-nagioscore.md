@@ -66,9 +66,11 @@ mkdir -p /usr/local/nagios/etc/servers
 Attribuez le répertoire nouvellement créé à l’utilisateur et au groupe Nagios pour qu’il puisse y accéder sans restriction :
 
 ```
-### chown nagios:nagios /usr/local/nagios/etc/servers
+chown nagios:nagios /usr/local/nagios/etc/servers
 ```
-
+```
+chmod 664 /usr/local/nagios/etc/servers
+```
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Installez le paquet :**  
