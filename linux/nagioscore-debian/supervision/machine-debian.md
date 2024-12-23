@@ -3,15 +3,19 @@
 ###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser Système Linux</a>
 
 
-# 📚 Superviser un sysème Linux (Debian) avec l'agent NRPE
+<div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 20px 25px; margin-bottom: 20px; text-align: center;">
+  <strong style="font-size: 24px; color: #ff9900;">📚 SUPERVISER UNE MACHINE LINUX</strong>
+</div>
 
-<!-- Alerte importante concernant les droits d'utilisateur -->
+<!-- Alerte importante concernant la distribution et les droits d'utilisateur -->
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
-  ⚠️ <strong>Important :</strong>
+
+  <p>Ce guide suppose les éléments suivants :</p>
   <ul>
-    <li>Ce guide part du principe que vous êtes connecté en tant que <code>root</code> (via <code>su -</code>).</li>
-    <li>Si ce n'est pas le cas, ajoutez <code>sudo</code> devant chaque commande.</li>
+    <li><strong>Distribution :</strong> Vous utilisez la distribution <strong>Debian</strong>.</li>
+    <li><strong>Accès administrateur :</strong> Vous êtes connecté en tant que <code>root</code> (via la commande <code>su -</code>).</li>
   </ul>
+  <p>Si ce n'est pas le cas, ajoutez <code>sudo</code> devant chaque commande pour l'exécuter avec les privilèges administratifs.</p>
 </div>
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
@@ -24,7 +28,10 @@ Vous allez apprendre à utiliser les templates pour réutiliser facilement des c
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-# 🖥️ DEPUIS UNE MACHINE DEBIAN (A SUPERVISER) :
+<!-- Section "Depuis votre serveur Nagios" avec un fond sombre, couleurs contrastées et texte clair -->
+<div style="background-color: #333; color: #fff; border-left: 5px solid #00bcd4; padding: 10px 10px; margin-bottom: 20px;">
+  <strong style="font-size: 17px; color: #00bcd4;">🖥️ DEPUIS UNE MACHINE LINUX :</strong>
+</div>
 
 **Mettez à jour votre système :**  
 Assurez-vous que votre système est à jour pour éviter les problèmes de compatibilité.
@@ -39,8 +46,7 @@ apt update && apt upgrade
 
 
 ```
-apt install nagios-nrpe-server
-apt install nagios-plugins
+apt install nagios-nrpe-server nagios-plugins
 ```
 - L'installation de **l'agent NRPE** est indispensable, car c'est cet agent, (présent notament sur notre serveur NAGIOS), qui permet l'échange des informations entre le serveur Nagios et les machines supervisées.
 - L'installation de **plugins** est notamment nécessaire car ce sont des scripts exécutés localement sur chaque machine supervisée. L'agent NRPE transmet ensuite les résultats de ces scripts au serveur Nagios.
@@ -70,7 +76,10 @@ systemctl restart nagios-nrpe-server.service
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-# 🖥️ RETOURNEZ SUR VOTRE SERVEUR NAGIOS :
+<!-- Section "Depuis votre serveur Nagios" avec un fond sombre, couleurs contrastées et texte clair -->
+<div style="background-color: #333; color: #fff; border-left: 5px solid #00bcd4; padding: 10px 10px; margin-bottom: 20px;">
+  <strong style="font-size: 17px; color: #00bcd4;">🖥️ DEPUIS VOTRE SERVEUR NAGIOS :</strong>
+</div>
 
 Après avoir configuré l'agent NRPE sur la machine que vous souhaitez superviser (pour établir une communication avec le serveur Nagios), vous pouvez maintenant définir cette machine en tant qu'hôte sur votre serveur Nagios.
 
@@ -94,10 +103,10 @@ Cela permettra à Nagios de commencer à la référencer dans l'interface de sur
 
 **Créez un fichier en .cfg destiné à la machine à superviser :**  
 
-Nous allons créer un fichier de configuration pour la machine Debian que nous voulons surveiller, nommée `UneMachineDebian.cfg`
+Nous allons créer un fichier de configuration pour la machine Debian que nous voulons surveiller, nommée `UneMachineLinux.cfg`
 
 ```
-touch /usr/local/nagios/etc/servers/UneMachineDebian.cfg
+touch /usr/local/nagios/etc/servers/UneMachineLinux.cfg
 ```
 C'est dans ce répertoire, `/usr/local/nagios/etc/servers/`, que nous allons regrouper tous nos fichiers **.cfg** pour chaque machine à superviser. (Nous avons activé sur la page précédente ce répertoire dans le fichier de configuration `/usr/local/nagios/etc/nagios.cfg`).
 
@@ -106,7 +115,7 @@ C'est dans ce répertoire, `/usr/local/nagios/etc/servers/`, que nous allons reg
 **Éditez le fichier :**  
 
 ```
-vim /usr/local/nagios/etc/servers/UneMachineDebian.cfg
+vim /usr/local/nagios/etc/servers/UneMachineLinux.cfg
 ```
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
@@ -140,7 +149,7 @@ systemctl restart nagios-nrpe-server.service
 
 Cliquez sur l'onglet `Host` à gauche, vous devriez maintenant voir apparaître la machine que vous avez configurée. Dans mon exemple, la machine Debian est référencée sous le nom `UneMachineDebian` :
 
-![alt text](../../../assets/images/host_debian_nagios.png)
+![alt text](../../../assets/images/nagioshostslinux.png)
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
