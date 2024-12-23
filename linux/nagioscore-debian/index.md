@@ -7,12 +7,13 @@
 - **Étape 1 : [Installer Nagios Core](installation-nagioscore.md)**  
 Apprenez à installer Nagios Core sur un serveur Debian en suivant notre guide.  
 
--  **Étape 2 : [Superviser une machine avec le Plugin NRPE](supervision-nrpe)**  
-Installez et configurez l'agent NRPE pour superviser vos machines.
-    - **[Superviser une machine Linux](/linux/nagioscore-debian/supervision/machine-debian.md)**
-    - **[Superviser une machine Windows](/linux/nagioscore-debian/supervision/machine-windows.md)**
-    - **[Superviser un switch Cisco](/linux/nagioscore-debian/supervision/switch-cisco.md)**
-    - **[Superviser un switch HP](/linux/nagioscore-debian/supervision/switch-hp.md)**
+- **Étape 2 : [Préparer le serveur Nagios](preparation-nagioscore.md)**  
+
+- **Étape 3 : Superviser un appareil :**  
+    - **[Superviser une machine Linux](supervision/machine-debian.md)**  
+    - **[Superviser une machine Windows](supervision/machine-windows.md)**  
+    - **[Superviser un switch Cisco](supervision/switch-cisco.md)**  
+    - **[Superviser un switch HP](supervision/switch-hp.md)**  
 
 
 ## 🔍 À propos de Nagios

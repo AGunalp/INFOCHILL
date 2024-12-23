@@ -7,8 +7,7 @@
   <strong style="font-size: 24px; color: #ff9900;">📚 INSTALLATION DE NAGIOS CORE SUR DEBIAN</strong>
 </div>
 
-
-
+<!-- Alerte importante concernant la distribution et les droits d'utilisateur -->
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
 
   <p>Ce guide suppose les éléments suivants :</p>
@@ -186,7 +185,7 @@ Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, c
 Aller sur l'onglet hosts :  
 ![alt text](/assets/images/nagioshosts.png)  
 
-Aller sur l'onglet services : 
+Aller sur l'onglet services :  
 ![alt text](/assets/images/nagiosservice.png)
 
 Origine du problème : Nous avons installé et configuré Nagios, mais rien au sujet des plugins.
@@ -226,6 +225,9 @@ On met **Nagios** comme propriétaire et groupe de ce répertoire, ainsi que de 
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
+![alt text](/assets/images/nagioshostsv.png)  
+
+![alt text](/assets/images/nagiosservicesv.png)  
 
 
 ### **[↩️ Retour](../../linux/nagioscore-debian/index.md)**

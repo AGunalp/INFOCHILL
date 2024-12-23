@@ -3,16 +3,21 @@
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser avec NRPE</a>
 
 
-# 📚 Superviser des machines avec l'agent NRPE
-
-<!-- Alerte importante concernant les droits d'utilisateur -->
-<div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
-  ⚠️ <strong>Important :</strong>
-  <ul>
-    <li>Ce guide part du principe que vous êtes connecté en tant que <code>root</code> (via <code>su -</code>).</li>
-    <li>Si ce n'est pas le cas, ajoutez <code>sudo</code> devant chaque commande.</li>
-  </ul>
+<div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 20px 25px; margin-bottom: 20px; text-align: center;">
+  <strong style="font-size: 24px; color: #ff9900;">📚 PREPARATION DU SERVEUR NAGIOS</strong>
 </div>
+
+<!-- Alerte importante concernant la distribution et les droits d'utilisateur -->
+<div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
+
+  <p>Ce guide suppose les éléments suivants :</p>
+  <ul>
+    <li><strong>Distribution :</strong> Vous utilisez la distribution <strong>Debian</strong>.</li>
+    <li><strong>Accès administrateur :</strong> Vous êtes connecté en tant que <code>root</code> (via la commande <code>su -</code>).</li>
+  </ul>
+  <p>Si ce n'est pas le cas, ajoutez <code>sudo</code> devant chaque commande pour l'exécuter avec les privilèges administratifs.</p>
+</div>
+
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
@@ -24,36 +29,10 @@ Pour cela, vous devez installer et configurer l'agent NRPE. Cet agent fait le li
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-# 🖥️ DEPUIS VOTRE SERVEUR NAGIOS
-
-**Installez d’abord les paquets nécessaires :**  
-
-```
-apt install nagios-nrpe-server nagios-plugins
-```
-- L'installation de **l'agent NRPE** est indispensable, car c'est cet agent, (présent notament sur les machines qu'on veut superviser), qui permet l'échange des informations entre le serveur Nagios et les machines supervisées.
-- L'installation des **plugins** est nécessaire, car ils contiennent les scripts exécutés localement qui fournissent les informations de supervision demandées.
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-**Déplacez les plugins dans le bon répertoire :**  
-
-```
-mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
-```
-- Le paquet **nagios-plugins** installe tous les plugins dans le répertoire `/usr/lib/nagios/plugins/`
-- Mais l'endroit le plus courant où Nagios attend ces plugins est `/usr/local/nagios/libexec/`  
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-**Transférez les droits à nagios :**
-```
-chown -R nagios:nagios /usr/local/nagios/libexec
-```
-On met **Nagios** comme propriétaire et groupe de ce répertoire, ainsi que de tous les fichiers qu’il contient, pour garantir que le service Nagios ait les permissions nécessaires pour exécuter les plugins correctement.
-
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+<!-- Section "Depuis votre serveur Nagios" avec un fond sombre, couleurs contrastées et texte clair -->
+<div style="background-color: #333; color: #fff; border-left: 5px solid #00bcd4; padding: 10px 10px; margin-bottom: 20px;">
+  <strong style="font-size: 17px; color: #00bcd4;">🖥️ DEPUIS VOTRE SERVEUR NAGIOS :</strong>
+</div>
 
 **Modifiez le fichier de configuration Nagios :**  
 
@@ -87,11 +66,16 @@ mkdir -p /usr/local/nagios/etc/servers
 Attribuez le répertoire nouvellement créé à l’utilisateur et au groupe Nagios pour qu’il puisse y accéder sans restriction :
 
 ```
-chown nagios:nagios /usr/local/nagios/etc/servers
+### chown nagios:nagios /usr/local/nagios/etc/servers
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
+**Installez le paquet :**  
 
+```
+apt install nagios-nrpe-server
+```
+- L'installation de **l'agent NRPE** est indispensable, car c'est cet agent, (présent notament sur les machines qu'on veut superviser), qui permet l'échange des informations entre le serveur Nagios et les machines supervisées.
 
 ### **[↩️ Retour](../../linux/nagioscore-debian/index.md)**
