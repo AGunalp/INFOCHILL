@@ -3,32 +3,46 @@
 ###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installation Nagios Core</a>
 
 
-# 📚 Installation de Nagios Core sur Debian
+# 📚 Installer Nagios Core sur Linux
 
 <div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
-  ⚠️ <strong>Important :</strong>
+
+  <p>Ce guide suppose les éléments suivants :</p>
   <ul>
-    <li>Ce guide part du principe que vous êtes connecté en tant que <code>root</code> (via <code>su -</code>).</li>
-    <li>Si ce n'est pas le cas, ajoutez <code>sudo</code> devant chaque commande.</li>
+    <li><strong>Distribution :</strong> Vous utilisez la distribution <strong>Debian</strong>.</li>
+    <li><strong>Accès administrateur :</strong> Vous êtes connecté en tant que <code>root</code> (via la commande <code>su -</code>).</li>
   </ul>
+  <p>Si ce n'est pas le cas, ajoutez <code>sudo</code> devant chaque commande pour l'exécuter avec les privilèges administratifs.</p>
 </div>
+
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-# 🖥️ DEPUIS VOTRE SERVEUR NAGIOS
+<!-- Section "Depuis votre serveur Nagios" avec un fond sombre, couleurs contrastées et texte clair -->
+<div style="background-color: #333; color: #fff; border-left: 5px solid #00bcd4; padding: 20px 25px; margin-bottom: 20px;">
+  <strong style="font-size: 22px; color: #00bcd4;">🖥️ DEPUIS VOTRE SERVEUR NAGIOS :</strong>
+  <p style="font-size: 16px; color: #ddd;">Suivez les étapes ci-dessous pour configurer et installer Nagios directement sur votre serveur. Ces instructions vous guideront à travers le processus d'installation avec les commandes nécessaires.</p>
+</div>
 
-**Mettez à jour votre système :**
-
-Pour commencer, assurez-vous que votre système est à jour. Exécutez la commande suivante : 
-
+**Mettez à jour votre système :**  
+Pour commencer, assurez-vous que votre système est à jour. Exécutez la commande suivante :  
 ```
 apt update && apt upgrade
 ```
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
+**Exemple d'info-bulle au survol :**
 
-**Installez les paquets nécessaires :**
+Voici un exemple de texte avec une info-bulle lorsque vous placez votre souris dessus :
 
+<span style="position: relative; cursor: pointer; text-decoration: underline;">
+  Survolez ce texte
+  <span style="visibility: hidden; width: 150px; background-color: black; color: #fff; text-align: center; border-radius: 5px; padding: 5px; position: absolute; z-index: 1; bottom: 100%; left: 50%; margin-left: -75px; opacity: 0; transition: opacity 0.3s;">
+    Ceci est une info-bulle avec plus de détails.
+  </span>
+</span>
+
+**Installez les paquets nécessaires :**  
 Lancez l'installation des paquets nécessaires pour Nagios : 
 
 ```

@@ -92,25 +92,6 @@ chown nagios:nagios /usr/local/nagios/etc/servers
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-## Choisissez le système à superviser :
 
-<a href="https://infochill.com/linux/nagioscore-debian/supervision/machine-debian.html" class="button">
-    <span class="icon">➤</span> Superviser un Système Linux (Debian)
-</a>
-
-<a href="https://infochill.com/linux/nagioscore-debian/supervision/machine-windows.html" class="button">
-    <span class="icon">➤</span> Superviser un Système Windows
-</a>
-
-<a href="https://infochill.com/linux/nagioscore-debian/supervision/switch-cisco.html" class="button">
-    <span class="icon">➤</span> Superviser un Switch Cisco
-</a>
-
-<a href="https://infochill.com/linux/nagioscore-debian/supervision/switch-hp.html" class="button">
-    <span class="icon">➤</span> Superviser un Switch HP
-</a>
-
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 ### **[↩️ Retour](../../linux/nagioscore-debian/index.md)**
