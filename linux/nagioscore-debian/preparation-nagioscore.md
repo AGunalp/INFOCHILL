@@ -80,4 +80,32 @@ apt install nagios-nrpe-server
 ```
 - L'installation de **l'agent NRPE** est indispensable, car c'est cet agent, (présent notament sur les machines qu'on veut superviser), qui permet l'échange des informations entre le serveur Nagios et les machines supervisées.
 
+
+**Installer le plugin check_nrpe :**
+
+```
+apt install nagios-nrpe-plugin
+```
+
+```
+mv /usr/lib/nagios/plugins/check_nrpe /usr/local/nagios/libexec/
+```
+
+```
+chmod 764 /usr/local/nagios/libexec/check_nrpe
+```
+
+
+Aller définir ce plugin dans les commandes pour pouvoir l'utiliser :
+```
+vim /usr/local/nagios/etc/objects/commands.cfg
+```
+```
+define command {
+    command_name    check_nrpe
+    command_line    /usr/local/nagios/libexec/check_nrpe -H $HOSTADDRESS$ -c $ARG1$ $ARG2$ $ARG3$
+}
+```
+
+
 ### **[↩️ Retour](../../linux/nagioscore-debian/index.md)**

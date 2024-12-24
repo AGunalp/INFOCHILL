@@ -62,7 +62,7 @@ vim /etc/nagios/nrpe.cfg
 - **Configurer les adresses IP autorisées :**  
   A la fin de cette ligne, rajoutez l'adresse IP du serveur Nagios (pour mon cas 192.168.1.200) : 
   ```
-  allowed_hosts=127.0.0.1,::1, 192.168.1.200
+  allowed_hosts=127.0.0.1,::1,192.168.1.200
   ```
 
   Cela permettra à l'agent NRPE de cette machine, à communiquer avec l'agent NRPE ayant comme IP `192.168.1.200` (donc pouvoir communiquer avec notre serveur)
@@ -206,38 +206,18 @@ Maintenant que nous avons vérifié l'existence de la commande, nous pouvons dé
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-**Définissez un template :**  
-Après avoir identifié la commande, nous allons créer un template en spécifiant la commande à utiliser ainsi que les arguments nécessaires à son fonctionnement.
+**Définissez un service  :**  
+
 ```
-vim /usr/local/nagios/etc/objects/templates.cfg
+vim /usr/local/nagios/etc/servers/UneMachineLinux.cfg
 ```
-**Ajoutez un templace à ce fichier :**
+
 ```
 define service {
-    name                    template_check_disk        ; Template pour la vérification du disque
-    use                     generic-service            ; Utilisation du modèle générique
-    check_command           check_local_disk!20!10!/   ; Commande pour vérifier le disque
-    register                0                          ; Indique que c'est un template et non un service réel
-}
-```
-- template_check_disk : Le nom du template qu'on utilisera au moment où défini les services dans le fichier **.cfg**.
-- use : Les valeurs de ce modèle seront utilisés si on en défini pas.
-- check_command : La commande de commands.cfg, en spécifiant cette fois si les arguments d'entrée.
-- register : Indique seulement que c'est un template et non un service 
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-**Définissez un service avec le template :**  
-Maintenant qu'on a ajouté le template, on peut maintenant définir un service dans notre fichier UneMachineDebian.cfg juste en précisant le nom du template.
-```
-vim /usr/local/nagios/etc/servers/UneMachineDebian.cfg
-```
-On défini ce service en précisant quel template ce service utilisera :
-```
-define service {
-    use                     template_check_disk        ; Utilisation du template pour le disque
-    host_name               UneMachineDebian           ; Nom de l'hôte
-    service_description     Check Disk                  ; Description du service
+    host_name                       UneMachineDebian          ; Nom de l'hôte
+    service_description             Disk Usage                 ; Description du service
+    check_command                   check_nrpe!check_local_disk ; Commande de vérification du disque
+    use                             generic-service            ; Modèle générique utilisé
 }
 ```
 - use : Représente le template qu'on utilise
@@ -264,6 +244,11 @@ systemctl restart nagios
     ⚠️ <strong>Avis :</strong> La rédaction des commandes pour superviser les services arrive très bientôt. Merci de votre patience !
 </div>
 
+
+Sur la machine distante :
+```
+command[check_local_disk]=/usr/lib/nagios/plugins/check_disk -w 30% -c 20% -p /
+```
 ---
 
 ### **[↩️ Retour](../../nagioscore-debian/supervision-nrpe.md)**
