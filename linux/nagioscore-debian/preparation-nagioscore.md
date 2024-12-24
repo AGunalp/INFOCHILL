@@ -90,6 +90,9 @@ apt install nagios-nrpe-plugin
 ```
 mv /usr/lib/nagios/plugins/check_nrpe /usr/local/nagios/libexec/
 ```
+```
+chown nagios:nagios /usr/local/nagios/libexec/check_nrpe
+```
 
 ```
 chmod 764 /usr/local/nagios/libexec/check_nrpe
