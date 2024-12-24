@@ -69,7 +69,7 @@ Attribuez le répertoire nouvellement créé à l’utilisateur et au groupe Nag
 chown nagios:nagios /usr/local/nagios/etc/servers
 ```
 ```
-chmod 664 /usr/local/nagios/etc/servers
+chmod 764 /usr/local/nagios/etc/servers
 ```
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
