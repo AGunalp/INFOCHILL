@@ -33,7 +33,8 @@ Avant chaque installation, il est important de s'assurer que le système est à 
 ```
 apt update && apt upgrade
 ```
-<hr style="border: 1px dotted #ccc; height: 1px; background-color: #ccc; border-style: dotted;">
+<hr style="border: none; border-top: 1px dotted #ccc; color: #ccc; background-color: #ccc;">
+
 
 
 
