@@ -33,10 +33,7 @@ Avant chaque installation, il est important de s'assurer que le système est à 
 ```
 apt update && apt upgrade
 ```
-<hr style="border: none; border-top: 1px dotted #ccc; color: #ccc; background-color: #ccc;">
-
-
-
+<br>
 
 **Installez les paquets nécessaires**  
 Avant d'installer Nagios, il est essentiel d'installer les paquets nécessaires au bon fonctionnement de Nagios et à son environnement.
