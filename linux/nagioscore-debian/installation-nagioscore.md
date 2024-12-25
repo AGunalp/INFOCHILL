@@ -33,7 +33,8 @@ Avant chaque installation, il est important de s'assurer que le système est à 
 ```
 apt update && apt upgrade
 ```
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border-style: solid; border-width: 1px;">
+
 
 **Installez les paquets nécessaires**  
 Avant d'installer Nagios, il est essentiel d'installer les paquets nécessaires au bon fonctionnement de Nagios et à son environnement.
@@ -48,7 +49,8 @@ apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-d
 ```
 cd /tmp
 ```
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border-style: solid; border-width: 1px;">
+
 **Téléchargez nagios :**
 ```
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
@@ -64,7 +66,8 @@ Une fois le téléchargement terminé, extrayez le fichier compressé :
 ```
 tar -xzvf nagios-4.5.9.tar.gz
 ```
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border-style: solid; border-width: 1px;">
+
 
 ---
 
@@ -74,7 +77,8 @@ tar -xzvf nagios-4.5.9.tar.gz
 ```
 cd nagios-4.5.9
 ```
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border-style: solid; border-width: 1px;">
+
 
 **Exécutez le script de configuration :**
 ```
