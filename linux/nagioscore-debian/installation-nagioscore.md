@@ -26,6 +26,7 @@
   <strong style="font-size: 17px; color: #00bcd4;">🖥️ DEPUIS VOTRE SERVEUR NAGIOS :</strong>
 </div>
 
+<br>
 
 ### Pré-requis :
 
@@ -195,6 +196,8 @@ http://[adresse_IP]/nagios
   <strong style="font-size: 24px; color: #ff9900;">📚 INSTALLATION DE PLUGINS EN LOCAL</strong>
 </div>
 
+<br>
+
 **Installez d’abord les paquets nécessaires :**  
 
 ```
@@ -202,7 +205,7 @@ apt install nagios-plugins
 ```
 - L'installation des **plugins** est nécessaire, car ils contiennent les scripts exécutés localement qui fournissent les informations de supervision demandées.
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+<br>
 
 **Déplacez les plugins dans le bon répertoire :**  
 
@@ -212,12 +215,14 @@ mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
 - Le paquet **nagios-plugins** installe tous les plugins dans le répertoire `/usr/lib/nagios/plugins/`
 - Mais l'endroit le plus courant où Nagios attend ces plugins est `/usr/local/nagios/libexec/`  
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+<br>
 
 
 **Visualiser les onglets hosts/services :**
 
 ![alt text](/assets/images/nagioshostsv.png)  
+
+<br>
 
 ![alt text](/assets/images/nagiosservicesv.png)  
 
