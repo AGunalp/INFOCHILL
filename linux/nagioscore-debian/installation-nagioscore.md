@@ -81,7 +81,9 @@ tar -xzvf nagios-4.5.9.tar.gz
 ```
 
 <br>
+
 ---
+
 <br>
 
 ### Configuration et installation de Nagios
@@ -143,7 +145,7 @@ htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 ```
 
 Ici, le `-c` indique de créer un nouveau fichier pour stocker les identifiants (il n'est pas nécessaire de réutiliser cette option si vous créez d'autres utilisateurs). Le `nagiosadmin` est le nom du login.
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 <br>
 
@@ -165,63 +167,11 @@ Ouvrez un navigateur web et accédez à votre interface Nagios :
 http://[adresse_IP]/nagios
 ```
 
+<br>
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
 
 ### ETAT ACTUEL :
 
@@ -233,7 +183,12 @@ http://[adresse_IP]/nagios
 
 ⚠️ Origine du problème : Nous avons installé et configuré Nagios, mais rien au sujet des plugins.
 
+
+<br>
+
 --- 
+
+<br>
 
 <div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 20px 25px; margin-bottom: 20px; text-align: center;">
   <strong style="font-size: 24px; color: #ff9900;">📚 INSTALLATION DE PLUGINS EN LOCAL</strong>
