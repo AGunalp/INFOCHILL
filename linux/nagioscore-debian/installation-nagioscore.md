@@ -45,11 +45,12 @@ apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-d
 
 ### Téléchargez Nagios Core :  
 
-
+**Placez vous dans un répertoire temporaire :**
 ```
 cd /tmp
 ```
 
+**Téléchargez nagios :**
 ```
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
 ```
