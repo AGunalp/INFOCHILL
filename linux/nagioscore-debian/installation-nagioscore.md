@@ -48,13 +48,14 @@ apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-d
 ```
 cd /tmp
 ```
-
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 **Téléchargez nagios :**
 ```
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
 ```
 
 **Information :** Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons cette documentation. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Extraire le dossier téléchargé :**
 
@@ -63,6 +64,7 @@ Une fois le téléchargement terminé, extrayez le fichier compressé :
 ```
 tar -xzvf nagios-4.5.9.tar.gz
 ```
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 ---
 
@@ -72,22 +74,26 @@ tar -xzvf nagios-4.5.9.tar.gz
 ```
 cd nagios-4.5.9
 ```
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Exécutez le script de configuration :**
 ```
 ./configure --with-httpd-conf=/etc/apache2/sites-enabled
 ```
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Compilez les fichiers :**
 
 ```
 make all
 ```
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Créez le groupe et l'utilisateur Nagios sur le système :**
 ```
 make install-groups-users
 ```
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Installez les fichiers de configuration et démarrez Nagios :**
 
@@ -100,6 +106,7 @@ make install-commandmode
 make install-config
 make install-webconf
 ```
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Activez les modules nécessaires pour Apache :**
 
@@ -107,6 +114,7 @@ make install-webconf
 a2enmod rewrite
 a2enmod cgi
 ```
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Créez un compte administrateur :**
 
@@ -117,7 +125,7 @@ htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 ```
 
 Ici, le `-c` indique de créer un nouveau fichier pour stocker les identifiants (il n'est pas nécessaire de réutiliser cette option si vous créez d'autres utilisateurs). Le `nagiosadmin` est le nom du login.
-
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Redémarrez les services :**
 
@@ -127,6 +135,7 @@ Ensuite, redémarrez les services Apache et Nagios pour appliquer les modificati
 systemctl restart apache2
 systemctl restart nagios
 ```
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Accédez à l'interface Nagios :**
 
