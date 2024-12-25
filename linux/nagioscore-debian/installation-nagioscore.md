@@ -33,7 +33,8 @@ Avant chaque installation, il est important de s'assurer que le système est à 
 ```
 apt update && apt upgrade
 ```
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border-style: solid; border-width: 1px;">
+<hr style="border: 1px dotted #ccc; height: 1px; background-color: #ccc; border-style: dotted;">
+
 
 
 **Installez les paquets nécessaires**  
@@ -49,7 +50,8 @@ apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-d
 ```
 cd /tmp
 ```
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border-style: solid; border-width: 1px;">
+
+<hr style="border: 1px dotted #ccc; height: 1px; background-color: #ccc; border-style: dotted;">
 
 **Téléchargez nagios :**
 ```
@@ -57,7 +59,9 @@ wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
 ```
 
 **Information :** Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons cette documentation. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+<hr style="border: 1px dotted #ccc; height: 1px; background-color: #ccc; border-style: dotted;">
+
 
 **Extraire le dossier téléchargé :**
 
@@ -66,7 +70,8 @@ Une fois le téléchargement terminé, extrayez le fichier compressé :
 ```
 tar -xzvf nagios-4.5.9.tar.gz
 ```
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border-style: solid; border-width: 1px;">
+<hr style="border: 1px dotted #ccc; height: 1px; background-color: #ccc; border-style: dotted;">
+
 
 
 ---
@@ -77,7 +82,8 @@ tar -xzvf nagios-4.5.9.tar.gz
 ```
 cd nagios-4.5.9
 ```
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border-style: solid; border-width: 1px;">
+<hr style="border: 1px dotted #ccc; height: 1px; background-color: #ccc; border-style: dotted;">
+
 
 
 **Exécutez le script de configuration :**
