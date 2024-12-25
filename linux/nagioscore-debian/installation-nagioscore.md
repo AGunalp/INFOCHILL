@@ -27,7 +27,7 @@
 </div>
 
 
-### Pré-requis :
+## Pré-requis :
 
 <br>
 
@@ -50,7 +50,7 @@ apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-d
 
 <br>
 
-### Téléchargez Nagios Core :
+## Téléchargez Nagios Core :
 
 <br>
 
@@ -86,7 +86,7 @@ tar -xzvf nagios-4.5.9.tar.gz
 
 <br>
 
-### Configuration et installation de Nagios
+## Configuration et installation de Nagios
 <br>
 
 **Placez vous dans le répertoire extrait :**
