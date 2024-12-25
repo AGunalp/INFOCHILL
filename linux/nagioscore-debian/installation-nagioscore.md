@@ -33,15 +33,14 @@ Avant chaque installation, il est important de s'assurer que le système est à 
 ```
 apt update && apt upgrade
 ```
-
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Installez les paquets nécessaires**  
 Avant d'installer Nagios, il est essentiel d'installer les paquets nécessaires au bon fonctionnement de Nagios et à son environnement.
 ```
 apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-dev openssl libssl-dev
 ```
-
-
+---
 
 ### Téléchargez Nagios Core :  
 
@@ -56,7 +55,6 @@ wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
 ```
 
 **Information :** Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons cette documentation. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
-
 
 **Extraire le dossier téléchargé :**
 
