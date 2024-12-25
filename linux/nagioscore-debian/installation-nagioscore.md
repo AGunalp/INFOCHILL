@@ -43,18 +43,26 @@ Avant d'installer Nagios, il est essentiel d'installer les paquets nécessaires 
 ```
 apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-dev openssl libssl-dev
 ```
+
+<br>
+
 ---
 
-### Téléchargez Nagios Core :  
+<br>
+
+### Téléchargez Nagios Core :
+
 <br>
 
 **Placez vous dans un répertoire temporaire :**
 ```
 cd /tmp
 ```
+
 <br>
 
 **Téléchargez nagios :**
+
 ```
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
 ```
@@ -65,14 +73,16 @@ wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
 
 **Extraire le dossier téléchargé :**
 
+
 Une fois le téléchargement terminé, extrayez le fichier compressé : 
 
 ```
 tar -xzvf nagios-4.5.9.tar.gz
 ```
 
-
+<br>
 ---
+<br>
 
 ### Configuration et installation de Nagios
 <br>
