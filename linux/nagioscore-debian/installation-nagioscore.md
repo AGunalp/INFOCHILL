@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [NagiosCore Debian](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installer Nagios Core</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [Nagios Core](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installer Nagios Core</a>
 
 
 <div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 20px 25px; margin-bottom: 20px; text-align: center;">

@@ -110,5 +110,8 @@ define command {
 }
 ```
 
+```
+systemctl restart nagios
+```
 
 ### **[↩️ Retour](../../linux/nagioscore-debian/index.md)**
