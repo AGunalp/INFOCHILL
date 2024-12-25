@@ -161,34 +161,23 @@ systemctl restart nagios
 
 **Accédez à l'interface Nagios :**
 
-Ouvrez un navigateur web et accédez à votre interface Nagios à l'adresse suivante (en remplaçant par l'IP de votre serveur) :
+Ouvrez un navigateur web et accédez à votre interface Nagios :
 
 ```
-http://[votre-serveur]/nagios
+http://[adresse_IP]/nagios
 ```
 
-Par exemple (pour mon cas) :
-
-```
-http://192.168.1.200/nagios
-```
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-
-Si tout s'est bien passé, vous devriez voir l'interface de gestion de Nagios, comme illustré ci-dessous :
+### ETAT ACTUEL :
 
 ![alt text](/assets/images/interface_nagios.png)
 
----
-
-Aller sur l'onglet hosts :  
 ![alt text](/assets/images/nagioshosts.png)  
-
-Aller sur l'onglet services :  
+  
 ![alt text](/assets/images/nagiosservice.png)
 
-Origine du problème : Nous avons installé et configuré Nagios, mais rien au sujet des plugins.
+⚠️ Origine du problème : Nous avons installé et configuré Nagios, mais rien au sujet des plugins.
+
+--- 
 
 <div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 20px 25px; margin-bottom: 20px; text-align: center;">
   <strong style="font-size: 24px; color: #ff9900;">📚 INSTALLATION DE PLUGINS EN LOCAL</strong>
@@ -213,21 +202,19 @@ mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Transférez les droits à nagios :**
-```
-##### chown -R nagios:nagios /usr/local/nagios/libexec
-```
-On met **Nagios** comme propriétaire et groupe de ce répertoire, ainsi que de tous les fichiers qu’il contient, pour garantir que le service Nagios ait les permissions nécessaires pour exécuter les plugins correctement.
 
 **Visualiser les onglets hosts/services :**
-
-
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 ![alt text](/assets/images/nagioshostsv.png)  
 
 ![alt text](/assets/images/nagiosservicesv.png)  
+
+
+
+
+<div style="background-color: #f8d7da; color: #721c24; border-left: 5px solid #f5c6cb; padding: 15px; margin-top: 20px; text-align: center;">
+  <strong>⚠️ IMPORTANT :</strong> Vérifiez les permissions des plugins pour vous assurer que Nagios dispose des permissions nécessaires pour les exécuter sur le serveur.
+</div>
 
 
 ### **[↩️ Retour](../../linux/nagioscore-debian/index.md)**
