@@ -27,46 +27,37 @@
 </div>
 
 
-**Mettre à jour le système**  
-Avant chaque installation, il est important d'avoir un système à jour :
+### Pré-requis :
+**Mettez à jour votre système**  
+Avant chaque installation, il est important de s'assurer que le système est à jour.
 ```
 apt update && apt upgrade
 ```
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-**Installer les paquets nécessaires**  
-Lancez l'installation des paquets nécessaires pour Nagios :
+**Installez les paquets nécessaires**  
+Avant d'installer Nagios, il est essentiel d'installer les paquets nécessaires au bon fonctionnement de Nagios et à son environnement.
 ```
 apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-dev openssl libssl-dev
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
+### Téléchargez Nagios Core :  
 
 
-**Accéder à un répertoire temporaire**  
-Placez vous dans le répertoire `tmp` :
 ```
 cd /tmp
 ```
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-
-**Télécharger Nagios Core :**  
-Téléchargez le paquet Nagios Core depuis Internet : 
-
 
 ```
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
 ```
 
-**Info :** Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons cette documentation. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+**Information :** Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons cette documentation. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
 
 
-**Extrayez le dossier téléchargé :**
+**Extraire le dossier téléchargé :**
 
 Une fois le téléchargement terminé, extrayez le fichier compressé : 
 
@@ -77,22 +68,17 @@ tar -xzvf nagios-4.5.9.tar.gz
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
-**Placez vous dans le répertoire que vous venez d'extraire :**
+### Configuration et installation de Nagios
 
+**Placez vous dans le répertoire extrait :**
 ```
 cd nagios-4.5.9
 ```
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
 
 **Exécutez le script de configuration :**
 ```
 ./configure --with-httpd-conf=/etc/apache2/sites-enabled
 ```
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
 
 **Compilez les fichiers :**
 
@@ -100,15 +86,10 @@ cd nagios-4.5.9
 make all
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-
 **Créez le groupe et l'utilisateur Nagios sur le système :**
 ```
 make install-groups-users
 ```
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Installez les fichiers de configuration et démarrez Nagios :**
 
@@ -122,18 +103,12 @@ make install-config
 make install-webconf
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-
 **Activez les modules nécessaires pour Apache :**
 
 ```
 a2enmod rewrite
 a2enmod cgi
 ```
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
 
 **Créez un compte administrateur :**
 
@@ -145,7 +120,6 @@ htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 
 Ici, le `-c` indique de créer un nouveau fichier pour stocker les identifiants (il n'est pas nécessaire de réutiliser cette option si vous créez d'autres utilisateurs). Le `nagiosadmin` est le nom du login.
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Redémarrez les services :**
 
@@ -156,9 +130,6 @@ systemctl restart apache2
 systemctl restart nagios
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-
 **Accédez à l'interface Nagios :**
 
 Ouvrez un navigateur web et accédez à votre interface Nagios :
@@ -166,6 +137,64 @@ Ouvrez un navigateur web et accédez à votre interface Nagios :
 ```
 http://[adresse_IP]/nagios
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### ETAT ACTUEL :
 

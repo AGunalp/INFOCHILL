@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../../../assets/css/principal-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [NagiosCore Debian](../../nagioscore-debian/index.md) > [Superviser avec NRPE](../supervision-nrpe.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser Système Linux</a>
+###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [Nagios Core](../../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser une machine Linux</a>
 
 
 <div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 20px 25px; margin-bottom: 20px; text-align: center;">
@@ -30,7 +30,7 @@ Vous allez apprendre à utiliser les templates pour réutiliser facilement des c
 
 <!-- Section "Depuis votre serveur Nagios" avec un fond sombre, couleurs contrastées et texte clair -->
 <div style="background-color: #333; color: #fff; border-left: 5px solid #00bcd4; padding: 10px 10px; margin-bottom: 20px;">
-  <strong style="font-size: 17px; color: #00bcd4;">🖥️ DEPUIS UNE MACHINE LINUX :</strong>
+  <strong style="font-size: 17px; color: #00bcd4;">🖥️ DEPUIS UNE MACHINE LINUX (A SUPERVISER ):</strong>
 </div>
 
 **Mettez à jour votre système :**  
@@ -46,7 +46,8 @@ apt update && apt upgrade
 
 
 ```
-apt install nagios-nrpe-server nagios-plugins
+apt install nagios-nrpe-server
+apt install nagios-plugins
 ```
 - L'installation de **l'agent NRPE** est indispensable, car c'est cet agent, (présent notament sur notre serveur NAGIOS), qui permet l'échange des informations entre le serveur Nagios et les machines supervisées.
 - L'installation de **plugins** est notamment nécessaire car ce sont des scripts exécutés localement sur chaque machine supervisée. L'agent NRPE transmet ensuite les résultats de ces scripts au serveur Nagios.
@@ -62,7 +63,7 @@ vim /etc/nagios/nrpe.cfg
 - **Configurer les adresses IP autorisées :**  
   A la fin de cette ligne, rajoutez l'adresse IP du serveur Nagios (pour mon cas 192.168.1.200) : 
   ```
-  allowed_hosts=127.0.0.1,::1,192.168.1.200
+  allowed_hosts=127.0.0.1,::1, 192.168.1.200
   ```
 
   Cela permettra à l'agent NRPE de cette machine, à communiquer avec l'agent NRPE ayant comme IP `192.168.1.200` (donc pouvoir communiquer avec notre serveur)
@@ -124,10 +125,10 @@ vim /usr/local/nagios/etc/servers/UneMachineLinux.cfg
 Rajoutez ce code dans votre fichier **.cfg** (en ajusatant) afin de définir l'hôte : 
 
     define host {
-        use                     linux-server          ; Template pré-défini
-        host_name               UneMachineLinux      ; Nom de l'hôte
-        alias                   Machine Linux       ; Alias (juste l'affichage dans Nagios)
         address                 192.168.1.201         ; Adresse IP de l'hôte
+        host_name               UneMachineLinux      ; Nom de l'hôte
+        alias                   Machine Linux       ; Pour l'affichage sur Nagios
+        use                     linux-server          ; Template pré-défini
     }
 
   - **use :** Les valeurs de ce template seront utilisées si certaines valeurs ne sont pas précisée, vous pouvez trouver ce template (ainsi que les valeurs associées) dans `/usr/local/nagios/etc/objects/templates.cfg`
@@ -176,7 +177,7 @@ Bon, dans notre cas, nous allons définir un service qui vérifie l'espace disqu
 ls -l /usr/local/nagios/libexec/
 ```
 
-Il est important de noter que le script sera exécuté sur la machine que vous souhaitez superviser, c’est-à-dire notre machine Debian. Ainsi, vous devez vous assurer que ce fichier existe sur votre machine Debian.
+Il est important de noter que le script sera exécuté sur la machine qkue vous souhaitez superviser, c’est-à-dire notre machine Debian. Ainsi, vous devez vous assurer que ce fichier existe sur votre machine Debian.
 
 Puisque nous avons téléchargé et déplacé ces plugins à la fois sur le serveur Nagios et sur notre machine Debian, vous devriez normalement les retrouver sur les deux. En général, si un plugin est présent sur le serveur Nagios, il sera également sur la machine Debian.
 
@@ -239,16 +240,19 @@ define service {
 systemctl restart nagios
 ```
 
+
+Sur la machine distante :
+```
+command[check_local_disk]=/usr/lib/nagios/plugins/check_disk -w 30% -c 20% -p /
+```
+
 # A VENIR : 
 <div style="border: 2px solid red; color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; width: fit-content; margin: 10px 0;">
     ⚠️ <strong>Avis :</strong> La rédaction des commandes pour superviser les services arrive très bientôt. Merci de votre patience !
 </div>
 
 
-Sur la machine distante :
-```
-command[check_local_disk]=/usr/lib/nagios/plugins/check_disk -w 30% -c 20% -p /
-```
+
 ---
 
-### **[↩️ Retour](../../nagioscore-debian/supervision-nrpe.md)**
+### **[↩️ Retour](../index.md)**
