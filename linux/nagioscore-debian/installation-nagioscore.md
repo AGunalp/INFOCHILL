@@ -66,8 +66,7 @@ Une fois le téléchargement terminé, extrayez le fichier compressé :
 tar -xzvf nagios-4.5.9.tar.gz
 ```
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
+---
 
 ### Configuration et installation de Nagios
 
