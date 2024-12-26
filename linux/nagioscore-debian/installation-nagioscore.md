@@ -45,7 +45,7 @@ cd /tmp
 ```
 
 **Téléchargez Nagios :**  
-Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons cette documentation. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
+Dans l'exemple ci-dessous, nous installons la version la plus récente au moment où nous rédigeons cette documentation. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
 ```
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
 ```

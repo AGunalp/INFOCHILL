@@ -178,12 +178,12 @@ vim /usr/local/nagios/etc/servers/UneMachineLinux.cfg
 
 Ajoutez ce contenu :
   ```
-  define service {
+define service {
     host_name                       UneMachineLinux          ; Nom de l'hôte
     service_description             Disk Usage                 ; Description du service
     check_command                   check_nrpe!check_disk ; Commande de vérification du disque
     use                             generic-service            ; Modèle générique utilisé
-  }
+}
   ```
 - Execute en local "check_nrpe" pour envouer "check_disk" à la machine distante.
 
