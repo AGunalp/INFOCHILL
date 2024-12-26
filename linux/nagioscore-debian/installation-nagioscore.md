@@ -21,15 +21,15 @@
   <strong style="font-size: 17px; color: #00bcd4;">🖥️ DEPUIS VOTRE SERVEUR NAGIOS :</strong>
 </div>
 
-### Pré-requis :
+### Pré-requis
 
-**Mettez à jour votre système**  
+**Mettez à jour votre système :**  
 Avant chaque installation, il est important de s'assurer que le système est à jour.
 ```bash
 apt update && apt upgrade
 ```
 
-**Installez les paquets nécessaires**  
+**Installez les paquets nécessaires :**  
 Avant d'installer Nagios, il est essentiel d'installer les paquets nécessaires au bon fonctionnement de Nagios et à son environnement.
 ```bash
 apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-dev openssl libssl-dev
@@ -37,18 +37,18 @@ apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-d
 
 ---
 
-### Téléchargez Nagios Core :
+### Téléchargement Nagios Core
 
 **Placez-vous dans un répertoire temporaire :**
 ```bash
 cd /tmp
 ```
 
-**Téléchargez Nagios :**
+**Téléchargez Nagios :**  
+Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons cette documentation. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
 ```bash
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
 ```
-**Information :** Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons cette documentation. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
 
 **Extraire le dossier téléchargé :**
 ```bash
@@ -112,21 +112,21 @@ http://[adresse_IP]/nagios
 
 ---
 
-### ETAT ACTUEL :
-
-![alt text](/assets/images/interface_nagios.png)
+### ETAT ACTUEL
 
 ![alt text](/assets/images/nagioshosts.png)  
 
 ![alt text](/assets/images/nagiosservice.png)
 
-⚠️ Origine du problème : Nous avons installé et configuré Nagios, mais rien au sujet des plugins.
+⚠️ Origine du problème : Nous avons installé et configuré Nagios, mais rien n'a été fait au sujet des plugins.
 
 ---
 
 <div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 18px 22px; margin-bottom: 18px; text-align: center;">
-  <strong style="font-size: 22px; color: #ff9900;">📚 INSTALLATION DE PLUGINS EN LOCAL</strong>
+  <strong style="font-size: 22px; color: #ff9900;">📚 INSTALLATION DEs PLUGINS EN LOCAL</strong>
 </div>
+
+Pour superviser une machine, Nagios utilise des plugins, des scripts exécutés automatiquement à intervalles réguliers pour surveiller l'état des services. Il est donc nécessaire d'installer ces plugins localement, afin que Nagios puisse surveiller l'état de la machine sur laquelle il est installé (localement).
 
 **Installez d’abord les paquets nécessaires :**  
 ```bash
