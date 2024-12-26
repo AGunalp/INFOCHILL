@@ -22,8 +22,8 @@
 
 
 
-### WINDOWS :
--  **[Windows Server 2022 (En développement)](windows/windows-server-2022/index.md)**  
+### Cheh :
+-  **[SSH](/./ssh/index.md)**  
 Un guide pour installer et configurer Windows Server 2022 sur votre système Debian.
 
 
