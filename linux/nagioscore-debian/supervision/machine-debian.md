@@ -124,20 +124,15 @@ Rajoutez ce code dans votre fichier **.cfg** (en ajusatant) afin de définir l'h
 ```
 systemctl restart nagios
 ```
+
+### Etat de Nagios :
 ![alt text](../images/nagios_host_ok_unemachinelinux.png)
 
-
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-Cliquez sur l'onglet `Host` à gauche, vous devriez maintenant voir apparaître le nom de l'hostname que vous avez ajouté dans le fichier .cfg. Dans mon exemple, la machine Debian est référencée sous le nom `UneMachineLinux` :
+## Définir un service :
 
-![alt text](../../../assets/images/nagioshostslinux.png)
-
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-## Ajout d'un service :
-
-Nous allons devoir maintenant définir des services, afin de donner l'ordre depuis notre serveur Nagios, d'executer un plugin sur notre "UneMachineLinux" par l'intermédiaire de l'agent NRPE.
+Nous allons devoir maintenant définir un service, afin de donner l'ordre depuis notre serveur Nagios, d'executer un plugin sur notre "UneMachineLinux" par l'intermédiaire de l'agent NRPE.
 
 Nous allons définir un service qui vérifie l'espace disque d'une machine.
 
@@ -158,8 +153,7 @@ Quand cette machine reçoit une commande de la part de Nagios, il doit savoir fa
 ```
 vim /etc/nagios/nrpe.cfg
 ```
-- **Ajoutez ce contenu (si n'existe pas) :**
-Dans notre cas, nous allons ajouter (si la commande n'est la commande pour executer correctement ce script existe) :
+- **Ajoutez ce contenu (si n'existe pas) :**  
   ```
   command[check_disk]=/usr/lib/nagios/plugins/check_disk -w 30% -c 20% -p /
   ```
