@@ -114,9 +114,9 @@ http://[adresse_IP]/nagios
 
 ### ETAT ACTUEL
 
-![alt text](/assets/images/nagioshosts.png)  
+![alt text](./images/nagios_host_down.png)  
 
-![alt text](/assets/images/nagiosservice.png)
+![alt text](./images/nagios_services_down.png)
 
 ⚠️ Origine du problème : Nous avons installé et configuré Nagios, mais rien n'a été fait au sujet des plugins.
 
@@ -134,6 +134,11 @@ apt install nagios-plugins
 ```
 
 - L'installation des **plugins** est nécessaire, car ils contiennent les scripts exécutés localement qui fournissent les informations de supervision demandées.
+
+**Vérification de l'etat :**
+![alt text](images/nagios_host_down.png)
+![alt text](images/nagios_services_down.png)
+Pourquoi rien n'a changé ? Si vous lisez attentivement la colonne "Status Information", vous remarquerez que Nagios attends ces plugins à un endroit bien spécifique.
 
 **Déplacez les plugins dans le bon répertoire :**  
 ```
