@@ -92,18 +92,21 @@ mv /usr/lib/nagios/plugins/check_nrpe /usr/local/nagios/libexec/
 
 **Définir la commande :**
 
-Déclarer cette commande dans `commands.cfg` permet à Nagios de savoir comment utiliser le plugin `check_nrpe` pour interroger les hôtes distants. Cela définit la méthode d'exécution du plugin afin de récupérer les informations de supervision depuis les machines supervisées.
+Pour pouvoir utiliser un plugin depuis notre serveur Nagios, le plugin doit être déclarer  dans `commands.cfg`. Cela permet à Nagios de savoir comment utiliser le plugin `check_nrpe` pour interroger les hôtes distants. Cela définit la méthode d'exécution du plugin afin de récupérer les informations de supervision depuis les machines supervisées.
 
 ```
 vim /usr/local/nagios/etc/objects/commands.cfg
 ```
-```
-define command {
+
+- Ajouter ou vérifier que ce contenu est bien à l'intérieur :
+  ```
+  define command {
     command_name    check_nrpe
     command_line    /usr/local/nagios/libexec/check_nrpe -H $HOSTADDRESS$ -c $ARG1$ $ARG2$ $ARG3$
-}
-```
+  }
+  ```
 
+Redémarrez le service :
 ```
 systemctl restart nagios
 ```
