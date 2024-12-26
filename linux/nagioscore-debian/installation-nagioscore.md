@@ -153,9 +153,11 @@ chmod -R 750 /usr/local/nagios/libexec
 
 **Visualiser les onglets hosts/services :**
 
-![alt text](/assets/images/nagioshostsv.png)  
+![alt text](./images/nagios_services-ok.png)  
 
-![alt text](/assets/images/nagiosservicesv.png)  
+![alt text](./images/nagios_services-ok.png)  
+
+
 
 <div style="background-color: #f8d7da; color: #721c24; border-left: 5px solid #f5c6cb; padding: 12px; margin-top: 18px; text-align: center;">
   <strong>⚠️ IMPORTANT :</strong> Vérifiez les permissions des plugins pour vous assurer que Nagios dispose des permissions nécessaires pour les exécuter sur le serveur.
