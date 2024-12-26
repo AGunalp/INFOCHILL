@@ -23,7 +23,7 @@
 
 
 ### Cheh :
--  **[SSH](/./ssh/index.md)**  
+-  **[SSH](/./ssh/index.html)**  
 Un guide pour installer et configurer Windows Server 2022 sur votre système Debian.
 
 
