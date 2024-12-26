@@ -158,17 +158,18 @@ Quand cette machine reçoit une commande de la part de Nagios, il doit savoir fa
 vim /etc/nagios/nrpe.cfg
 ```
 - **Ajoutez ce contenu (si n'existe pas) :**
-Dans notre cas, nous allons ajouter (si la commande n'est la commande pour executer correctement ce script existe :
+Dans notre cas, nous allons ajouter (si la commande n'est la commande pour executer correctement ce script existe) :
   ```
   command[check_disk]=/usr/lib/nagios/plugins/check_disk -w 30% -c 20% -p /
   ```
+- Entre les crochets [check_disk], est la commande que notre serveur nagios enverra à cette machine.
 
-Maintenant que nous avons vérifié l'existence de la commande, nous pouvons définir un template pour superviser l'espace disque.
+<!-- Section "Depuis votre serveur Nagios" avec un fond sombre, couleurs contrastées et texte clair -->
+<div style="background-color: #333; color: #fff; border-left: 5px solid #00bcd4; padding: 10px 10px; margin-bottom: 20px;">
+  <strong style="font-size: 17px; color: #00bcd4;">🖥️ DEPUIS VOTRE SERVEUR NAGIOS :</strong>
+</div>
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
-
-
-**Définissez un service  :**  
+**Définissez le service  :**  
 
 ```
 vim /usr/local/nagios/etc/servers/UneMachineLinux.cfg
@@ -178,21 +179,11 @@ vim /usr/local/nagios/etc/servers/UneMachineLinux.cfg
 define service {
     host_name                       UneMachineDebian          ; Nom de l'hôte
     service_description             Disk Usage                 ; Description du service
-    check_command                   check_nrpe!check_local_disk ; Commande de vérification du disque
+    check_command                   check_nrpe!check_disk ; Commande de vérification du disque
     use                             generic-service            ; Modèle générique utilisé
 }
 ```
-- use : Représente le template qu'on utilise
-- host_name : Le nom de la machine
-- service_description : Le nom du service
-
-<div style="border: 1px solid #007BFF; border-radius: 5px; padding: 10px; margin: 1em 0;">
-  <strong>💡 À SAVOIR :</strong>
-  <p>Les templates vous permettent de lier facilement des seuils spécifiques, comme <strong>80 %</strong> pour un avertissement et <strong>90 %</strong> pour un état critique, à des commandes déjà définies dans <code>commands.cfg</code>.</p>
-
-  <strong>Par exemple :</strong>
-  <p>Si vous créez un template pour surveiller l'utilisation du disque, vous pouvez ensuite appliquer ce template à plusieurs services. Cela signifie que vous n'avez pas besoin de redéfinir les seuils pour chaque service, car ils seront automatiquement appliqués grâce au template.</p>
-</div>
+- Execute en local "check_nrpe" pour envouer "check_disk" à la machine distante.
 
 
 #### Redémarrez le services nagios (ou reboot) :
@@ -200,18 +191,6 @@ define service {
 ```
 systemctl restart nagios
 ```
-
-
-Sur la machine distante :
-```
-command[check_local_disk]=/usr/lib/nagios/plugins/check_disk -w 30% -c 20% -p /
-```
-
-# A VENIR : 
-<div style="border: 2px solid red; color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; width: fit-content; margin: 10px 0;">
-    ⚠️ <strong>Avis :</strong> La rédaction des commandes pour superviser les services arrive très bientôt. Merci de votre patience !
-</div>
-
 
 
 ---
