@@ -25,13 +25,13 @@
 
 **Mettez à jour votre système :**  
 Avant chaque installation, il est important de s'assurer que le système est à jour.
-```bash
+```
 apt update && apt upgrade
 ```
 
 **Installez les paquets nécessaires :**  
 Avant d'installer Nagios, il est essentiel d'installer les paquets nécessaires au bon fonctionnement de Nagios et à son environnement.
-```bash
+```
 apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-dev openssl libssl-dev
 ```
 
@@ -40,18 +40,18 @@ apt install unzip autoconf gcc libc6 make wget apache2 apache2-utils php libgd-d
 ### Téléchargement Nagios Core
 
 **Placez-vous dans un répertoire temporaire :**
-```bash
+```
 cd /tmp
 ```
 
 **Téléchargez Nagios :**  
 Dans l'exemple ci-dessus, nous installons la version la plus récente au moment où nous rédigeons cette documentation. Si vous voulez connaitre la dernière version, rendez-vous sur [Nagios Core Downloads](https://www.nagios.org/downloads/nagios-core/).
-```bash
+```
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.9.tar.gz
 ```
 
 **Extraire le dossier téléchargé :**
-```bash
+```
 tar -xzvf nagios-4.5.9.tar.gz
 ```
 
@@ -60,27 +60,27 @@ tar -xzvf nagios-4.5.9.tar.gz
 ### Configuration et installation de Nagios
 
 **Placez-vous dans le répertoire extrait :**
-```bash
+```
 cd nagios-4.5.9
 ```
 
 **Exécutez le script de configuration :**
-```bash
+```
 ./configure --with-httpd-conf=/etc/apache2/sites-enabled
 ```
 
 **Compilez les fichiers :**
-```bash
+```
 make all
 ```
 
 **Créez le groupe et l'utilisateur Nagios sur le système :**
-```bash
+```
 make install-groups-users
 ```
 
 **Installez les fichiers de configuration et démarrez Nagios :**
-```bash
+```
 make install
 make install-daemoninit
 make install-commandmode
@@ -89,24 +89,24 @@ make install-webconf
 ```
 
 **Activez les modules nécessaires pour Apache :**
-```bash
+```
 a2enmod rewrite
 a2enmod cgi
 ```
 
 **Créez un compte administrateur :**
-```bash
+```
 htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 ```
 
 **Redémarrez les services :**
-```bash
+```
 systemctl restart apache2
 systemctl restart nagios
 ```
 
 **Accédez à l'interface Nagios :**
-```bash
+```
 http://[adresse_IP]/nagios
 ```
 
@@ -129,14 +129,14 @@ http://[adresse_IP]/nagios
 Pour superviser une machine, Nagios utilise des plugins, des scripts exécutés automatiquement à intervalles réguliers pour surveiller l'état des services. Il est donc nécessaire d'installer ces plugins localement, afin que Nagios puisse surveiller l'état de la machine sur laquelle il est installé (localement).
 
 **Installez d’abord les paquets nécessaires :**  
-```bash
+```
 apt install nagios-plugins
 ```
 
 - L'installation des **plugins** est nécessaire, car ils contiennent les scripts exécutés localement qui fournissent les informations de supervision demandées.
 
 **Déplacez les plugins dans le bon répertoire :**  
-```bash
+```
 mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
 ```
 
