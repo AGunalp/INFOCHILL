@@ -22,3 +22,4 @@
   const analytics = getAnalytics(app);
 </script>
 
+Bonjour
