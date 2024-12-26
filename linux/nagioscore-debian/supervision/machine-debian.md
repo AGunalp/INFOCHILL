@@ -194,6 +194,9 @@ Ajoutez ce contenu :
 systemctl restart nagios
 ```
 
+ETAT DE NAGIOS : 
+
+![alt text](../images/nagios_services_ok_unemachinelinux.png)
 
 ---
 
