@@ -81,8 +81,12 @@ apt install nagios-nrpe-plugin
 ```
 mv /usr/lib/nagios/plugins/check_nrpe /usr/local/nagios/libexec/
 ```
-
-
+```
+chown nagios:nagios /usr/local/nagios/libexec/check_nrpe
+```
+```
+chmod 750 /usr/local/nagios/libexec/check_nrpe
+```
 **Définir la commande :**
 
 Pour pouvoir utiliser un plugin depuis notre serveur Nagios, le plugin doit être déclarer  dans `commands.cfg`. Cela permet à Nagios de savoir comment utiliser le plugin `check_nrpe` pour interroger les hôtes distants. Cela définit la méthode d'exécution du plugin afin de récupérer les informations de supervision depuis les machines supervisées.

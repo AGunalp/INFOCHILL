@@ -123,8 +123,9 @@ Rajoutez ce code dans votre fichier **.cfg** (en ajusatant) afin de définir l'h
 
 ```
 systemctl restart nagios
-systemctl restart nagios-nrpe-server.service
 ```
+![alt text](../images/nagios_host_ok_unemachinelinux.png)
+
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
