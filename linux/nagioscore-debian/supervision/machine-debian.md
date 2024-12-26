@@ -128,7 +128,7 @@ systemctl restart nagios-nrpe-server.service
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-Cliquez sur l'onglet `Host` à gauche, vous devriez maintenant voir apparaître la machine que vous avez configurée. Dans mon exemple, la machine Debian est référencée sous le nom `UneMachineDebian` :
+Cliquez sur l'onglet `Host` à gauche, vous devriez maintenant voir apparaître le nom de l'hostname que vous avez ajouté dans le fichier .cfg. Dans mon exemple, la machine Debian est référencée sous le nom `UneMachineLinux` :
 
 ![alt text](../../../assets/images/nagioshostslinux.png)
 
@@ -177,7 +177,7 @@ vim /usr/local/nagios/etc/servers/UneMachineLinux.cfg
 
 ```
 define service {
-    host_name                       UneMachineDebian          ; Nom de l'hôte
+    host_name                       UneMachineLinux          ; Nom de l'hôte
     service_description             Disk Usage                 ; Description du service
     check_command                   check_nrpe!check_disk ; Commande de vérification du disque
     use                             generic-service            ; Modèle générique utilisé

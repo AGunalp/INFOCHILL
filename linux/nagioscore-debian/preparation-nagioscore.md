@@ -68,14 +68,7 @@ chmod 750 /usr/local/nagios/etc/servers
 ```
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-### Mettre en place l'agent NRPE
-
-**Installez le paquet :**  
-
-```
-apt install nagios-nrpe-server
-```
-- L'installation de **l'agent NRPE** est indispensable, car c'est cet agent, (présent notament sur les machines qu'on veut superviser), qui permet l'échange des informations entre le serveur Nagios et les machines supervisées.
+### Mettre en place le plugin permettant de communiquer avec les agents NRPE distants
 
 
 **Installer le plugin check_nrpe :**

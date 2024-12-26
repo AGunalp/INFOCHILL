@@ -123,7 +123,7 @@ http://[adresse_IP]/nagios
 ---
 
 <div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 18px 22px; margin-bottom: 18px; text-align: center;">
-  <strong style="font-size: 22px; color: #ff9900;">📚 INSTALLATION DEs PLUGINS EN LOCAL</strong>
+  <strong style="font-size: 22px; color: #ff9900;">📚 INSTALLATION DES PLUGINS EN LOCAL</strong>
 </div>
 
 Pour superviser une machine, Nagios utilise des plugins, des scripts exécutés automatiquement à intervalles réguliers pour surveiller l'état des services. Il est donc nécessaire d'installer ces plugins localement, afin que Nagios puisse surveiller l'état de la machine sur laquelle il est installé (localement).
