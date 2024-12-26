@@ -157,7 +157,13 @@ vim /etc/nagios/nrpe.cfg
   ```
   command[check_disk]=/usr/lib/nagios/plugins/check_disk -w 30% -c 20% -p /
   ```
-- Entre les crochets [check_disk], est la commande que notre serveur nagios enverra à cette machine.
+  - Entre les crochets [check_disk], est la commande que notre serveur nagios enverra à cette machine.
+
+**Rédemarrez le service :**
+
+```
+systemctl restart nagios-nrpe-server.service
+```
 
 <!-- Section "Depuis votre serveur Nagios" avec un fond sombre, couleurs contrastées et texte clair -->
 <div style="background-color: #333; color: #fff; border-left: 5px solid #00bcd4; padding: 10px 10px; margin-bottom: 20px;">
@@ -170,14 +176,15 @@ vim /etc/nagios/nrpe.cfg
 vim /usr/local/nagios/etc/servers/UneMachineLinux.cfg
 ```
 
-```
-define service {
+Ajoutez ce contenu :
+  ```
+  define service {
     host_name                       UneMachineLinux          ; Nom de l'hôte
     service_description             Disk Usage                 ; Description du service
     check_command                   check_nrpe!check_disk ; Commande de vérification du disque
     use                             generic-service            ; Modèle générique utilisé
-}
-```
+  }
+  ```
 - Execute en local "check_nrpe" pour envouer "check_disk" à la machine distante.
 
 
