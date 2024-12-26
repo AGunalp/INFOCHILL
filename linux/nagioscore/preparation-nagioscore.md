@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [Nagios Core](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Préparer le</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [Nagios Core](../nagioscore/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Préparer le serveur</a>
 
 
 <div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 20px 25px; margin-bottom: 20px; text-align: center;">
@@ -108,4 +108,4 @@ Redémarrez le service :
 systemctl restart nagios
 ```
 
-### **[↩️ Retour](../../linux/nagioscore-debian/index.md)**
+### **[↩️ Retour](../../linux/nagioscore/index.md)**

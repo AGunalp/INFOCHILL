@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../../../assets/css/principal-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [Nagios Core](../../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser un switch Cisco</a>
+###### 📂 Vous êtes ici : [Accueil](../../../index.md) > [Nagios Core](../../nagioscore/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Superviser un switch Cisco</a>
 
 
 ## En cours

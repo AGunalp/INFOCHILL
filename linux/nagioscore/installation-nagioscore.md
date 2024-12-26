@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [Nagios Core](../nagioscore-debian/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installer Nagios Core</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [Nagios Core](../nagioscore/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installer Nagios Core</a>
 
 <div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 18px 22px; margin-bottom: 18px; text-align: center;">
   <strong style="font-size: 22px; color: #ff9900;">📚 INSTALLATION DE NAGIOS CORE SUR DEBIAN</strong>
@@ -155,6 +155,6 @@ chmod -R 750 /usr/local/nagios/libexec
 
 ![alt text](./images/nagios_host_ok.png)  
 
-![alt text](./images/nagios_services-ok.png)  
+![alt text](./images/nagios_services_ok.png)  
 
-### **[↩️ Retour](../../linux/nagioscore-debian/index.md)**
+### **[↩️ Retour](../../linux/nagioscore/index.md)**

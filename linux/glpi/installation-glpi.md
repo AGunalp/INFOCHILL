@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi-debian/index.md) > <a href="" style="color: #ff9900; text-decoration: underline;">Installation GLPI</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [GLPI Debian](../glpi/index.md) > <a href="" style="color: #ff9900; text-decoration: underline;">Installation GLPI</a>
 
 
 # 📚 Installation de GLPI et liaison avec MariaDB
@@ -140,4 +140,4 @@ Une fois l'installation terminée, vous arrivez à la page de connexion. Le comp
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
-### **[↩️ Retour](../glpi-debian/index.md)**
+### **[↩️ Retour](../glpi/index.md)**

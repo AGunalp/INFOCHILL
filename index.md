@@ -9,23 +9,17 @@
 ## 📍 EXPLOREZ NOS DOCUMENTATIONS
 
 ### LINUX :
--  **[GLPI (Debian)](linux/glpi-debian/index.md)**  
+-  **[GLPI (Debian)](linux/glpi/index.md)**  
   Un guide pour installer et configurer GLPI sur votre système Debian.
   
--  **[NagiosCore (Debian)](linux/nagioscore-debian/index.md)**  
+-  **[NagiosCore (Debian)](linux/nagioscore/index.md)**  
   Un guide pour installer et configurer Nagios Core sur votre système Debian.
 
-- **[OpenMediaVault](linux/openmediavault-debian/index.md)**
+- **[OpenMediaVault (Debian)](linux/openmediavault/index.md)**  
+  Un guide pour installer et configurer OpenMediaVault sur votre système Debian.
 
--  **[Postfix (Debian) (En développement)](linux/postfix-debian/index.md)**  
+-  **[Postfix (En développement)](linux/postfix/index.md)**  
   Un guide pour installer et configurer Postfix sur votre système Debian.
-
-
-
-### Cheh :
--  **[SSH](/./ssh/index.html)**  
-Un guide pour installer et configurer Windows Server 2022 sur votre système Debian.
-
 
 
 ## 🔍 À PROPOS
