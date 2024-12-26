@@ -1,16 +1,20 @@
 <link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
-###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Nagios Core Debian</a>
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Nagios Core</a>
 
 ## 🛠️ Guides Nagios Core
 
-- ### Étape 1 : Installer Nagios Core
+-  **Étape 1 : Installer Nagios Core**  
   [Installer Nagios Core](installation-nagioscore.md)
 
-- ### Étape 2 : Préparer le serveur Nagios  
+<br>
+
+- **Étape 2 : Préparer le serveur Nagios**  
   [Préparer le serveur](preparation-nagioscore.md)
 
-- ### Étape 3 : Superviser un appareil  
+<br>
+
+- **Étape 3 : Superviser un appareil**  
   - [Superviser une machine Linux](supervision/machine-debian.md)
   - [Superviser une machine Windows](supervision/machine-windows.md)  
   - [Superviser un switch Cisco](supervision/switch-cisco.md)  
