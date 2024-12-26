@@ -23,9 +23,7 @@
 
 ## Objectif
 
-Après avoir installé et vérifié que votre serveur Nagios est en cours d'exécution ("Daemon running") via votre navigateur, l'objectif est de superviser efficacement vos machines et de collecter des informations sur leur état.
-
-Pour cela, vous devez installer et configurer l'agent NRPE. Cet agent fait le lien entre votre serveur Nagios et les hôtes que vous voulez superviser. Il permet au serveur Nagios d'envoyer des commandes aux systèmes supervisés, qui à leur tour communiquent les résultats au serveur.
+L'objectif de cette page est de configurer et préparer le serveur Nagios pour superviser des machines à distance en utilisant l'agent NRPE et les plugins associés.
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
@@ -34,9 +32,12 @@ Pour cela, vous devez installer et configurer l'agent NRPE. Cet agent fait le li
   <strong style="font-size: 17px; color: #00bcd4;">🖥️ DEPUIS VOTRE SERVEUR NAGIOS :</strong>
 </div>
 
+### Configuration du répertoire de supervision 
+On doit indiquer à Nagios quel répertoire contiendra les fichiers de configuration des machines que nous souhaitons superviser.
+
+
 **Modifiez le fichier de configuration Nagios :**  
 
-Nous devons maintenant indiquer à Nagios le chemin exact du répertoire où sont stockés les fichiers de configuration des éléments à superviser.
 ```
 vim /usr/local/nagios/etc/nagios.cfg
 ```
@@ -46,9 +47,7 @@ vim /usr/local/nagios/etc/nagios.cfg
   ```
   cfg_dir=/usr/local/nagios/etc/servers
   ```
-Une fois activée, cette ligne précise à Nagios d’utiliser ce répertoire pour consulter les fichiers **.cfg** qui définissent les machines à superviser.
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Créez le répertoire (si nécessaire) :**
 
@@ -57,21 +56,19 @@ Si le répertoire activé n'existe pas encore, créez-le manuellement avec la co
 ```
 mkdir -p /usr/local/nagios/etc/servers
 ```
-- -p : Permet de créer notamment les répertoires parents si ils n'existent pas.
 
-<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 **Changez les droits d'accès :**
-
-Attribuez le répertoire nouvellement créé à l’utilisateur et au groupe Nagios pour qu’il puisse y accéder sans restriction :
 
 ```
 chown nagios:nagios /usr/local/nagios/etc/servers
 ```
 ```
-chmod 764 /usr/local/nagios/etc/servers
+chmod 750 /usr/local/nagios/etc/servers
 ```
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
+### Mettre en place l'agent NRPE
 
 **Installez le paquet :**  
 
@@ -83,16 +80,20 @@ apt install nagios-nrpe-server
 
 **Installer le plugin check_nrpe :**
 
+C'est ce plugin que l'agent NRPE utilisera pour l'envoie de commande.
 ```
 apt install nagios-nrpe-plugin
 ```
-
+**Déplacez ce plugin à l'endroit où Nagios attends les plugins :**
 ```
 mv /usr/lib/nagios/plugins/check_nrpe /usr/local/nagios/libexec/
 ```
 
 
-Aller définir ce plugin dans les commandes pour pouvoir l'utiliser :
+**Définir la commande :**
+
+Déclarer cette commande dans `commands.cfg` permet à Nagios de savoir comment utiliser le plugin `check_nrpe` pour interroger les hôtes distants. Cela définit la méthode d'exécution du plugin afin de récupérer les informations de supervision depuis les machines supervisées.
+
 ```
 vim /usr/local/nagios/etc/objects/commands.cfg
 ```
