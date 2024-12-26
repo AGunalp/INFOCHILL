@@ -20,6 +20,13 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+
+  const loginEmail = txtEmail.value;
+  const loginPassword = txtPassword.value;
+
+  const userCredential = await signWithEmailAndPassword(auth, loginEmail, loginPassword);
+  console.log(userCredential.user);
+
 </script>
 
-Bonjour
+yo
