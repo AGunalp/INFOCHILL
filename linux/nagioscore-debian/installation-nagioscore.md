@@ -138,11 +138,17 @@ apt install nagios-plugins
 **Vérification de l'etat :**
 ![alt text](images/nagios_host_down.png)
 ![alt text](images/nagios_services_down.png)
-Pourquoi rien n'a changé ? Si vous lisez attentivement la colonne "Status Information", vous remarquerez que Nagios attends ces plugins à un endroit bien spécifique.
+Pourquoi rien n'a changé ? Si vous lisez attentivement la colonne "Status Information", vous remarquerez que Nagios attends ces plugins à un endroit bien spécifique, or, la commande "apt install nagios-plugins" installe par défaut les plugins dans un autre répertoire.
 
 **Déplacez les plugins dans le bon répertoire :**  
 ```
 mv /usr/lib/nagios/plugins/* /usr/local/nagios/libexec/
+```
+```
+chown -R nagios:nagios /usr/local/nagios/libexec
+```
+```
+chmod -R 750 /usr/local/nagios/libexec
 ```
 
 - Le paquet **nagios-plugins** installe tous les plugins dans le répertoire `/usr/lib/nagios/plugins/`
