@@ -7,12 +7,8 @@
 -  **Étape 1 : Installer Nagios Core**  
   [Installer Nagios Core](installation-nagioscore.md)
 
-<br>
-
 - **Étape 2 : Préparer le serveur Nagios**  
   [Préparer le serveur](preparation-nagioscore.md)
-
-<br>
 
 - **Étape 3 : Superviser un appareil**  
   - [Superviser une machine Linux](supervision/machine-debian.md)
