@@ -1,6 +1,21 @@
 <link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
-# Sauvegardes : 
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [OpenMediaVault](../openmediavault/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Sauvegardes</a>
+
+<div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 18px 22px; margin-bottom: 18px; text-align: center;">
+  <strong style="font-size: 22px; color: #ff9900;">📚 SAUVEGARDES SUR OPENMEDIAVAULT</strong>
+</div>
+
+<div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
+  <p>Ce guide vous montre comment configurer les sauvegardes dans OpenMediaVault en utilisant des partages réseau et la synchronisation avec <strong>rsync</strong>.</p>
+  <ul>
+    <li><strong>Prérequis :</strong> Vous avez déjà installé OpenMediaVault et vous avez accès à votre serveur.</li>
+    <li><strong>Objectif :</strong> Sauvegarder des répertoires depuis un serveur Debian vers un stockage partagé OpenMediaVault.</li>
+  </ul>
+</div>
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 
 ### Créez un dossier partagés : 
 Lorsque vous créez un dossier partagé, vous transformez un répertoire local en un répertoire accessible via le réseau. Cela permet à d'autres appareils sur le réseau local (ou même à distance, selon la configuration) d'accéder à ce répertoire.

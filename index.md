@@ -9,16 +9,16 @@
 ## 📍 EXPLOREZ NOS DOCUMENTATIONS
 
 ### LINUX :
--  **[GLPI (Debian)](linux/glpi/index.md)**  
+-  **[GLPI](linux/glpi/index.md)**  
   Un guide pour installer et configurer GLPI sur votre système Debian.
   
--  **[NagiosCore (Debian)](linux/nagioscore/index.md)**  
+-  **[NagiosCore](linux/nagioscore/index.md)**  
   Un guide pour installer et configurer Nagios Core sur votre système Debian.
 
-- **[OpenMediaVault (Debian)](linux/openmediavault/index.md)**  
+- **[OpenMediaVault (En développement)](linux/openmediavault/index.md)**  
   Un guide pour installer et configurer OpenMediaVault sur votre système Debian.
 
--  **[Postfix (En développement)](linux/postfix/index.md)**  
+-  **[Postfix (Bientôt)](linux/postfix/index.md)**  
   Un guide pour installer et configurer Postfix sur votre système Debian.
 
 
@@ -41,4 +41,4 @@ Pour toute question ou suggestion, n'hésitez pas à nous contacter :
 
 
 
-&copy; 2024 InfoChill - Tous droits réservés
+&copy; 2025 InfoChill - Tous droits réservés

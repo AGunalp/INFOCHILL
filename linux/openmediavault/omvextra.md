@@ -1,8 +1,22 @@
 <link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
 
-## Description
-Ce guide vous accompagne dans l'installation de **OMV-Extras** sur **OpenMediaVault** (OMV). OMV-Extras est un plugin essentiel qui permet d'étendre les fonctionnalités de votre serveur OMV en ajoutant des plugins supplémentaires. Si vous rencontrez des erreurs lors de l'installation, vous trouverez également des solutions pour résoudre des problèmes courants liés à la connexion réseau.
+
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [OpenMediaVault](../openmediavault/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installation d'OMV-Extras</a>
+
+<div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 18px 22px; margin-bottom: 18px; text-align: center;">
+  <strong style="font-size: 22px; color: #ff9900;">📚 INSTALLATION D'OMV-EXTRAS SUR OPENMEDIAVAULT</strong>
+</div>
+
+<div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
+  <p>Ce guide vous aide à installer et configurer **OMV-Extras**, un plugin permettant d'étendre les fonctionnalités d'OpenMediaVault en ajoutant des plugins supplémentaires. En cas de problèmes liés à la connexion réseau, des solutions sont également proposées pour résoudre ces erreurs courantes.</p>
+  <ul>
+    <li><strong>Prérequis :</strong> Vous avez déjà installé OpenMediaVault sur votre serveur.</li>
+    <li><strong>Objectif :</strong> Installer OMV-Extras et résoudre les erreurs liées au réseau si nécessaire.</li>
+  </ul>
+</div>
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
 
 
 ### Télécharger et installer OMV-Extras

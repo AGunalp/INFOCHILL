@@ -1,5 +1,22 @@
 <link rel="stylesheet" type="text/css" href="../../assets/css/principal-theme.css">
 
+###### 📂 Vous êtes ici : [Accueil](../../index.md) > [OpenMediaVault](../openmediavault/index.md) > <a href="." style="color: #ff9900; text-decoration: underline;">Installation d'OpenMediaVault</a>
+
+<div style="background-color: #333; color: #fff; border-left: 5px solid #ff9900; border-right: 5px solid #ff9900; padding: 18px 22px; margin-bottom: 18px; text-align: center;">
+  <strong style="font-size: 22px; color: #ff9900;">📚 INSTALLATION D'OPENMEDIAVAULT SUR DEBIAN</strong>
+</div>
+
+<div style="color: #d9534f; font-weight: bold; margin-bottom: 1em;">
+  <p>Ce guide suppose les éléments suivants :</p>
+  <ul>
+    <li><strong>Distribution :</strong> Vous utilisez la distribution <strong>Debian</strong>.</li>
+    <li><strong>Accès administrateur :</strong> Vous êtes connecté en tant que <code>root</code> (via la commande <code>su -</code>).</li>
+  </ul>
+  <p>Si ce n'est pas le cas, ajoutez <code>sudo</code> devant chaque commande pour l'exécuter avec les privilèges administratifs.</p>
+</div>
+
+<hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
+
 ## 🛠️ GUIDES D'INSTALLATION ET DE CONFIGURATION
 
 ### 1. Mettez à jour le système :  
