@@ -200,4 +200,8 @@ ETAT DE NAGIOS :
 
 ---
 
+Pour d'autres services : 
+
+[AUTRES](https://drive.google.com/file/d/1WfwKvXQH5cuc2JWAClylz9x0NoXja0M6/view?usp=sharing)
+
 ### **[↩️ Retour](../index.md)**
