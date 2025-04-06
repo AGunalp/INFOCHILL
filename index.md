@@ -15,11 +15,10 @@
 -  **[NagiosCore](linux/nagioscore/index.md)**  
   Un guide pour installer et configurer Nagios Core sur votre système Debian.
 
-- **[OpenMediaVault (En développement)](linux/openmediavault/index.md)**  
+- **[OpenMediaVault](linux/openmediavault/index.md)**  
   Un guide pour installer et configurer OpenMediaVault sur votre système Debian.
 
--  **[Postfix (Bientôt)](linux/postfix/index.md)**  
-  Un guide pour installer et configurer Postfix sur votre système Debian.
+
 
 
 ## 🔍 À PROPOS
