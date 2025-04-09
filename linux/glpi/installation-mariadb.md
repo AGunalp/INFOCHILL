@@ -115,7 +115,7 @@ CREATE USER 'glpiuser'@'%' IDENTIFIED BY 'votremotdepasse';
 Accordez à l'utilisateur tous les privilèges nécessaires sur la base de données `glpi`.
 
 ```
-GRANT ALL PRIVILEGES ON glpi.* TO 'glpiuser'@'localhost';
+GRANT ALL PRIVILEGES ON glpi.* TO 'glpiuser'@'%';
 ```
 
 <hr style="border: 1px solid #ccc; height: 1px; background-color: #ccc; border: none;">
